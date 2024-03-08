@@ -8,12 +8,11 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
+        <link href="https://fonts.bunny.net/css?family=playfair-display:900|roboto-condensed:300,300i,400,400i,700,700i" rel="stylesheet" />
         <!-- Styles -->
         @vite('resources/css/app.css')
     </head>
     <body class="">
-        <h1 class="text-3xl font-bold underline">Sveika, Ruckas muiža!</h1>
+        <h1 class="text-3xl font-light underline text-yellow font-roboto">Sveika, Ruckas muiža!</h1>
     </body>
 </html>
