@@ -14,6 +14,6 @@
         @vite('resources/css/app.css')
     </head>
     <body class="">
-        <h1 class="text-3xl font-bold underline">Sveika, Ruckas muiža!</h1>
+        <h1 class="text-3xl font-bold underline">{{ __('Sveika, Ruckas muiža') }}!</h1>
     </body>
 </html>
