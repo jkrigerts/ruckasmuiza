@@ -14,8 +14,32 @@ use App\Livewire\Counter;
 |
 */
 
+// Route::get('/{locale?}', function ($locale = null) {
+//     if (isset($locale) && in_array($locale, config("app.available_locales"))) {
+//         app()->setLocale($locale);
+//     }
+//     return view('welcome');
+// });
+
+// Route::prefix('{locale}')
+//     ->where(['locale' => '[a-zA-Z]{2}'])
+//     ->middleware('setlocale')
+//     ->group(function () {
+//         Route::get('/', function () {
+//             return view('welcome');
+//         });
+//         Route::get('/counter', Counter::class);
+//     });
+
+// Route::get('/', function () {
+//     return redirect(app()->getLocale());
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+ return view('welcome');
 });
- 
-Route::get('/counter', Counter::class);
+
+Route::get('/en', function () {
+    app()->setLocale("en");
+    return view('welcome');
+   });
