@@ -4,12 +4,12 @@
             <img src="{{ asset('images/logo.png') }}" alt="Ruckas muižas logo" class="block h-24 w-auto">
         </a>
         <ul class="mt-4 flex gap-8">
-            <li><a href="{{ route('about') }}" wire:navigate class="uppercase text-white hover:text-lightgray transition {{request()->routeIs('about') ? 'underline' : ''}}">Par muižu</a></li>
-            <li><a href="{{ route('events') }}" wire:navigate class="uppercase text-white hover:text-lightgray transition {{request()->routeIs('events') ? 'underline' : ''}}">Afiša</a></li>
-            <li><a href="{{ route('services') }}" wire:navigate class="uppercase text-white hover:text-lightgray transition {{request()->routeIs('services') ? 'underline' : ''}}">Izklaide</a></li>
-            <li><a href="{{ route('stay') }}" wire:navigate class="uppercase text-white hover:text-lightgray transition {{request()->routeIs('stay') ? 'underline' : ''}}">Nakšņošana</a></li>
-            <li><a href="{{ route('blog') }}" wire:navigate class="uppercase text-white hover:text-lightgray transition {{request()->routeIs('blog') ? 'underline' : ''}}">Blogs</a></li>
-            <li><a href="{{ route('gallery') }}" wire:navigate class="uppercase text-white hover:text-lightgray transition {{request()->routeIs('gallery') ? 'underline' : ''}}">Galerija</a></li>
+            <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>
+            <x-navigation.nav-link href="events">Afiša</x-navigation.nav-link>
+            <x-navigation.nav-link href="services">Izklaide</x-navigation.nav-link>
+            <x-navigation.nav-link href="stay">Nakšņošana</x-navigation.nav-link>
+            <x-navigation.nav-link href="blog">Blogs</x-navigation.nav-link>
+            <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>
         </ul>
     </nav>
 </div>
