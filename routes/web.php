@@ -13,9 +13,6 @@ use App\Livewire\Counter;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
- 
-Route::get('/counter', Counter::class);
-
 
 Route::get('/', function () {return view('landing');})
        ->name("landing");
