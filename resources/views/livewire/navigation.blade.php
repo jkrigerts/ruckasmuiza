@@ -1,8 +1,8 @@
 <div class="sticky top-0 left-0 z-50 w-full h-14 border-t-8 border-red bg-black">
     <div class="max-w-7xl mx-auto h-full flex justify-between md:justify-start md:gap-8">
-        <a href="{{ route('landing') }}" wire:navigate class="w-32 w-auto -translate-y-px relative">
+        <a href="{{ route('landing') }}" wire:navigate class="w-32 relative">
             @persist('logo')
-                <img src="{{ asset('images/logo.png') }}" alt="Ruckas muižas logo" class="absolute top-0 left-0 w-full h-auto">
+                <img src="{{ asset('images/logo.png') }}" alt="Ruckas muižas logo" class="absolute -top-px left-0 w-full h-auto">
             @endpersist
         </a>
         <nav class="hidden md:block">

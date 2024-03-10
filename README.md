@@ -36,9 +36,10 @@ _Hostings_ tiks veikts uz [area](https://area.lv/lv/) servera.
 2. `cd ruckasmuiza`
 3. `composer install`
 4. `php artisan migrate`
-5. Vienā terminālī `npm run dev`
-6. Otrā terminālī `php artisan serve`
-7. Ja vēlies piekļūt _admin_ panelim, jāizveido lietotājs ar `php artisan make:filament-user` un jādodas uz `/admin`
+5. `npm install`
+6. Vienā terminālī `npm run dev`
+7. Otrā terminālī `php artisan serve`
+8. Ja vēlies piekļūt _admin_ panelim, jāizveido lietotājs ar `php artisan make:filament-user` un jādodas uz `/admin`
 
 ## Atbalstītāji
 
