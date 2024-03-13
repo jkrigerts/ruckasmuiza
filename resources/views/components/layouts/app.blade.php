@@ -14,7 +14,7 @@
     </head>
     <body>
         <livewire:navigation />
-        <main class="pt-10">
+        <main class="">
             {{ $slot }}
         </main>
     </body>
