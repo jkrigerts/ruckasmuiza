@@ -5,7 +5,7 @@
 ])
 
 <li>
-  <a href="{{route($href)}}" wire:navigate class="uppercase text-white hover:text-lightgray transition {{request()->routeIs($href) ? 'underline' : ''}}">
+  <a href="{{route($href)}}" wire:navigate class="{{request()->routeIs($href) ? 'underline' : ''}}">
       {{ $slot }}
   </a>
 </li>
