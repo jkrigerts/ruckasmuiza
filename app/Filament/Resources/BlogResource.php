@@ -5,6 +5,8 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BlogResource\Pages;
 use App\Filament\Resources\BlogResource\RelationManagers;
 use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\Section;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,8 +16,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Resources\RelationManagers\RelationManager;
 
 class BlogResource extends Resource
 {
@@ -28,7 +32,23 @@ class BlogResource extends Resource
         return $form
             ->schema([
                 TextInput::make('title')->required(),
-                Textarea::make('content')->required(),
+                RichEditor::make('content')->required()->toolbarButtons([
+                    'blockquote',
+                    'bold',
+                    'bulletList',
+                    'h2',
+                    'h3',
+                    'italic',
+                    'link',
+                    'orderedList',
+                    'redo',
+                    'strike',
+                    'underline',
+                    'undo',
+                ]),
+                Select::make('blog_category_id')->label('Blog Category')->options(BlogCategory::all()->pluck('name', 'id'))->required()->native(false),
+                Select::make('section_id')->label('Blog Section')->options(Section::all()->pluck('name', 'id'))->required()->native(false),
+                // Textarea::make('content')->required(),
                 FileUpload::make('image')->required(),
             ]);
     }
@@ -64,7 +84,7 @@ class BlogResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\CategoriesRelationManager::class,
         ];
     }
 
