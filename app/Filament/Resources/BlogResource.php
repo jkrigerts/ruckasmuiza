@@ -20,52 +20,58 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\RelationManagers\RelationManager;
+use Filament\Tables\Columns\ImageColumn;
 
 class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = "heroicon-o-bars-3-center-left";
 
     public static function form(Form $form): Form
     {
-        return $form
-            ->schema([
-                TextInput::make('title')->required(),
-                RichEditor::make('content')->required()->toolbarButtons([
-                    'blockquote',
-                    'bold',
-                    'bulletList',
-                    'h2',
-                    'h3',
-                    'italic',
-                    'link',
-                    'orderedList',
-                    'redo',
-                    'strike',
-                    'underline',
-                    'undo',
+        return $form->schema([
+            TextInput::make("title")->required(),
+            Select::make("section_id")
+            ->label("Blog Section")
+            ->options(Section::all()->pluck("name", "id"))
+            ->required()
+            ->native(false),
+            RichEditor::make("content")
+                ->required()
+                ->toolbarButtons([
+                    "blockquote",
+                    "bold",
+                    "bulletList",
+                    "h2",
+                    "h3",
+                    "italic",
+                    "link",
+                    "orderedList",
+                    "redo",
+                    "strike",
+                    "underline",
+                    "undo",
                 ]),
-                Select::make('blog_category_id')->label('Blog Category')->options(BlogCategory::all()->pluck('name', 'id'))->required()->native(false),
-                Select::make('section_id')->label('Blog Section')->options(Section::all()->pluck('name', 'id'))->required()->native(false),
-                // Textarea::make('content')->required(),
-                FileUpload::make('image')->required(),
-            ]);
+            FileUpload::make("image")->required(),
+        ])->columns(1);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('created_at')
+                Tables\Columns\TextColumn::make("title")->sortable(),
+                Tables\Columns\TextColumn::make("section.name"),
+                ImageColumn::make("image"),
+                Tables\Columns\TextColumn::make("created_at")
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: false),
+                Tables\Columns\TextColumn::make("updated_at")
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('title'),
             ])
             ->filters([
                 //
@@ -84,17 +90,17 @@ class BlogResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\CategoriesRelationManager::class,
+            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBlogs::route('/'),
-            'create' => Pages\CreateBlog::route('/create'),
-            'view' => Pages\ViewBlog::route('/{record}'),
-            'edit' => Pages\EditBlog::route('/{record}/edit'),
+            "index" => Pages\ListBlogs::route("/"),
+            "create" => Pages\CreateBlog::route("/create"),
+            "view" => Pages\ViewBlog::route("/{record}"),
+            "edit" => Pages\EditBlog::route("/{record}/edit"),
         ];
     }
 }

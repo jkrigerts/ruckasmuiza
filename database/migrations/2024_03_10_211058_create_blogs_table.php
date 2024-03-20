@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('image');
             $table->text('content');
-            $table->foreignIdFor(BlogCategory::class)->constrained()->onDelete('cascade');
             $table->foreignIdFor(Section::class)->constrained()->onDelete('cascade');
             $table->timestamps();
         });
