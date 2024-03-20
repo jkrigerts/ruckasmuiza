@@ -6,7 +6,9 @@ use App\Filament\Resources\EventsResource\Pages;
 use App\Filament\Resources\EventsResource\RelationManagers;
 use App\Models\Event_category;
 use App\Models\Events;
+use Carbon\Carbon;
 use Filament\Forms;
+use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -18,69 +20,89 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Section;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Enums\FiltersLayout;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\Indicator;
 use Filament\Tables\Filters\QueryBuilder\Constraints\DateConstraint;
+use Filament\Tables\Filters\SelectFilter;
 
 class EventsResource extends Resource
 {
     protected static ?string $model = Events::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-calendar-days';
-    protected static ?string $navigationGroup = 'Afišas';
-
+    
     protected static ?string $modelLabel = 'Afiša';
+
+    
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Section::make('Laiks')
+                Section::make('Time and date')
                     ->columns([
                         'sm' => 1,
                         'md' => 2,
                     ])
-                    ->description('Norādiet datumu un laiku kad notiks pasākums.')
+                    ->description('Enter date and time of this event.')
                     ->schema([
-                        DatePicker::make('date')
+                        DatePicker::make('happens_at')
                             ->label('Datums')
                             ->native(false)
                             ->placeholder('Aug 23, 2021')
                             ->required()
                             ->minDate(now()),
                         TextInput::make('time')
-                            ->label('Laiks/laiki')
+                            ->label('Laiks/Laiki')
                             ->required()
                             ->maxLength(50)
                             ->placeholder('12:30 - 14:00'),
                     ]),
 
-                Section::make('Informācija')
+                Section::make('Info')
                     ->columns([
                         'sm' => 1,
                         'md' => 2,
                     ])
-                    ->description('Norādiet pārējo informāciju par pasākumu')
+                    ->description('Enter information about the event.')
                     ->schema([
-                        Textarea::make('description')
-                            ->label('Apraksts')
+                        TextInput::make('title')
+                            ->label('Virsraksts')
                             ->required()
+                            ->maxLength(50),
+                        Textarea::make('titleLong')
+                            ->label('Garš virsraksts')
+                            ->required()
+                            ->autosize()
+                            ->maxLength(255),
+                        TextInput::make('info')
+                            ->label('Kopsavilkums')
+                            ->required()
+                            ->maxLength(50)
+                            ->placeholder('Kino vakars ar popkornu'),
+                        Textarea::make('infoLong')
+                            ->required()
+                            ->label('Apraksts')
                             ->autosize()
                             ->placeholder('Harija Potera fanu kluba kino vakars ar popkornu skolas vecuma bērniem.')
                             ->maxLength(255),
-                        TextInput::make('summary')
-                            ->label('Īsais apraksts')
-                            ->required()
-                            ->maxLength(45)
-                            ->placeholder('kino vakars ar popkornu'),
         
-                        Select::make('event_category_id')
-                            ->label('Kategorija')
+                        Select::make('type_id')
+                            ->label('Category')
                             ->native(false)
+                            ->label('Kategorija')
                             ->searchable(['name'])
                             ->preload()
-                            ->relationship('category', 'name'), // TODO: create custom options, where it also shows the category color
-                        TextInput::make('entry_cost')
-                            ->label('Dalības maksa')
+                            ->relationship('type', 'name') // TODO: create custom options, where it also shows the category color
+                            ->createOptionForm([
+                                TextInput::make('name')->required()->maxLength(50)->placeholder('Pieaugušiem'),
+                                ColorPicker::make('color')->required()->placeholder('#FFFFFF'),
+                            ]),
+                        TextInput::make('price')
                             ->required()
+                            ->label('Dalības maksa')
                             ->numeric()
                             ->suffix('EUR')
                             ->placeholder('5'),
@@ -91,31 +113,80 @@ class EventsResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->modifyQueryUsing(fn (Builder $query) => $query->orderBy('happens_at', 'ASC'))
             ->columns([
-                Tables\Columns\TextColumn::make('date')
+                Tables\Columns\TextColumn::make('title')
+                    ->label('Virsraksts')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('type.name')
+                    ->label('Kategorija')
+                    ->toggleable()
+                    ->toggledHiddenByDefault(),
+                Tables\Columns\TextColumn::make('info')
+                    ->label('Kopsavilkums')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('happens_at')
+                    ->label('Datums')
                     ->date()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('time')
+                    ->label('Laiks/Laiki')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('description')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('summary')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('entry_cost')
+                Tables\Columns\TextColumn::make('price')
+                    ->label('Cena')    
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
+                    ->label('Uztaisīts')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
+                    ->label('Atjaunots')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([ // TODO: Add filter for dates and prices
+                Filter::make('happens_at')
+                    ->form([
+                        DatePicker::make('created_from')->label('No')->default(now()),
+                        DatePicker::make('created_until')->label('Līdz'),
+                    ])
+                    ->query(function (Builder $query, array $data): Builder {
+                        return $query
+                            ->when(
+                                $data['created_from'],
+                                fn (Builder $query, $date): Builder => $query->whereDate('happens_at', '>=', $date),
+                            )
+                            ->when(
+                                $data['created_until'],
+                                fn (Builder $query, $date): Builder => $query->whereDate('happens_at', '<=', $date),
+                            );
+                    })
+                    ->indicateUsing(function (array $data): array {
+                        $indicators = [];
+                        
+                        if ($data['created_from'] ?? null) {
+                            $indicators[] = Indicator::make('No ' . Carbon::parse($data['created_from'])->toFormattedDateString())
+                                ->removeField('created_from');
+                        }
+                 
+                        if ($data['created_until'] ?? null) {
+                            $indicators[] = Indicator::make('Līdz ' . Carbon::parse($data['created_until'])->toFormattedDateString())
+                                ->removeField('created_until');
+                        }
+                 
+                        return $indicators;
+                    }),
+                SelectFilter::make('category_id')
+                    ->searchable()
+                    ->preload()
+                    ->indicator('Kategorija')
+                    ->relationship('type', 'name'),
             ])
             ->actions([
+                ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -123,12 +194,14 @@ class EventsResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
+            
+            
     }
 
     public static function getRelations(): array
     {
         return [
-            //
+            
         ];
     }
 

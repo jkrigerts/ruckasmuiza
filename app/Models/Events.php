@@ -8,19 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Events extends Model
 {
     protected $fillable = [
-        'event_category_id',
-        'date',
+        'type_id',
+        'title',
+        'titleLong',
         'time',
-        'description',
-        'summary',
-        'entry_cost',
+        'happens_at',
+        'info',
+        'infoLong',
+        'price',
     ];
-
-    public function category(){
-        return $this->belongsTo(Event_category::class, 'event_category_id');
-    }
-
     
+    public function type(){
+        return $this->belongsTo(\App\Models\Type::class);
+    }
 
     use HasFactory;
 }

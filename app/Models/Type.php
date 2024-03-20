@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Event_category extends Model
+class Type extends Model
 {
     protected $fillable = [
         'name',
-        'hex'
+        'color'
     ];
 
     public function event(){
