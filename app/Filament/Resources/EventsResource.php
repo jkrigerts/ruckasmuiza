@@ -3,11 +3,9 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\EventsResource\Pages;
-use App\Filament\Resources\EventsResource\RelationManagers;
-use App\Models\Event_category;
 use App\Models\Events;
 use Carbon\Carbon;
-use Filament\Forms;
+use Closure;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
@@ -18,13 +16,11 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Toggle;
 use Filament\Tables\Actions\ViewAction;
-use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\Indicator;
-use Filament\Tables\Filters\QueryBuilder\Constraints\DateConstraint;
 use Filament\Tables\Filters\SelectFilter;
 
 class EventsResource extends Resource
@@ -41,12 +37,12 @@ class EventsResource extends Resource
     {
         return $form
             ->schema([
-                Section::make('Time and date')
+                Section::make('Datums un laiks')
                     ->columns([
                         'sm' => 1,
                         'md' => 2,
                     ])
-                    ->description('Enter date and time of this event.')
+                    ->description('Ievadiet datumu un laiku par pasākumu')
                     ->schema([
                         DatePicker::make('happens_at')
                             ->label('Datums')
@@ -61,12 +57,12 @@ class EventsResource extends Resource
                             ->placeholder('12:30 - 14:00'),
                     ]),
 
-                Section::make('Info')
+                Section::make('Informācija')
                     ->columns([
                         'sm' => 1,
                         'md' => 2,
                     ])
-                    ->description('Enter information about the event.')
+                    ->description('Ievadiet informāciju par jauno afišu.')
                     ->schema([
                         TextInput::make('title')
                             ->label('Virsraksts')
@@ -92,6 +88,7 @@ class EventsResource extends Resource
                         Select::make('type_id')
                             ->label('Category')
                             ->native(false)
+                            ->required()
                             ->label('Kategorija')
                             ->searchable(['name'])
                             ->preload()
@@ -103,9 +100,11 @@ class EventsResource extends Resource
                         TextInput::make('price')
                             ->required()
                             ->label('Dalības maksa')
-                            ->numeric()
+                            ->columnSpan(1) 
                             ->suffix('EUR')
+                            ->maxLength(20)
                             ->placeholder('5'),
+
                     ]),
             ]);
     }
@@ -127,15 +126,13 @@ class EventsResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('happens_at')
                     ->label('Datums')
-                    ->date()
-                    ->sortable(),
+                    ->date(),
                 Tables\Columns\TextColumn::make('time')
                     ->label('Laiks/Laiki')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
-                    ->label('Cena')    
-                    ->numeric()
-                    ->sortable(),
+                    ->label('Cena')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->label('Uztaisīts')

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('time', 50);
             $table->string('info', 50);
             $table->string('infoLong');
-            $table->float('price', 8, 2, true);
+            $table->string('price', 20);
             $table->timestamps();
         });
     }
