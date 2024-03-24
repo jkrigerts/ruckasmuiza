@@ -26,10 +26,10 @@ use Filament\Tables\Filters\SelectFilter;
 class EventsResource extends Resource
 {
     protected static ?string $model = Events::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-calendar-days';
     
-    protected static ?string $modelLabel = 'Afiša';
+    protected static ?string $modelLabel = 'Pasākums';
+    protected static ?string $pluralModelLabel = 'Pasākumi';
 
     
 

@@ -1,11 +1,29 @@
 
 @props([
-    'dark',
-    'href'
+    'href',
+    'items',
+    'unchoosable'
 ])
 
 <li>
-  <a href="{{route($href)}}" wire:navigate class="{{request()->routeIs($href) ? 'underline' : ''}}">
+  @if (isset($unchoosable))
+    <button class="{{request()->routeIs($href.'*') ? 'active' : ''}}">
+      {{$slot}}
+    </button>  
+  @else
+    <a href="{{route($href)}}" wire:navigate class="{{request()->routeIs($href.'*') ? 'active' : ''}}">
       {{ $slot }}
-  </a>
+    </a>
+  @endif
+  @isset ($items)
+    <ul class="dropdown">
+      @foreach ($items as $item)
+          <li>
+            <a href="{{route($item['href'])}}"  wire:navigate class="{{request()->routeIs($item['href']) ? 'active' : ''}}">
+              {{$item['title']}}
+            </a>
+          </li>
+      @endforeach
+    </ul>
+  @endisset
 </li>
