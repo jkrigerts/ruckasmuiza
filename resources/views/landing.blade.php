@@ -78,7 +78,7 @@
 			title="Svinēt svētkus"
 			description="Ruckas muiža piedāvā svinēt kā mazus, tā lielus svētkus! Sākot ar dzimšanas dienām, beidzot ar kāzām."
     		icon="components.icons.confetti"
-			link="izklaide"
+			link="services."
 			right=true
 			fade=true
 		/>
@@ -88,7 +88,7 @@
 			title="Nakšņot"
 			description="Muiža piedāvā ērtas guļvietas, astētisku, siltu un zaļu istabiņu ar pasakainu skatu pa logu. Esam par to, lai cilvēki šeit patiesi labi izgulētos."
     		icon="components.icons.bedtime"
-			link="naksnosana"
+			link="services.stay"
 			fade=true
 		/>
 		<x-landing.section
@@ -97,7 +97,7 @@
 			title="Apmeklēt kultūras pasākumus"
 			description="Ruckas muiža katru nedēļu piedāvā plašu kultūras programmu. Sākot ar lekcijām un meistarklasēm un beidzot ar koncertiem un teātriem. Seko līdzi informācijai un izvēlies savējo!"
     		icon="components.icons.calendar"
-			link="afisa"
+			link="events"
 			fade=true
 		/>
 		<x-landing.section
@@ -106,7 +106,7 @@
 			title="Telpu noma"
 			description="TBD"
     		icon="components.icons.fireplace"
-			link="naksnosana"
+			link="services.rent"
 			fade=true
 		/>
 		<x-landing.section
@@ -115,7 +115,7 @@
 			title="Skolas soma"
 			description="TBD"
     		icon="components.icons.bag"
-			link="https://latvijasskolassoma.lv/"
+			link="offers.special_offers"
 			fade=true
 			right=true
 		/>
@@ -125,7 +125,7 @@
 			title="Iepazīt muižas putnus"
 			description="Muižā ir putnu istaba ar 12 putniem, katram lidonim ir savs vārds un stāsts, ko kāds no muižas ļaudīm gatavs pastāstīt!"
     		icon="components.icons.bird"
-			link="izklaide"
+			link="gallery"
 			right=true
 		/>
 		<x-landing.section
@@ -134,7 +134,7 @@
 			title="Kļūt par melderi"
 			description="Ruckas muižā iespējamas ekskursijas uz griķu dzirnavām un uz stundu kļūt par melderi. Būs iespēja degustēt un iegādāties griķu produktus! Iespēja pasūtīt Bretaņas pankūkas ar ievārījumu, kas tapis no muižas augļu un ogu krūmiem, kā arī vietējiem mežiem."
     		icon="components.icons.plant"
-			link="par-muizu"
+			link="offers.special_offers"
 			fade=true
 			right=true
 		/>
@@ -144,7 +144,7 @@
 			title="Aktivitātes, pastaigas muižas parkā"
 			description="Ruckas muižā ietilpst 6 hektārus liels parks, kas atvērts apmeklētājiem visu dienu. Ziemā iespējams gatavot sniega enģeļus vai velt sniegavīrus. Siltajos mēnešos var izskriet rīta krosus vai vienkārši uz soliņa pabaudīt dabu."
     		icon="components.icons.forest"
-			link="izklaide"
+			link="gallery"
 		/>
 		<x-landing.section
 			id="dzivas-gleznas"
@@ -152,7 +152,7 @@
 			title="Dzīvās gleznas"
 			description="TBD"
     		icon="components.icons.brush"
-			link="izklaide"
+			link="gallery"
 		/>
 	</div>
 </x-layouts.app>

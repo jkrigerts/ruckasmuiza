@@ -25,19 +25,23 @@ use Filament\Tables\Columns\ImageColumn;
 class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
-
     protected static ?string $navigationIcon = "heroicon-o-bars-3-center-left";
+
+    protected static ?string $modelLabel = 'Ieraksts';
+    protected static ?string $pluralModelLabel = 'Muiža runā';
 
     public static function form(Form $form): Form
     {
         return $form->schema([
-            TextInput::make("title")->required(),
+            TextInput::make("title")->required()
+                ->label("Virsraksts"),
             Select::make("section_id")
-            ->label("Blog Section")
-            ->options(Section::all()->pluck("name", "id"))
-            ->required()
-            ->native(false),
+                ->label("Sadaļa")
+                ->options(Section::all()->pluck("name", "id"))
+                ->required()
+                ->native(false),
             RichEditor::make("content")
+                ->label("Saturs")
                 ->required()
                 ->toolbarButtons([
                     "blockquote",
@@ -53,7 +57,9 @@ class BlogResource extends Resource
                     "underline",
                     "undo",
                 ]),
-            FileUpload::make("image")->required(),
+            FileUpload::make("image")
+                ->label("Attēls")
+                ->required(),
         ])->columns(1);
     }
 

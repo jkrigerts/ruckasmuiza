@@ -12,7 +12,7 @@
                     <h2>{{ $title }}</h2>
                     <p>{{ $description }}</p>
                 </div>
-                <button class="landing-button" onclick="window.location.href='{{ $link }}'">Skatīties tālāk</button>
+                <a class="landing-button" href={{route($link)}}>Skatīties tālāk</a>
             </div>
         </div>
     </div>

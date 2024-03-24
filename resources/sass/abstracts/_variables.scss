@@ -33,8 +33,11 @@ $transition-duration: 0.3s;
 
 $content-max-width: 1600px;
 
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 480px;
+$xsBreakpoint: 480px;
+$smBreakpoint: 640px;
+$mdBreakpoint: 768px;
+$lgBreakpoint: 1024px;
+$xlBreakpoint: 1280px;
 
 $font-size-xxl: 6rem;
 $font-size-xl: 4.5rem;
