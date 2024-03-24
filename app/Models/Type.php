@@ -16,5 +16,10 @@ class Type extends Model
         return $this->hasMany(\App\Models\Events::class);
     }
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
     use HasFactory;
 }

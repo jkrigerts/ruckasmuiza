@@ -22,5 +22,10 @@ class Events extends Model
         return $this->belongsTo(\App\Models\Type::class);
     }
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
     use HasFactory;
 }

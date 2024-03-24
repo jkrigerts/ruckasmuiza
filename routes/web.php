@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventsController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
 
@@ -18,7 +19,7 @@ Route::get('/', function () {return view('landing');})
        ->name("landing");
 Route::get('/par-muizu', function () { return view('about');})
        ->name("about");
-Route::get('/afisa', function () { return view('events');})
+Route::get('/afisa', [EventsController::class, 'index'])
        ->name("events");
 Route::get('/izklaide', function () {return view('services');})
        ->name("services");
