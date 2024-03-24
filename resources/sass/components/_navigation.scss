@@ -10,7 +10,7 @@ header {
     padding: 0 1rem;
 
     > div {
-        max-width: $page-margins;
+        max-width: $content-max-width;
         margin: 0 auto;
         height: 100%;
         display: flex;
