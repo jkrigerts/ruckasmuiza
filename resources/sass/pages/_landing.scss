@@ -270,7 +270,7 @@ $box-shadow: 0 5px 150px $color-black-true;
             text-wrap: pretty;
         }
         p {
-            width: 70ch;
+            max-width: 65ch;
             font-size: $font-size-md;
             font-weight: normal;
             text-transform: none;
