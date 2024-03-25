@@ -1,0 +1,101 @@
+$navWidth: $content-max-width;
+$logoWidth: 130px;
+$navHeight: 60px;
+$navPadding: 16px;
+
+// ------------------- Main page (background) ---------------
+.main-events{
+    position: relative;
+    min-height: calc(100dvh - $navHeight);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        transparent 100%
+    );
+
+
+    .screen-image {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+// ----------- Content including calendar header and calendar --------------
+.main-events .content{
+    min-height: calc(100dvh - $navHeight);
+    max-width: calc($navWidth - $logoWidth); // nav bar max width - logo
+    background-color: rgba($color: $color-black, $alpha: 0.6);
+
+    margin: 0 auto;
+
+    padding: 2rem calc($logoWidth / 2 + 1rem);
+    color: $color-white-gray;
+
+    .header{
+        font-size: $font-size-lg;
+        font-family: $font-display;
+    }
+
+    .date{
+        font-size: $font-size-md;
+    }
+
+    .flex-between{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: calc($navWidth + $navPadding)) {
+    .main-events .content {
+        margin: 0 calc(($logoWidth / 2) + $navPadding);
+    }
+}
+
+@include lg-breakpoint {
+    .main-events .content {
+        margin: 0;
+        padding: 0.5rem 1rem;
+
+        .flex-between {
+            padding-left: calc($logoWidth + 1rem);
+            text-align: right;
+
+            flex-direction: column;
+            align-items: end;
+
+            gap: 0.5rem;
+        }
+    }
+}
+
+@include sm-breakpoint {
+    .main-events .content {
+        .header{
+            font-size: $font-size-md;
+        }
+
+        .date{
+            font-size: $font-size-sm;
+        }
+    }
+}
+
+
+// ------------------ Calendar container ------------------- 
+.main-events .calendar-container{
+
+}
