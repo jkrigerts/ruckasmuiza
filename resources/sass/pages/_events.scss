@@ -84,6 +84,8 @@ $navPadding: 16px;
 
 @include sm-breakpoint {
     .main-events .content {
+        padding: 0.5rem;
+
         .header{
             font-size: $font-size-md;
         }
@@ -97,5 +99,95 @@ $navPadding: 16px;
 
 // ------------------ Calendar container ------------------- 
 .main-events .calendar-container{
+    width: 100%;
+    border-collapse: collapse;
+    
 
+    .day{
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+        position: relative;
+        
+        .number{
+            position: absolute;
+            top: 0.25rem;
+            right: 0.25rem;
+            
+            font-family: $font-display;
+        }
+
+        .event{
+            padding: 0.25rem;
+            flex-grow: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .sm{ font-size: $font-size-xs; }
+            .md { font-size: $font-size-sm; font-family: $font-display; }
+
+            transition: $transition-duration ease-out;
+            cursor: pointer;
+        }
+    }
+
+    td{
+        border: 1px solid $color-white;
+        position: relative;
+        height: max(16vh, 130px);
+        width: 14.29%;
+    }
+}
+
+@include xl-breakpoint{
+    .main-events .calendar-container .day .event .sm {
+        &:nth-child(1), &:nth-child(3){
+            display: none;
+        }
+    }
+}
+
+@include lg-breakpoint{
+    .main-events .calendar-container {
+        .day { 
+            .number{
+                font-size: $font-size-sm;
+            }
+
+        }
+    }
+}
+
+@include md-breakpoint{
+    .main-events .calendar-container .day {
+        .event {
+            .md{
+                font-size: 40%;
+            }
+
+            .sm {
+                display: none;
+            }
+        }
+    }
+}
+
+@include sm-breakpoint{
+    .main-events .calendar-container{
+        td {
+            height: 120px;
+        }
+    }
+}
+
+@include xs-breakpoint{
+    .main-events .calendar-container{
+        td {
+            height: 80px;
+            overflow-y: scroll;
+        }
+    }
 }

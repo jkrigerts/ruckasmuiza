@@ -1,3 +1,8 @@
+<?php
+// dd($calendarData);
+?>
+
+
 <x-layouts.app>
 
     <section class="main-events">
@@ -6,11 +11,20 @@
         <div class="content">
             <div class="flex-between">
                 <p class="header">Ruckas muiža ielūdz!</p>
-                <p class="date">2024. gada <strong>MARTA PASĀKUMU KALENDĀRS</strong></p>
+                <p class="date">2024. gada {{ strtoupper($thisMonth) }} <strong>PASĀKUMU KALENDĀRS</strong></p>
             </div>
             <p>Uzziniet vairāk, izvēloties krāsaino datumu</p>
 
-            <table>
+            <table class="calendar-container">
+                @foreach ($calendarData as $row)
+                    <tr>
+                        @foreach ($row as $date => $data)
+                            <td>
+                                <x-events.day :data="$data"/>
+                            </td> 
+                        @endforeach
+                    </tr>
+                @endforeach
                 
             </table>
         </div>
