@@ -28,7 +28,7 @@ class EventsController extends Controller
         $dateFormat = 'Y-m-d';
         $req->validate([
             'month' => 'numeric|integer|between:1,12',
-            'year' => 'numeric|integer|between:2020,3000'
+            'year' => 'numeric|integer|between:'. now()->year - 2 .','. now()->year + 2 .''
 
         ]);
 
@@ -128,7 +128,9 @@ class EventsController extends Controller
             'previousMonth' => $monthsKas[$today->subMonth()->month - 1],
             'thisMonth' => $monthsKa[$today->addMonth()->month - 1],
             'nextMonth' => $monthsKas[$today->addMonth()->month - 1],
-            
+            'monthsSelect' => $monthsKa,
+            'thisYear' => $today->year,
+
         ]);
     }
 }
