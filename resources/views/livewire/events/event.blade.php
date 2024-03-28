@@ -7,7 +7,12 @@
     @click="open = 1"
 >
    
-    <div class="modal" x-show="open">
+    <div class="modal" 
+        x-show="open"
+        x-transition:enter="modal-enter"
+        x-transition:leave="modal-leave"
+
+    >
         <div class="modal-content" >
             <div @click.stop="open = 0" class="close-btn" style="background-color: {{ $event['type']['color'] }};">
                 <x-icons.x />

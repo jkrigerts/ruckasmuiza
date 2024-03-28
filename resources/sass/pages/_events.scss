@@ -282,8 +282,6 @@ $navPadding: 16px;
         overflow-y: auto;
         overflow-x: hidden;
 
-        animation: $transition-duration modal-content-appear forwards ease-out;
-
         padding: 1.4rem 1rem;
 
         .close-btn{
@@ -311,14 +309,41 @@ $navPadding: 16px;
     }
 }
 
+.main-events .event .modal-enter{
+    .modal-content{
+        animation: modal-content-appear $transition-duration ease-out forwards;
+    }
+}
+
+.main-events .event .modal-leave{
+    .modal-content{
+        animation: modal-content-leave $transition-duration ease-in forwards;
+    }
+
+    animation: modal-leave $transition-duration ease-in forwards;
+}
+
 @keyframes modal-appear{
     0%{
         background-color: rgba($color: $color-black, $alpha: 0);
     }
 }
 
+@keyframes modal-leave {
+    100%{
+        background-color: rgba($color: $color-black, $alpha: 0);
+    }
+}
+
 @keyframes modal-content-appear {
     0%{
+        opacity: 0;
+        scale: 0;
+    }
+}
+
+@keyframes modal-content-leave {
+    100%{
         opacity: 0;
         scale: 0;
     }
