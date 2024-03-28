@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('type_id')->constrained()->cascadeOnDelete();
             $table->string('title', 50);
-            $table->string('titleLong');
             $table->date('happens_at');
             $table->string('time', 50);
             $table->string('info', 50);
