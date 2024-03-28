@@ -33,6 +33,7 @@ Route::group([
        }
        );
 
+
 Route::get('/pasakumi', [\App\Http\Controllers\EventsController::class, 'index'])
        ->name("events");
 

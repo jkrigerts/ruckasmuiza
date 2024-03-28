@@ -251,3 +251,75 @@ $navPadding: 16px;
         }
     }
 }
+
+// ------------------ Event modal -------------------
+
+.main-events .event .modal{
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+
+    background-color: rgba($color: $color-black, $alpha: 0.6);
+    z-index: 10;
+
+    display: grid;
+    place-items: center;
+
+    animation: modal-appear $transition-duration forwards ease-out;
+
+    .modal-content{
+        position: relative;
+
+        font-size: 1rem;
+        color: $color-black;
+        background-color: $color-white-gray;
+    
+        max-width: 500px;
+        max-height: 600px;
+    
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        animation: $transition-duration modal-content-appear forwards ease-out;
+
+        padding: 1.4rem 1rem;
+
+        .close-btn{
+            color: $color-white;
+            
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+
+            display: grid;
+            place-items: center;
+
+            padding: 0.1rem;
+            border-radius: 0.6rem;
+
+            svg {
+                scale: 0.6;
+            }
+        }
+
+        .modal-title{
+            font-family: $font-display;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@keyframes modal-appear{
+    0%{
+        background-color: rgba($color: $color-black, $alpha: 0);
+    }
+}
+
+@keyframes modal-content-appear {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+}
