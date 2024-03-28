@@ -58,7 +58,7 @@ class EventsController extends Controller
             'janvāris',
             'februāris',
             'marts',
-            'aprīls',
+            'aprīlis',
             'maijs',
             'jūnijs',
             'jūlijs',

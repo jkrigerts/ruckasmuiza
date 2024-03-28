@@ -22,7 +22,7 @@
                         gada 
                         <select name="month" onchange="this.form.submit()">
                             @foreach ($monthsSelect as $month)
-                                <option value="{{ $loop->index + 1}}" @if ($month == $thisMonth) selected @endif>{{ strtoupper($month) }}</option>
+                                <option value="{{ $loop->index + 1}}" @if ($month == $thisMonth) selected @endif>{{ $month }}</option>
                             @endforeach
                         </select>
     

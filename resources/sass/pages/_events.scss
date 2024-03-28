@@ -176,6 +176,7 @@ $navPadding: 16px;
             right: 0.25rem;
             
             font-family: $font-display;
+            font-size: 1.25rem;
         }
 
         .event{
@@ -214,7 +215,7 @@ $navPadding: 16px;
     .main-events .calendar-container {
         .day { 
             .number{
-                font-size: $font-size-sm;
+                font-size: 1rem;
             }
 
         }
@@ -240,6 +241,10 @@ $navPadding: 16px;
         td {
             height: 120px;
         }
+    }
+
+    .main-events .calendar-container .day .number {
+        font-size: 0.75rem;
     }
 }
 
