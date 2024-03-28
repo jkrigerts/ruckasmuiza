@@ -68,11 +68,6 @@ class EventsResource extends Resource
                             ->label('Virsraksts')
                             ->required()
                             ->maxLength(50),
-                        Textarea::make('titleLong')
-                            ->label('Garš virsraksts')
-                            ->required()
-                            ->autosize()
-                            ->maxLength(255),
                         TextInput::make('info')
                             ->label('Kopsavilkums')
                             ->required()
@@ -82,6 +77,7 @@ class EventsResource extends Resource
                             ->required()
                             ->label('Apraksts')
                             ->autosize()
+                            ->columnSpanFull()
                             ->placeholder('Harija Potera fanu kluba kino vakars ar popkornu skolas vecuma bērniem.')
                             ->maxLength(255),
         
@@ -101,7 +97,6 @@ class EventsResource extends Resource
                             ->required()
                             ->label('Dalības maksa')
                             ->columnSpan(1) 
-                            ->suffix('EUR')
                             ->maxLength(20)
                             ->placeholder('5'),
 

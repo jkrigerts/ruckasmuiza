@@ -8,6 +8,7 @@ class Event extends Component
 {
     public $event;
     public $eventCount;
+    public $monthName;
     
     public function render()
     {

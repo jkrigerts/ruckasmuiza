@@ -255,6 +255,8 @@ $navPadding: 16px;
 // ------------------ Event modal -------------------
 
 .main-events .event .modal{
+    cursor: auto;
+
     position: fixed;
     width: 100dvw;
     height: 100dvh;
@@ -270,14 +272,21 @@ $navPadding: 16px;
     animation: modal-appear $transition-duration forwards ease-out;
 
     .modal-content{
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
         position: relative;
 
         font-size: 1rem;
         color: $color-black;
         background-color: $color-white-gray;
     
-        max-width: 500px;
-        max-height: 600px;
+        width: 95%;
+        max-width: 400px;
+        height: 100%;
+        max-height: 450px;
     
         overflow-y: auto;
         overflow-x: hidden;
@@ -297,6 +306,8 @@ $navPadding: 16px;
             padding: 0.1rem;
             border-radius: 0.6rem;
 
+            cursor: pointer;
+
             svg {
                 scale: 0.6;
             }
@@ -304,7 +315,36 @@ $navPadding: 16px;
 
         .modal-title{
             font-family: $font-display;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .modal-contacts{
+            margin-top: auto;
+
+            .contacts{
+                margin-top: 0.8rem;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-family: inherit;
+                    padding: 0.25rem 0.5rem;
+                    font-size: calc($font-size-sm + 0.25rem);
+                    transition: all .3s;
+
+                    &:hover{
+                        transform: translateY(0.15rem);
+                    }
+                }
+            }
         }
     }
 }
