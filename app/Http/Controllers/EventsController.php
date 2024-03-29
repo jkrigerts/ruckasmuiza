@@ -28,7 +28,7 @@ class EventsController extends Controller
         $dateFormat = 'Y-m-d';
         $req->validate([
             'month' => 'numeric|integer|between:1,12',
-            'year' => 'numeric|integer|between:2020,3000'
+            'year' => 'numeric|integer|between:'. now()->year - 2 .','. now()->year + 2 .''
 
         ]);
 
@@ -38,6 +38,36 @@ class EventsController extends Controller
             (isset($req->month) ? $req->month : now()->month) . '-' .
             now()->day
         );
+
+        $monthsKa = [ // atbild uz jautājumu Kā?
+            'janvāra',
+            'februāra',
+            'marta',
+            'aprīļa',
+            'maija',
+            'jūnija',
+            'jūlija',
+            'augusta',
+            'septembra',
+            'oktobra',
+            'novembra',
+            'decembra'
+        ];
+
+        $monthsKas = [ // atbild uz jautājumu Kas?
+            'janvāris',
+            'februāris',
+            'marts',
+            'aprīlis',
+            'maijs',
+            'jūnijs',
+            'jūlijs',
+            'augusts',
+            'septembris',
+            'oktobris',
+            'novembris',
+            'decembris'
+        ];
 
 
         $firstDayOfMonth = Carbon::parse($today)->startOfMonth()->format($dateFormat);
@@ -50,19 +80,30 @@ class EventsController extends Controller
         
         // add days before this month
         for($i = $firstDayPlace - 1; $i >= 1; $i--){
-            $day = Carbon::parse($today)->startOfMonth()->subDays($i)->format($dateFormat);
-            $return[$day] = [
+            $day = Carbon::parse($today)->startOfMonth()->subDays($i);
+            $dayName = $day->format($dateFormat);
+            $events = Events::where('happens_at', $dayName)->with('type')->get();
+
+            $return[$dayName] = [
+                'monthName' => $monthsKas[$day->month - 1],
+                'day' => $day->day,
                 'thisMonth' => false,
-                'events' => Events::where('happens_at', $day)->with('type')->get(),
+                'events' => $events,
+                'eventCount' => count($events),
             ];
         }
         
         // add this month days
         $currentDate = $firstDayOfMonth;
         while ($currentDate <= $lastDayOfMonth) {
+            $events = Events::where('happens_at', $currentDate)->with('type')->get();
+            
             $return[$currentDate] = [
+                'monthName' => $monthsKas[Carbon::parse($currentDate)->month - 1],
+                'day' => Carbon::parse($currentDate)->day,
                 'thisMonth' => true,
-                'events' => Events::where('happens_at', $currentDate)->with('type')->get(),
+                'events' => $events,
+                'eventCount' => count($events),
             ];
             $currentDate = Carbon::parse($currentDate)->addDay()->format($dateFormat);
         }
@@ -71,15 +112,25 @@ class EventsController extends Controller
         $currentDate = $lastDayOfMonth;
         while(count($return) < 35){
             $currentDate = Carbon::parse($currentDate)->addDay()->format($dateFormat);
+            $events = Events::where('happens_at', $currentDate)->with('type')->get();
+            
             $return[$currentDate] = [
+                'monthName' => $monthsKas[Carbon::parse($currentDate)->month - 1],
+                'day' => Carbon::parse($currentDate)->day,
                 'thisMonth' => false,
-                'events' => Events::where('happens_at', $currentDate)->with('type')->get(),
+                'events' => $events,
+                'eventCount' => count($events),
             ];
         }
         
-        //dd($return);
         return view('events', [
-            'calendarData' => $return
+            'calendarData' => array_chunk($return, 7, true),
+            'previousMonth' => $monthsKas[$today->subMonth()->month - 1],
+            'thisMonth' => $monthsKa[$today->addMonth()->month - 1],
+            'nextMonth' => $monthsKas[$today->addMonth()->month - 1],
+            'monthsSelect' => $monthsKa,
+            'thisYear' => $today->year,
+
         ]);
     }
 }

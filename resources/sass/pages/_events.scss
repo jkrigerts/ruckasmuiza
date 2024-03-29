@@ -1,0 +1,395 @@
+$navWidth: $content-max-width;
+$logoWidth: 130px;
+$navHeight: 60px;
+$navPadding: 16px;
+
+// ------------------- Main page (background) ---------------
+.main-events{
+    position: relative;
+    min-height: calc(100dvh - $navHeight);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        transparent 100%
+    );
+
+
+    .screen-image {
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+// ----------- Content including calendar header and calendar --------------
+.main-events .content{
+    position: relative;
+    min-height: calc(100dvh - $navHeight);
+    max-width: calc($navWidth - $logoWidth); // nav bar max width - logo
+    background-color: rgba($color: $color-black, $alpha: 0.6);
+
+    margin: 0 auto;
+
+    padding: 2rem calc($logoWidth / 2 + 1rem);
+    color: $color-white-gray;
+
+    .header{
+        font-size: $font-size-lg;
+        font-family: $font-display;
+    }
+
+    .date{
+        font-size: $font-size-md;
+        select{
+            color: $color-white;
+            font-size: $font-size-md;
+
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+
+            option{
+                background-color: darken($color: $color-raspberry-red-dark, $amount: 10);
+            }
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    .flex-between{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 0.5rem 0;
+    }
+
+    .footer{
+        margin: 0.5rem 0;
+        color: $color-white-gray;
+
+        strong, a{
+            color: $color-white-gray;
+        }
+    }
+
+    .social-media {
+        position: absolute;
+        bottom: 1rem;
+        left: -3rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        a {
+            color: $color-white;
+        }
+
+        cursor: pointer;
+
+        svg {
+            scale: 1.3;
+        }
+    }
+}
+
+
+@media (max-width: calc($navWidth + $navPadding)) {
+    .main-events .content {
+        margin: 0 calc(($logoWidth / 2) + $navPadding);
+    }
+}
+
+@include lg-breakpoint {
+    .main-events .content {
+        margin: 0;
+        padding: 0.5rem 1rem;
+
+        .flex-between {
+            padding-left: calc($logoWidth + 1rem);
+            text-align: right;
+
+            flex-direction: column;
+            align-items: end;
+
+            gap: 0.5rem;
+        }
+
+        .social-media{
+            position: relative;
+            bottom: auto;
+            left: auto;
+
+            flex-direction: row;
+            margin: 1rem 0;
+        }
+    }
+}
+
+@include sm-breakpoint {
+    .main-events .content {
+        padding: 0.5rem;
+
+        .header{
+            font-size: $font-size-md;
+        }
+
+        .date{
+            font-size: $font-size-sm;
+
+            select{
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}
+
+
+// ------------------ Calendar container ------------------- 
+.main-events .calendar-container{
+    width: 100%;
+    border-collapse: collapse;
+    
+
+    .day{
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+        position: relative;
+        
+        .number{
+            position: absolute;
+            top: 0.25rem;
+            right: 0.25rem;
+            
+            font-family: $font-display;
+            font-size: 1.25rem;
+        }
+
+        .event{
+            padding: 0.25rem;
+            flex-grow: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .sm{ font-size: $font-size-xs; }
+            .md { font-size: $font-size-sm; font-family: $font-display; }
+
+            transition: $transition-duration ease-out;
+            cursor: pointer;
+        }
+    }
+
+    td{
+        border: 1px solid $color-white;
+        position: relative;
+        height: max(16vh, 130px);
+        width: 14.29%;
+    }
+}
+
+@include xl-breakpoint{
+    .main-events .calendar-container .day .event .sm {
+        &:nth-child(1), &:nth-child(3){
+            display: none;
+        }
+    }
+}
+
+@include lg-breakpoint{
+    .main-events .calendar-container {
+        .day { 
+            .number{
+                font-size: 1rem;
+            }
+
+        }
+    }
+}
+
+@include md-breakpoint{
+    .main-events .calendar-container .day {
+        .event {
+            .md{
+                font-size: 40%;
+            }
+
+            .sm {
+                display: none;
+            }
+        }
+    }
+}
+
+@include sm-breakpoint{
+    .main-events .calendar-container{
+        td {
+            height: 120px;
+        }
+    }
+
+    .main-events .calendar-container .day .number {
+        font-size: 0.75rem;
+    }
+}
+
+@include xs-breakpoint{
+    .main-events .calendar-container{
+        td {
+            height: 80px;
+            overflow-y: scroll;
+        }
+    }
+}
+
+// ------------------ Event modal -------------------
+
+.main-events .event .modal{
+    cursor: auto;
+
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+
+    background-color: rgba($color: $color-black, $alpha: 0.6);
+    z-index: 10;
+
+    display: grid;
+    place-items: center;
+
+    animation: modal-appear $transition-duration forwards ease-out;
+
+    .modal-content{
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        position: relative;
+
+        font-size: 1rem;
+        color: $color-black;
+        background-color: $color-white-gray;
+    
+        width: 95%;
+        max-width: 400px;
+        height: 100%;
+        max-height: 450px;
+    
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        padding: 1.4rem 1rem;
+
+        .close-btn{
+            color: $color-white;
+            
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+
+            display: grid;
+            place-items: center;
+
+            padding: 0.1rem;
+            border-radius: 0.6rem;
+
+            cursor: pointer;
+
+            svg {
+                scale: 0.6;
+            }
+        }
+
+        .modal-title{
+            font-family: $font-display;
+            font-size: 1.8rem;
+        }
+
+        .modal-contacts{
+            margin-top: auto;
+
+            .contacts{
+                margin-top: 0.8rem;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-family: inherit;
+                    padding: 0.25rem 0.5rem;
+                    font-size: calc($font-size-sm + 0.25rem);
+                    transition: all .3s;
+
+                    &:hover{
+                        transform: translateY(0.15rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-events .event .modal-enter{
+    .modal-content{
+        animation: modal-content-appear $transition-duration ease-out forwards;
+    }
+}
+
+.main-events .event .modal-leave{
+    .modal-content{
+        animation: modal-content-leave $transition-duration ease-in forwards;
+    }
+
+    animation: modal-leave $transition-duration ease-in forwards;
+}
+
+@keyframes modal-appear{
+    0%{
+        background-color: rgba($color: $color-black, $alpha: 0);
+    }
+}
+
+@keyframes modal-leave {
+    100%{
+        background-color: rgba($color: $color-black, $alpha: 0);
+    }
+}
+
+@keyframes modal-content-appear {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+}
+
+@keyframes modal-content-leave {
+    100%{
+        opacity: 0;
+        scale: 0;
+    }
+}
