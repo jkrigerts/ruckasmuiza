@@ -10,9 +10,9 @@
                 <div class="grid-content">
                     <x-landing.icon-repeat :icon="$icon" />
                     <h2>{{ $title }}</h2>
-                    <p>{{ $description }}</p>
+                    {!! $description !!}
                 </div>
-                <a class="landing-button" href={{route($link)}}>Skatīties tālāk</a>
+                <a class="landing-button" href={{route($link)}}>{{ $linkText ?? "Uzzināt vairāk"}}</a>
             </div>
         </div>
     </div>
