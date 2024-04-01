@@ -84,7 +84,6 @@ $navPadding: 16px;
         flex-direction: column;
         gap: 2rem;
 
-
         h1{
             font-weight: normal;
             font-size: calc($font-size-lg + 2.5rem);
@@ -96,16 +95,19 @@ $navPadding: 16px;
 
         .month-switcher{
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: 4rem;
+
+            margin: 0 auto;
+            max-width: 500px;
+            width: 100%;
 
             font-size: calc($font-size-lg + 0.5rem);
             font-weight: bold;
 
             svg{
                 cursor: pointer;
-                
+
                 width: 4rem;
                 height: 4rem;
             }
@@ -188,6 +190,17 @@ $navPadding: 16px;
 
             select{
                 font-size: $font-size-sm;
+            }
+        }
+
+        .calendar-header{
+            h1{
+                font-weight: normal;
+                font-size: calc($font-size-lg);
+            }
+    
+            p{
+                font-size: calc($font-size-md);
             }
         }
     }
