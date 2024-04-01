@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Models\Events as EventsModal;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Livewire\Attributes\Url;
 
 class Events extends Component
 {
@@ -17,6 +18,7 @@ class Events extends Component
     public $monthsSelect;
     public $thisYear;
 
+    #[Url(except: '')]
     public $monthOffset = 0; // this is the way arrow buttons are going to work now()->addMonths($monthOffset)
 
     public function data(){
@@ -128,10 +130,12 @@ class Events extends Component
     public function up(){
         $this->monthOffset++;
         $this->data();
+        $this->dispatch('data-updated');
     }
 
     public function down(){
         $this->monthOffset--;
         $this->data();
+        $this->dispatch('data-updated');
     }
 }

@@ -3,6 +3,53 @@ $logoWidth: 130px;
 $navHeight: 60px;
 $navPadding: 16px;
 
+// ------------------ Calendar animations -------------------
+.calendar-leave-up {
+    animation: calendar-leave-up 250ms forwards;   
+}
+
+.calendar-enter-up{
+    animation: calendar-enter-up 250ms forwards;
+}
+
+@keyframes calendar-leave-up {
+    100%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes calendar-enter-up {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+
+
+.calendar-leave-down {
+    animation: calendar-leave-down 250ms forwards;   
+}
+
+.calendar-enter-down{
+    animation: calendar-enter-down 250ms forwards;
+}
+
+@keyframes calendar-leave-down {
+    100%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes calendar-enter-down {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
 // ------------------- Main page (background) ---------------
 .main-events{
     position: relative;
@@ -32,6 +79,8 @@ $navPadding: 16px;
 
 // ----------- Content including calendar header and calendar --------------
 .main-events .content{
+    overflow: hidden;
+
     position: relative;
     min-height: calc(100dvh - $navHeight);
     max-width: calc($navWidth - $logoWidth); // nav bar max width - logo
@@ -67,13 +116,6 @@ $navPadding: 16px;
         }
     }
 
-    // .flex-between{
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: space-between;
-
-    //     margin: 0.5rem 0;
-    // }
 
     .calendar-header{
         margin: 2rem 0;
@@ -210,7 +252,9 @@ $navPadding: 16px;
 // ------------------ Calendar container ------------------- 
 .main-events .calendar-container{
     width: 100%;
+    
     border-collapse: collapse;
+       
     
 
     .day{

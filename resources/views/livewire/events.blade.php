@@ -1,53 +1,36 @@
 
 
 
-    <section class="main-events">
+    <section class="main-events" >
         <img class="screen-image" src="{{ asset('images/landing/landing.webp') }}" alt="">
         
-        <div class="content">
-            {{-- <div class="flex-between">
-                <p class="header">Ruckas muiža ielūdz!</p>
-                <form action="{{ route('events') }}" method="get">
-                    <p class="date">
-                        <select name="year" onchange="this.form.submit()">
-                            @for ($i = now()->year - 2; $i <= now()->year + 2; $i++)
-                                <option value="{{ $i }}" @if ($thisYear == $i) selected @endif>{{ $i }}</option>
-                                
-                            @endfor
-                        </select>
-                        gada 
-                        <select name="month" onchange="this.form.submit()">
-                            @foreach ($monthsSelect as $month)
-                                <option value="{{ $loop->index + 1}}" @if ($month == $thisMonth) selected @endif>{{ $month }}</option>
-                            @endforeach
-                        </select>
-    
-                        <strong>PASĀKUMU KALENDĀRS</strong>
-                    </p>
-                </form>
-            </div>
-            <p>Uzziniet vairāk, izvēloties krāsaino datumu</p> --}}
+        <div class="content" x-data="{ show_calendar: true, transition_left: false }" x-init="@this.on('data-updated', () => { show_calendar = true })">
 
             <div class="calendar-header">
                 <h1>Pasākumu kalendārs</h1>
-                <p>Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu – atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.</p>
+                <p>Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu - atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.</p>
             
                 <div class="month-switcher">
-                    <div wire:click="down">
+                    <div @click="() => {transition_left = true ; show_calendar = false; }" wire:click="down" >
                         <x-icons.caret-left />
                     </div>
 
                     <p>{{ $thisMonth }} {{ $thisYear }}</p>
                     
-                    <div wire:click="up">
+                    <div @click="() => {transition_left = false ; show_calendar = false; }" wire:click="up">
                         <x-icons.caret-right />
                     </div>
                 </div>
             </div>
 
-            <table class="calendar-container">
+            <table class="calendar-container" 
+                :class="show_calendar 
+                    ? transition_left ? 'calendar-enter-down' : 'calendar-enter-up'
+                    : transition_left ? 'calendar-leave-down' : 'calendar-leave-up'
+                "
+            >
                 @foreach ($calendarData as $row)
-                    <tr>
+                    <tr >
                         @foreach ($row as $date => $data)
                             <td>
                                 <x-events.day :data="$data"/>
