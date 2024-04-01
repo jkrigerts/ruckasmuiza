@@ -6,10 +6,10 @@
 <x-layouts.app>
 
     <section class="main-events">
-        <img class="screen-image" src="{{ asset('images/landing/landing7.webp') }}" alt="">
+        <img class="screen-image" src="{{ asset('images/landing/landing.webp') }}" alt="">
         
         <div class="content">
-            <div class="flex-between">
+            {{-- <div class="flex-between">
                 <p class="header">Ruckas muiža ielūdz!</p>
                 <form action="{{ route('events') }}" method="get">
                     <p class="date">
@@ -30,7 +30,18 @@
                     </p>
                 </form>
             </div>
-            <p>Uzziniet vairāk, izvēloties krāsaino datumu</p>
+            <p>Uzziniet vairāk, izvēloties krāsaino datumu</p> --}}
+
+            <div class="calendar-header">
+                <h1>Pasākumu kalendārs</h1>
+                <p>Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu – atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.</p>
+            
+                <div class="month-switcher">
+                    <x-icons.caret-left />
+                    <p>Aprīlis 2024</p>
+                    <x-icons.caret-right />
+                </div>
+            </div>
 
             <table class="calendar-container">
                 @foreach ($calendarData as $row)

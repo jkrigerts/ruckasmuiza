@@ -67,12 +67,49 @@ $navPadding: 16px;
         }
     }
 
-    .flex-between{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    // .flex-between{
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
 
-        margin: 0.5rem 0;
+    //     margin: 0.5rem 0;
+    // }
+
+    .calendar-header{
+        margin: 2rem 0;
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+
+        h1{
+            font-weight: normal;
+            font-size: calc($font-size-lg + 2.5rem);
+        }
+
+        p{
+            font-size: calc($font-size-md + 0.5rem);
+        }
+
+        .month-switcher{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+
+            font-size: calc($font-size-lg + 0.5rem);
+            font-weight: bold;
+
+            svg{
+                cursor: pointer;
+                
+                width: 4rem;
+                height: 4rem;
+            }
+        }
     }
 
     .footer{
