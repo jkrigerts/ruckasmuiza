@@ -79,6 +79,7 @@ $navPadding: 16px;
 
 // ----------- Content including calendar header and calendar --------------
 .main-events .content{
+    user-select: none;
     overflow: hidden;
 
     position: relative;
@@ -371,6 +372,7 @@ $navPadding: 16px;
     animation: modal-appear $transition-duration forwards ease-out;
 
     .modal-content{
+        user-select: auto;
 
         display: flex;
         flex-direction: column;
