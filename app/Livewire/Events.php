@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Models\Events as EventsModal;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Livewire\Attributes\Url;
 
 class Events extends Component
@@ -20,6 +21,8 @@ class Events extends Component
 
     #[Url(except: '')]
     public $monthOffset = 0; // this is the way arrow buttons are going to work now()->addMonths($monthOffset)
+
+    
 
     public function data(){
         $dateFormat = 'Y-m-d';
@@ -108,6 +111,22 @@ class Events extends Component
                 'eventCount' => count($events),
             ];
         }
+
+        // Fix anomaly that accures sometimes, and required sixth line in the calendar
+        if(Carbon::parse($currentDate)->dayOfWeek == 1){
+            while(count($return) < 42){
+                $currentDate = Carbon::parse($currentDate)->addDay()->format($dateFormat);
+                $events = EventsModal::where('happens_at', $currentDate)->with('type')->get();
+                
+                $return[$currentDate] = [
+                    'monthName' => $monthsKas[Carbon::parse($currentDate)->month - 1],
+                    'day' => Carbon::parse($currentDate)->day,
+                    'thisMonth' => false,
+                    'events' => $events,
+                    'eventCount' => count($events),
+                ];
+            }
+        }
         
         
         $this->calendarData = array_chunk($return, 7, true);
@@ -119,7 +138,7 @@ class Events extends Component
 
     }
 
-    public function render(Request $req)
+    public function render()
     {
         $this->data();
         return view('livewire.events');

@@ -3,52 +3,7 @@ $logoWidth: 130px;
 $navHeight: 60px;
 $navPadding: 16px;
 
-// ------------------ Calendar animations -------------------
-.calendar-leave-up {
-    animation: calendar-leave-up 250ms forwards;   
-}
 
-.calendar-enter-up{
-    animation: calendar-enter-up 250ms forwards;
-}
-
-@keyframes calendar-leave-up {
-    100%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-}
-
-@keyframes calendar-enter-up {
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-}
-
-
-
-.calendar-leave-down {
-    animation: calendar-leave-down 250ms forwards;   
-}
-
-.calendar-enter-down{
-    animation: calendar-enter-down 250ms forwards;
-}
-
-@keyframes calendar-leave-down {
-    100%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
-}
-
-@keyframes calendar-enter-down {
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-}
 
 // ------------------- Main page (background) ---------------
 .main-events{
@@ -125,15 +80,16 @@ $navPadding: 16px;
 
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
 
         h1{
+            font-family: $font-display;
             font-weight: normal;
-            font-size: calc($font-size-lg + 2.5rem);
+            font-size: calc($font-size-lg);
         }
 
         p{
-            font-size: calc($font-size-md + 0.5rem);
+            font-size: calc($font-size-md);
         }
 
         .month-switcher{
@@ -142,7 +98,7 @@ $navPadding: 16px;
             align-items: center;
 
             margin: 0 auto;
-            max-width: 500px;
+            max-width: 250px;
             width: 100%;
 
             font-size: calc($font-size-lg + 0.5rem);
@@ -151,8 +107,8 @@ $navPadding: 16px;
             svg{
                 cursor: pointer;
 
-                width: 4rem;
-                height: 4rem;
+                width: 2rem;
+                height: 2rem;
             }
         }
     }
@@ -199,16 +155,6 @@ $navPadding: 16px;
         margin: 0;
         padding: 0.5rem 1rem;
 
-        .flex-between {
-            padding-left: calc($logoWidth + 1rem);
-            text-align: right;
-
-            flex-direction: column;
-            align-items: end;
-
-            gap: 0.5rem;
-        }
-
         .social-media{
             position: relative;
             bottom: auto;
@@ -236,16 +182,6 @@ $navPadding: 16px;
             }
         }
 
-        .calendar-header{
-            h1{
-                font-weight: normal;
-                font-size: calc($font-size-lg);
-            }
-    
-            p{
-                font-size: calc($font-size-md);
-            }
-        }
     }
 }
 
@@ -253,7 +189,6 @@ $navPadding: 16px;
 // ------------------ Calendar container ------------------- 
 .main-events .calendar-container{
     width: 100%;
-    
     border-collapse: collapse;
        
     
@@ -487,5 +422,52 @@ $navPadding: 16px;
     100%{
         opacity: 0;
         scale: 0;
+    }
+}
+
+// ------------------ Calendar animations -------------------
+.calendar-leave-up {
+    animation: calendar-leave-up 250ms forwards;   
+}
+
+.calendar-enter-up{
+    animation: calendar-enter-up 250ms;
+}
+
+@keyframes calendar-leave-up {
+    100%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes calendar-enter-up {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+
+
+.calendar-leave-down {
+    animation: calendar-leave-down 250ms forwards;   
+}
+
+.calendar-enter-down{
+    animation: calendar-enter-down 250ms;
+}
+
+@keyframes calendar-leave-down {
+    100%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes calendar-enter-down {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
     }
 }
