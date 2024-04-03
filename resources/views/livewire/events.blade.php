@@ -9,7 +9,6 @@
             <div class="calendar-header">
                 <h1>Pasākumu kalendārs</h1>
                 <p>Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu - atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.</p>
-            
                 <div class="month-switcher">
                     <div @click="() => {transition_left = true ; show_calendar = false; }" wire:click="down" >
                         <x-icons.caret-left />
@@ -22,7 +21,7 @@
                     </div>
                 </div>
             </div>
-
+            <p class="explanation">Uzziniet vairāk, izvēloties krāsaino datumu</p>
             <table class="calendar-container" 
                 :class="show_calendar 
                     ? transition_left ? 'calendar-enter-down' : 'calendar-enter-up'
