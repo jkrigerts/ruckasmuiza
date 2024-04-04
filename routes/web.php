@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\EventsController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,8 +34,11 @@ Route::group([
        );
 
 
-Route::get('/pasakumi', [\App\Http\Controllers\EventsController::class, 'index'])
-       ->name("events");
+Route::get('/pasakumi', function (Request $req) { 
+       if ($req->monthOffset == null) return redirect(route('events', ['monthOffset' => 0])); // month offset pārbaude
+       return view('events'); 
+})->name("events");
+       
 
 Route::group([
        "prefix" => "/piedavajumi",

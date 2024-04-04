@@ -4,16 +4,9 @@ $navHeight: 60px;
 $navPadding: 16px;
 
 // ------------------- Main page (background) ---------------
-.main-events{
+.main-events {
     position: relative;
     min-height: calc(100dvh - $navHeight);
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        transparent 100%
-    );
-
 
     .screen-image {
         z-index: -1;
@@ -31,25 +24,32 @@ $navPadding: 16px;
 }
 
 // ----------- Content including calendar header and calendar --------------
-.main-events .content{
+.main-events .content {
+    user-select: none;
+    overflow: hidden;
+
     position: relative;
     min-height: calc(100dvh - $navHeight);
     max-width: calc($navWidth - $logoWidth); // nav bar max width - logo
-    background-color: rgba($color: $color-black, $alpha: 0.6);
+    background-color: rgba(5, 5, 5, 0.7);
 
     margin: 0 auto;
 
     padding: 2rem calc($logoWidth / 2 + 1rem);
     color: $color-white-gray;
 
-    .header{
+    .header {
         font-size: $font-size-lg;
         font-family: $font-display;
     }
 
-    .date{
+    .explanation {
+        margin-bottom: 4px;
+    }
+
+    .date {
         font-size: $font-size-md;
-        select{
+        select {
             color: $color-white;
             font-size: $font-size-md;
 
@@ -57,29 +57,73 @@ $navPadding: 16px;
             border: 1px solid transparent;
             border-radius: 0.25rem;
 
-            option{
-                background-color: darken($color: $color-raspberry-red-dark, $amount: 10);
+            option {
+                background-color: darken(
+                    $color: $color-raspberry-red-dark,
+                    $amount: 10
+                );
             }
 
-            &:focus{
+            &:focus {
                 outline: none;
             }
         }
     }
 
-    .flex-between{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .calendar-header {
+        margin: 2rem 0;
 
-        margin: 0.5rem 0;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        h1 {
+            font-family: $font-display;
+            font-weight: normal;
+            font-size: $font-size-xl;
+            text-shadow: $text-shadow;
+            text-transform: uppercase;
+            transform: translateZ(0);
+
+            @include md-breakpoint {
+                font-size: calc($font-size-lg + 3vw);
+            }
+        }
+
+        p {
+            font-size: $font-size-md;
+            // text-align: left;
+        }
+
+        .month-switcher {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 0 auto;
+            max-width: 250px;
+            width: 100%;
+
+            font-size: calc($font-size-lg + 0.5rem);
+            font-weight: bold;
+
+            svg {
+                cursor: pointer;
+
+                width: 2rem;
+                height: 2rem;
+            }
+        }
     }
 
-    .footer{
+    .footer {
         margin: 0.5rem 0;
         color: $color-white-gray;
 
-        strong, a{
+        strong,
+        a {
             color: $color-white-gray;
         }
     }
@@ -105,7 +149,6 @@ $navPadding: 16px;
     }
 }
 
-
 @media (max-width: calc($navWidth + $navPadding)) {
     .main-events .content {
         margin: 0 calc(($logoWidth / 2) + $navPadding);
@@ -117,17 +160,7 @@ $navPadding: 16px;
         margin: 0;
         padding: 0.5rem 1rem;
 
-        .flex-between {
-            padding-left: calc($logoWidth + 1rem);
-            text-align: right;
-
-            flex-direction: column;
-            align-items: end;
-
-            gap: 0.5rem;
-        }
-
-        .social-media{
+        .social-media {
             position: relative;
             bottom: auto;
             left: auto;
@@ -142,91 +175,114 @@ $navPadding: 16px;
     .main-events .content {
         padding: 0.5rem;
 
-        .header{
+        .header {
             font-size: $font-size-md;
         }
 
-        .date{
+        .date {
             font-size: $font-size-sm;
 
-            select{
+            select {
                 font-size: $font-size-sm;
             }
         }
     }
 }
 
-
-// ------------------ Calendar container ------------------- 
-.main-events .calendar-container{
+// ------------------ Calendar container -------------------
+.main-events .calendar-container {
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    
 
-    .day{
+    .day {
         display: flex;
         flex-direction: column;
 
         height: 100%;
         position: relative;
-        
-        .number{
+
+        .number {
             position: absolute;
-            top: 0.25rem;
-            right: 0.25rem;
-            
+            top: 0rem;
+            right: 0rem;
+            padding: 0 0.4rem 0.2rem 0.2rem;
+
             font-family: $font-display;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
+            line-height: 1.3rem;
         }
 
-        .event{
+        .event {
             padding: 0.25rem;
             flex-grow: 1;
+            flex-basis: 0;
+            overflow: hidden;
 
             display: flex;
             flex-direction: column;
             justify-content: center;
 
-            .sm{ font-size: $font-size-xs; }
-            .md { font-size: $font-size-sm; font-family: $font-display; }
+            .sm {
+                font-size: $font-size-xs;
+            }
+            .md {
+                font-size: $font-size-sm;
+                font-family: $font-display;
+                text-transform: uppercase;
+            }
+
+            &:not(:only-of-type) {
+                .sm {
+                    font-size: calc($font-size-xs - 0.05rem);
+                    line-height: 0.7rem;
+                }
+
+                .md {
+                    font-size: calc($font-size-sm - 0.1rem);
+                    line-height: 0.8rem;
+                }
+            }
 
             transition: $transition-duration ease-out;
             cursor: pointer;
         }
     }
 
-    td{
+    td {
         border: 1px solid $color-white;
         position: relative;
-        height: max(16vh, 130px);
+        height: max(16vh, 150px);
         width: 14.29%;
     }
 }
 
-@include xl-breakpoint{
+@include xl-breakpoint {
     .main-events .calendar-container .day .event .sm {
-        &:nth-child(1), &:nth-child(3){
+        &:nth-child(1),
+        &:nth-child(3) {
             display: none;
         }
     }
 }
 
-@include lg-breakpoint{
+@include lg-breakpoint {
     .main-events .calendar-container {
-        .day { 
-            .number{
-                font-size: 1rem;
+        .day {
+            .number {
+                font-size: 1.2rem;
             }
-
         }
     }
 }
 
-@include md-breakpoint{
+@include md-breakpoint {
     .main-events .calendar-container .day {
         .event {
-            .md{
-                font-size: 40%;
+            &:not(:only-of-type) .md,
+            .md {
+                font-size: calc(0.2rem + 1vw);
+                line-height: 0.65rem;
             }
 
             .sm {
@@ -236,20 +292,22 @@ $navPadding: 16px;
     }
 }
 
-@include sm-breakpoint{
-    .main-events .calendar-container{
+@include sm-breakpoint {
+    .main-events .calendar-container {
         td {
             height: 120px;
         }
     }
 
     .main-events .calendar-container .day .number {
-        font-size: 0.75rem;
+        line-height: 1.2rem;
+        font-size: 1rem;
+        padding: 0 0.3rem 0.2rem 0.2rem;
     }
 }
 
-@include xs-breakpoint{
-    .main-events .calendar-container{
+@include xs-breakpoint {
+    .main-events .calendar-container {
         td {
             height: 80px;
             overflow-y: scroll;
@@ -259,7 +317,7 @@ $navPadding: 16px;
 
 // ------------------ Event modal -------------------
 
-.main-events .event .modal{
+.main-events .event .modal {
     cursor: auto;
 
     position: fixed;
@@ -268,15 +326,18 @@ $navPadding: 16px;
     top: 0;
     left: 0;
 
-    background-color: rgba($color: $color-black, $alpha: 0.6);
-    z-index: 10;
+    background-color: rgba(5, 5, 5, 0.7);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    z-index: 51;
 
     display: grid;
     place-items: center;
 
     animation: modal-appear $transition-duration forwards ease-out;
 
-    .modal-content{
+    .modal-content {
+        user-select: auto;
 
         display: flex;
         flex-direction: column;
@@ -287,20 +348,20 @@ $navPadding: 16px;
         font-size: 1rem;
         color: $color-black;
         background-color: $color-white-gray;
-    
+
         width: 95%;
         max-width: 400px;
         height: 100%;
         max-height: 450px;
-    
+
         overflow-y: auto;
         overflow-x: hidden;
 
         padding: 1.4rem 1rem;
 
-        .close-btn{
+        .close-btn {
             color: $color-white;
-            
+
             position: absolute;
             top: 0.5rem;
             right: 0.5rem;
@@ -318,22 +379,23 @@ $navPadding: 16px;
             }
         }
 
-        .modal-title{
+        .modal-title {
             font-family: $font-display;
             font-size: 1.8rem;
+            text-transform: uppercase;
         }
 
-        .modal-contacts{
+        .modal-contacts {
             margin-top: auto;
 
-            .contacts{
+            .contacts {
                 margin-top: 0.8rem;
 
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
 
-                a{
+                a {
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
@@ -343,9 +405,9 @@ $navPadding: 16px;
                     font-family: inherit;
                     padding: 0.25rem 0.5rem;
                     font-size: calc($font-size-sm + 0.25rem);
-                    transition: all .3s;
+                    transition: all 0.3s;
 
-                    &:hover{
+                    &:hover {
                         transform: translateY(0.15rem);
                     }
                 }
@@ -354,42 +416,87 @@ $navPadding: 16px;
     }
 }
 
-.main-events .event .modal-enter{
-    .modal-content{
+.main-events .event .modal-enter {
+    .modal-content {
         animation: modal-content-appear $transition-duration ease-out forwards;
     }
 }
 
-.main-events .event .modal-leave{
-    .modal-content{
+.main-events .event .modal-leave {
+    .modal-content {
         animation: modal-content-leave $transition-duration ease-in forwards;
     }
 
     animation: modal-leave $transition-duration ease-in forwards;
 }
 
-@keyframes modal-appear{
-    0%{
+@keyframes modal-appear {
+    0% {
         background-color: rgba($color: $color-black, $alpha: 0);
     }
 }
 
 @keyframes modal-leave {
-    100%{
+    100% {
         background-color: rgba($color: $color-black, $alpha: 0);
     }
 }
 
 @keyframes modal-content-appear {
-    0%{
+    0% {
         opacity: 0;
         scale: 0;
     }
 }
 
 @keyframes modal-content-leave {
-    100%{
+    100% {
         opacity: 0;
         scale: 0;
+    }
+}
+
+// ------------------ Calendar animations -------------------
+.calendar-leave-up {
+    animation: calendar-leave-up 250ms forwards;
+}
+
+.calendar-enter-up {
+    animation: calendar-enter-up 250ms;
+}
+
+@keyframes calendar-leave-up {
+    100% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes calendar-enter-up {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+.calendar-leave-down {
+    animation: calendar-leave-down 250ms forwards;
+}
+
+.calendar-enter-down {
+    animation: calendar-enter-down 250ms;
+}
+
+@keyframes calendar-leave-down {
+    100% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes calendar-enter-down {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
     }
 }
