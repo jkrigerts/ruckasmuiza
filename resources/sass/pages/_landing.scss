@@ -61,7 +61,16 @@
     }
     .landing-section-wrapper {
         height: calc(100vh - 60px); // 60px - nav height
-        min-height: 600px;
+        min-height: 690px;
+
+        &:first-of-type {
+            min-height: 250px;
+
+            @include lg-breakpoint {
+                height: calc(100svh - 60px);
+            }
+        }
+
         padding-bottom: 30px;
         position: relative;
         scroll-snap-align: start none;
@@ -73,8 +82,8 @@
         );
 
         @include md-breakpoint {
-            // height: auto;
             padding-bottom: 10px;
+            scroll-margin-top: 60px;
         }
 
         .screen-image {
