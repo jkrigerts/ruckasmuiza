@@ -1,0 +1,45 @@
+.simple-page {
+    max-width: calc($navWidth - $logoWidth);
+    margin: 0 auto 2rem;
+
+    .head {
+        text-align: center;
+        margin: 4rem 1rem 3rem;
+    }
+
+    section {
+        background-color: $color-white-gray;
+        text-align: justify;
+
+        padding: 2.5rem calc($logoWidth / 2);
+    }
+
+    @include content-max-width-breakpoint {
+        margin: 0 calc(($logoWidth / 2) + $navPadding) 2rem;
+    }
+
+    @include lg-breakpoint {
+        margin: 0 $navPadding 2rem;
+
+        section {
+            padding: 2.5rem calc($logoWidth / 2);
+        }
+    }
+
+    @include lg-breakpoint {
+        section {
+            padding: 2rem;
+        }
+    }
+
+    @include xs-breakpoint {
+        section {
+            padding: $navPadding;
+        }
+    }
+
+    p {
+        font-size: $font-size-md;
+        margin-bottom: 2rem;
+    }
+}

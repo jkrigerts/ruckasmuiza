@@ -7,6 +7,8 @@
         </a>
         <nav  :class="open ? 'mobile-navigation' : ''">
             <ul>
+
+                <x-navigation.nav-link href="landing">Sākums</x-navigation.nav-link>
                 <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>
                 <x-navigation.nav-link href="services."
                                        :items="[
