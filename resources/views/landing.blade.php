@@ -1,7 +1,8 @@
 <x-layouts.app>
 	
-<div class="landing" x-data="{ scrolled: false }" @scroll="scrolled = ($event.target.scrollTop > 0)">	
-		<button class="back-to-top" x-show="scrolled" x-data="{ scrollToTop: () => { document.querySelector('.landing').scrollTo({ top: 0, behavior: 'smooth' }); } }" @click="scrollToTop()">
+	<div id="top"></div>
+<div class="landing" x-data="{ scrolled: false }" @scroll.throttle.debounce="scrolled = ($event.target.scrollTop > 0)" @scroll.window.throttle.debounce="scrolled = (window.scrollY > 10)">	
+		<button class="back-to-top" x-show="scrolled" x-data="{ scrollToTop: () => { document.querySelector('.landing').scrollTo({ top: 0, behavior: 'smooth' }); window.scrollTo({ top: 0, behavior: 'smooth' }); }}" @click="scrollToTop()">
 			<x-icons.down></x-icons.down>
 		</button>
 		<section class="landing-section-wrapper">
