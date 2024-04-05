@@ -1,0 +1,13 @@
+.section-heading {
+    font-family: $font-display;
+    font-weight: normal;
+    color: $color-white-gray;
+    font-size: $font-size-xl;
+    text-shadow: $text-shadow;
+    text-transform: uppercase;
+    transform: translateZ(0);
+
+    @include md-breakpoint {
+        font-size: calc($font-size-lg + 3vw);
+    }
+}

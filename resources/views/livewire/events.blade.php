@@ -2,12 +2,12 @@
 
 
     <section class="main-events" >
-        <img class="screen-image" src="{{ asset('images/landing/landing.webp') }}" alt="">
+        <x-background-image src="{{ asset('images/landing/landing.webp') }}" alt="Ruckas muiža" gradient={{false}}/>
         
         <div class="content" x-data="{ show_calendar: true, transition_left: false }" x-init="@this.on('data-updated', () => { show_calendar = true })">
 
             <div class="calendar-header">
-                <h1>Pasākumu kalendārs</h1>
+                <x-section-heading>Pasākumu kalendārs</x-section-heading>
                 <p>Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu - atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.</p>
                 <div class="month-switcher">
                     <div @click="() => {transition_left = true ; show_calendar = false; }" wire:click="down" >

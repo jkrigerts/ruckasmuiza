@@ -7,9 +7,12 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/background-image";
 @import "components/navigation";
+@import "components/section-heading";
 
 @import "layout/app";
+@import "layout/simple-page";
 
 @import "pages/about";
 @import "pages/blog/gabrans";

@@ -1,26 +1,7 @@
-$navWidth: $content-max-width;
-$logoWidth: 130px;
-$navHeight: 60px;
-$navPadding: 16px;
-
 // ------------------- Main page (background) ---------------
 .main-events {
     position: relative;
     min-height: calc(100dvh - $navHeight);
-
-    .screen-image {
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        position: absolute;
-
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
 }
 
 // ----------- Content including calendar header and calendar --------------
@@ -79,19 +60,6 @@ $navPadding: 16px;
         flex-direction: column;
         gap: 1.5rem;
 
-        h1 {
-            font-family: $font-display;
-            font-weight: normal;
-            font-size: $font-size-xl;
-            text-shadow: $text-shadow;
-            text-transform: uppercase;
-            transform: translateZ(0);
-
-            @include md-breakpoint {
-                font-size: calc($font-size-lg + 3vw);
-            }
-        }
-
         p {
             font-size: $font-size-md;
             // text-align: left;
@@ -149,7 +117,7 @@ $navPadding: 16px;
     }
 }
 
-@media (max-width: calc($navWidth + $navPadding)) {
+@include content-max-width-breakpoint {
     .main-events .content {
         margin: 0 calc(($logoWidth / 2) + $navPadding);
     }
