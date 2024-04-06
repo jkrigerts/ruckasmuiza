@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
+use App\Http\Controllers\GalleryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +16,29 @@ use App\Livewire\Counter;
 |
 */
 
-Route::get('/', function () {return view('landing');})
+Route::get('/', function () {
+       return view('landing');
+})
        ->name("landing");
-Route::get('/par-muizu', function () { return view('about');})
+Route::get('/par-muizu', function () {
+       return view('about');
+})
        ->name("about");
-Route::get('/afisa', function () { return view('events');})
+Route::get('/afisa', function () {
+       return view('events');
+})
        ->name("events");
-Route::get('/izklaide', function () {return view('services');})
+Route::get('/izklaide', function () {
+       return view('services');
+})
        ->name("services");
-Route::get('/naksnosana', function () { return view('stay');})
+Route::get('/naksnosana', function () {
+       return view('stay');
+})
        ->name("stay");
-Route::get('/blogs', function () { return view('blog');})
+Route::get('/blogs', function () {
+       return view('blog');
+})
        ->name("blog");
-Route::get('/galerija', function () { return view('gallery');})
-       ->name("gallery");
+Route::get('/galerija', [GalleryController::class, 'index'])
+       ->name('gallery');
