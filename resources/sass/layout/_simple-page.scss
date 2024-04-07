@@ -49,6 +49,7 @@
     @include xs-breakpoint {
         section {
             padding: $navPadding;
+            text-align: left;
         }
     }
 
