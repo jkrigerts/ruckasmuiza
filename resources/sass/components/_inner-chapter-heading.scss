@@ -1,0 +1,12 @@
+.inner-chapter-heading {
+    text-transform: uppercase;
+    font-family: $font-display;
+    font-size: $font-size-lg;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include md-breakpoint {
+        font-size: calc(1.5rem + 1vw);
+        text-align: left;
+    }
+}

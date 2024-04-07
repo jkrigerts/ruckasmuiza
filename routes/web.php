@@ -26,7 +26,7 @@ Route::group([
        ],
        function() {
               Route::get('/', function () {return view('services/services');})->name("");
-              Route::get('/viesnica', function () {return view('services/stay');})->name("stay");
+              Route::get('/naksnosana', function () {return view('services/stay');})->name("stay");
               Route::get('/kazas', function () {return view('services/weddings');})->name("weddings");
               Route::get('/svinibas', function () {return view('services/celebrations');})->name("celebrations");
               Route::get('/noma', function () {return view('services/rent');})->name("rent");

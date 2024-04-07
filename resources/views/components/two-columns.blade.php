@@ -5,7 +5,7 @@
 ])
 
 <article class="two-columns {{$swap ? "two-columns-swap" : "" }}">
-  <h2>{{ $title }}</h2>
+  <x-inner-chapter-heading>{{ $title }}</x-inner-chapter-heading>
   <div>
     <div class="text">
       {{ $slot }}
