@@ -2,12 +2,24 @@
 
 <div
     class="event"
-    @isset($event['type']['color'])
-        style="background-color: {{ $event['type']['color'] }}; gap: {{ 0.25 / $eventCount }}rem;"
-    @endisset
+    style="--event-color: {{ $event['type']['color'] }};"
     x-data="{ open: 0 }"
-    @click="open = 1"
+    
 >
+
+    <button @isset($event['type']['color'])
+                style="gap: {{ 0.25 / $eventCount }}rem;"
+            @endisset
+            class="event-btn"
+            @click="open = 1"
+    >
+        <div>
+            <p class="sm">{{ $event['type']['name'] }}</p>
+            <p class="sm">{{ $event['time'] }}</p>
+        </div>
+        <p class="md">{{ $event['title'] }}</p>
+        <p class="sm">{{ $event['info'] }}</p>
+    </button>
    
     <div class="modal" 
         x-show="open"
@@ -16,7 +28,7 @@
 
     >
         <div class="modal-content" @click.away="open = 0">
-            <div @click.stop="open = 0" class="close-btn" style="background-color: {{ $event['type']['color'] }};">
+            <div @click.stop="open = 0" class="close-btn">
                 <x-icons.x />
             </div>
 
@@ -24,7 +36,7 @@
                 <p>{{ $event['type']['name'] }}</p>
             </div>
 
-            <p class="modal-title" style="color: {{ $event['type']['color'] }};">{{$event['title']}}</p>
+            <p class="modal-title">{{$event['title']}}</p>
             
             <div>
                 <p>{{ \Carbon\Carbon::parse($event['happens_at'])->day }}. {{ $monthName }}</p>
@@ -37,20 +49,13 @@
             <div class="modal-contacts">
                 <p>Iepriekšēja pieteikšanās:</p>
                 <div class="contacts">
-                    <a style="background-color: {{ $event['type']['color'] }};" href="tel:+37128237566"><x-icons.phone /> Zvanīt</a>
-                    <a style="background-color: {{ $event['type']['color'] }};" href="mailto:ruckasm@gmail.com"><x-icons.mail /> Rakstīt</a>
+                    <a href="tel:+37128237566"><x-icons.phone /> Zvanīt</a>
+                    <a href="mailto:ruckasm@gmail.com"><x-icons.mail /> Rakstīt</a>
                 </div>
             </div>
         </div>
 
     </div>
-    
-    <div>
-        <p class="sm">{{ $event['type']['name'] }}</p>
-        <p class="sm">{{ $event['time'] }}</p>
-    </div>
-    <p class="md">{{ $event['title'] }}</p>
-    <p class="sm">{{ $event['info'] }}</p>
     
 </div>
 
