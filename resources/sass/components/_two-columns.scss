@@ -1,0 +1,51 @@
+.two-columns {
+    width: 100%;
+    margin-bottom: 5.5rem;
+
+    &:last-child {
+        margin-bottom: 0rem;
+    }
+
+    > div {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 3px;
+        }
+
+        .text {
+            p {
+                margin-bottom: 14px;
+                text-align: left;
+            }
+
+            .button-link {
+                margin-top: 20px;
+            }
+        }
+
+        @include md-breakpoint {
+            grid-template-columns: 1fr;
+
+            img {
+                object-position: left;
+            }
+        }
+    }
+}
+
+.two-columns-swap {
+    .image {
+        grid-row: 1;
+        @include md-breakpoint {
+            grid-row: auto;
+        }
+    }
+}

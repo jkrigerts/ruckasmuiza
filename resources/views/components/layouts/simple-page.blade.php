@@ -11,6 +11,9 @@
     </div>
 
     <section>
+      {{-- Safari Mobile has a weird issue where tables are lagging because of ::before,
+        so this is a workaround :D --}}
+      <div class="bg"></div> 
       {{ $slot }}
     </section>
   </main>

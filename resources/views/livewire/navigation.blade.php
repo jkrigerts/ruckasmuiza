@@ -12,7 +12,7 @@
                 <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>
                 <x-navigation.nav-link href="services."
                                        :items="[
-                                        ['title' => 'Viesnīca', 'href' => 'services.stay'],
+                                        ['title' => 'Nakšņošana', 'href' => 'services.stay'],
                                         ['title' => 'Kāzas', 'href' => 'services.weddings'],
                                         ['title' => 'Svinības', 'href' => 'services.celebrations'],
                                         ['title' => 'Telpu noma', 'href' => 'services.rent'],
