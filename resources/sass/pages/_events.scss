@@ -175,6 +175,7 @@
             top: 0rem;
             right: 0rem;
             padding: 0 0.4rem 0.2rem 0.2rem;
+            z-index: 2;
 
             font-family: $font-display;
             font-size: 1.3rem;
@@ -182,14 +183,55 @@
         }
 
         .event {
-            padding: 0.25rem;
             flex-grow: 1;
             flex-basis: 0;
             overflow: hidden;
-
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            position: relative;
+            --event-color: $color-raspberry-red;
+            --event-color-darker: color-mix(
+                in srgb,
+                var(--event-color),
+                #000 15%
+            );
+
+            .event-btn {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                justify-content: center;
+                border: none;
+                color: $color-white;
+                padding: 0.25rem;
+                text-align: left;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                background-color: var(--event-color);
+                transition: background-color $transition-duration;
+
+                &:hover {
+                    background-color: var(--event-color-darker);
+                }
+            }
+
+            &:first-of-type .event-btn::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                width: 34px;
+                height: 25px;
+                background-color: var(--event-color);
+                transition: background-color $transition-duration;
+            }
+
+            &:first-of-type .event-btn:hover::after {
+                background-color: var(--event-color-darker);
+            }
 
             .sm {
                 font-size: $font-size-xs;
@@ -240,6 +282,10 @@
             .number {
                 font-size: 1.2rem;
             }
+            .event:first-of-type .event-btn::after {
+                width: 32px;
+                height: 23px;
+            }
         }
     }
 }
@@ -267,10 +313,16 @@
         }
     }
 
-    .main-events .calendar-container .day .number {
-        line-height: 1.2rem;
-        font-size: 1rem;
-        padding: 0 0.3rem 0.2rem 0.2rem;
+    .main-events .calendar-container .day {
+        .number {
+            line-height: 1.2rem;
+            font-size: 1rem;
+            padding: 0 0.3rem 0.2rem 0.2rem;
+        }
+        .event:first-of-type .event-btn::after {
+            width: 24px;
+            height: 20px;
+        }
     }
 }
 
@@ -326,6 +378,7 @@
         overflow-x: hidden;
 
         padding: 1.4rem 1rem;
+        border-radius: $border-radius;
 
         .close-btn {
             color: $color-white;
@@ -339,6 +392,7 @@
 
             padding: 0.1rem;
             border-radius: 0.6rem;
+            background-color: var(--event-color);
 
             cursor: pointer;
 
@@ -351,6 +405,7 @@
             font-family: $font-display;
             font-size: 1.8rem;
             text-transform: uppercase;
+            color: var(--event-color);
         }
 
         .modal-contacts {
@@ -367,17 +422,17 @@
                     display: flex;
                     align-items: center;
                     gap: 0.5rem;
-                    color: #fff;
+                    color: $color-white;
                     text-decoration: none;
                     cursor: pointer;
                     font-family: inherit;
-                    padding: 0.25rem 0.5rem;
-                    font-size: calc($font-size-sm + 0.25rem);
-                    transition: all 0.3s;
-
-                    &:hover {
-                        transform: translateY(0.15rem);
-                    }
+                    padding: 0.3rem 0.6rem;
+                    border-radius: 3px;
+                    font-size: $font-size-sm;
+                    font-weight: bold;
+                    background-color: var(--event-color);
+                    text-transform: uppercase;
+                    transition: all $transition-duration;
                 }
             }
         }
