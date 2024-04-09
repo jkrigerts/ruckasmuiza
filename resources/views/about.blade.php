@@ -1,4 +1,4 @@
-<x-layouts.simple-page bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="about" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
     <x-slot:title>Par Ruckas muižu</x-slot:title>
     <p>
       Ruckas muižas parks ir Cēsu ģeogrāfiskais centrs, tāpēc pavisam droši varam teikt

@@ -1,4 +1,4 @@
-<x-layouts.simple-page bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="weddings" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Kāzu svinību vieta Cēsīs</x-slot:title>
   <p>
     Ierodoties muižā pa skaisto koku aleju, jau pārņem romantiska svētku gaisotne.

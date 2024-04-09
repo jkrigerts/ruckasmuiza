@@ -1,4 +1,4 @@
-<x-layouts.simple-page bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="rest_offers" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Atpūtas iespējas</x-slot:title>
   <p>
     Ruckas muiža ir vieta, kur piedzīvot, iepazīt, izzināt 

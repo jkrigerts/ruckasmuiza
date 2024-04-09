@@ -1,9 +1,19 @@
 @props([
     'bg_src',
-    'bg_alt'
+    'bg_alt',
+    'metaName'
 ])
 
-<x-layouts.app>
+
+@php
+    // fallback incase metaName is not provided
+    if(!isset($metaName)) {
+      $metaName = 'landing';
+    }
+@endphp
+
+
+<x-layouts.app :metaName=$metaName>
   <x-background-image src="{{ asset($bg_src) }}" alt="{{$bg_alt}}" />
   <main class="simple-page">
     <div class="head">

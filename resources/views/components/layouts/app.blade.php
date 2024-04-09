@@ -4,7 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>{{ $title ?? 'Page Title' }}</title>
+        <!-- open graph meta tags -->
+        @isset($metaName)
+            <x-open-tags :metaName='$metaName'/>
+        @endisset
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

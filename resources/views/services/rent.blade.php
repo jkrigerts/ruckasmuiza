@@ -1,4 +1,4 @@
-<x-layouts.simple-page bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="rent" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Telpu noma Cēsīs</x-slot:title>
   <p>
     Publiski pasākumi, konferences, semināri, nometnes un pat kultūras pasākumi –
