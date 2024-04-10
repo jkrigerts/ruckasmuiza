@@ -1,6 +1,7 @@
 $color-raspberry-red-light: hsl(330deg, 100%, 34%);
 $color-raspberry-red: hsl(330deg, 100%, 31%);
 $color-raspberry-red-dark: hsl(330deg, 100%, 28%);
+$color-raspberry-red-dark-opacity-90: rgba(143, 0, 72, 0.9);
 
 $color-clay-brown-light: hsl(9deg, 53%, 50%);
 $color-clay-brown: hsl(9deg, 53%, 45%);
@@ -55,4 +56,5 @@ $font-body: "Roboto Condensed", sans-serif;
 
 $text-shadow: 0 0 100px $color-black-true;
 $box-shadow: 0 5px 150px $color-black-true;
+$box-shadow-light: 0 5px 30px rgba(0, 0, 0, 0.5);
 $border-radius: 3px;

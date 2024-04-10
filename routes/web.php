@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Livewire\Livewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,56 +16,96 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {return view('landing');})
+Route::get('/', function () {
+       return view('landing');
+})
        ->name("landing");
 
-Route::get('/par-muizu', function () { return view('about');})
+Route::get('/par-muizu', function () {
+       return view('about');
+})
        ->name("about");
 
-Route::group([
-       "prefix" => "/pakalpojumi",
-       "as" => "services.",
+Route::group(
+       [
+              "prefix" => "/pakalpojumi",
+              "as" => "services.",
        ],
-       function() {
-              Route::get('/', function () {return view('services/services');})->name("");
-              Route::get('/naksnosana', function () {return view('services/stay');})->name("stay");
-              Route::get('/kazas', function () {return view('services/weddings');})->name("weddings");
-              Route::get('/svinibas', function () {return view('services/celebrations');})->name("celebrations");
-              Route::get('/noma', function () {return view('services/rent');})->name("rent");
-       }
-       );
-
-
-Route::get('/pasakumi', function (Request $req) { 
-       if ($req->monthOffset == null) return redirect(route('events', ['monthOffset' => 0])); // month offset pārbaude
-       return view('events'); 
-})->name("events");
-       
-
-Route::group([
-       "prefix" => "/piedavajumi",
-       "as" => "offers.",
-       ],
-       function() {
-              Route::get('/ipasie-piedavajumi', function () {return view('offers/special_offers');})->name("special_offers");
-              Route::get('/atputa', function () {return view('offers/rest');})->name("rest");
-              Route::get('/davanu-kartes', function () {return view('offers/gift_cards');})->name("gift_cards");
-       }
-       );
-
-Route::group([
-       "prefix" => "/muiza-runa",
-       "as" => "blog.",
-       ],
-       function() {
-       Route::get('/aktualitates', function () {return view('blog/news');})->name("news");
-       Route::get('/renars-sprogis', function () {return view('blog/sprogis');})->name("sprogis");
-       Route::get('/janis-gabrans', function () {return view('blog/gabrans');})->name("gabrans");
+       function () {
+              Route::get('/', function () {
+                     return view('services/services');
+              })->name("");
+              Route::get('/naksnosana', function () {
+                     return view('services/stay');
+              })->name("stay");
+              Route::get('/kazas', function () {
+                     return view('services/weddings');
+              })->name("weddings");
+              Route::get('/svinibas', function () {
+                     return view('services/celebrations');
+              })->name("celebrations");
+              Route::get('/noma', function () {
+                     return view('services/rent');
+              })->name("rent");
        }
 );
 
-Route::get('/galerija', function () { return view('gallery');})
+
+Route::get('/pasakumi', function (Request $req) {
+       if ($req->monthOffset == null) return redirect(route('events', ['monthOffset' => 0])); // month offset pārbaude
+       return view('events');
+})->name("events");
+
+
+Route::group(
+       [
+              "prefix" => "/piedavajumi",
+              "as" => "offers.",
+       ],
+       function () {
+              Route::get('/ipasie-piedavajumi', function () {
+                     return view('offers/special_offers');
+              })->name("special_offers");
+              Route::get('/atputa', function () {
+                     return view('offers/rest');
+              })->name("rest");
+              Route::get('/davanu-kartes', function () {
+                     return view('offers/gift_cards');
+              })->name("gift_cards");
+       }
+);
+
+Route::group(
+       [
+              "prefix" => "/muiza-runa",
+              "as" => "blog.",
+       ],
+       function () {
+              Route::get('/aktualitates', function () {
+                     $blogPost = Blog::where('section_id', 3)->get();
+                     return view('blog/news', ['blogPosts' => $blogPost]);
+              })->name("news");
+              Route::get('/renars-sprogis', function () {
+                     $blogPost = Blog::where('section_id', 1)->get();
+                     return view('blog/news', ['blogPosts' => $blogPost]);
+              })->name("sprogis");
+              Route::get('/janis-gabrans', function () {
+                     $blogPost = Blog::where('section_id', 2)->get();
+                     return view('blog/news', ['blogPosts' => $blogPost]);
+              })->name("gabrans");
+              Route::get('/{id}', function ($id) {
+                     $blogPost = Blog::where('id', $id)->firstOrFail();
+                     return view('blog/blog-post', ['blogPost' => $blogPost]);
+              })->name("id");
+       }
+);
+
+Route::get('/galerija', function () {
+       return view('gallery');
+})
        ->name("gallery");
 
-Route::get('/kontakti', function () { return view('contacts');})
+Route::get('/kontakti', function () {
+       return view('contacts');
+})
        ->name("contacts");
