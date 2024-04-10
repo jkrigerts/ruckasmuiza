@@ -12,7 +12,7 @@
                     <h2>{{ $title }}</h2>
                     {!! $description !!}
                 </div>
-                <a class="landing-button" href={{route($link)}}>{{ $linkText ?? "Uzzināt vairāk"}}</a>
+                <a class="landing-button" href={{route($link)}} wire:navigate>{{ $linkText ?? "Uzzināt vairāk"}}</a>
             </div>
         </div>
     </div>
