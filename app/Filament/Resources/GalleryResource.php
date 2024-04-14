@@ -17,17 +17,19 @@ class GalleryResource extends Resource
 {
     protected static ?string $model = Gallery::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-photo';
+    protected static ?string $modelLabel = 'Galerija';
+    protected static ?string $pluralModelLabel = 'Galerijas';
 
     public static function form(Form $form): Form
     {
         return $form
             ->columns(1)
             ->schema([
-                Forms\Components\TextInput::make('title'),
-                Forms\Components\Textarea::make('description'),
-                Forms\Components\DateTimePicker::make('date'),
-                Forms\Components\FileUpload::make('file_name')->multiple(),
+                Forms\Components\TextInput::make('title')->label('Virsraksts'),
+                Forms\Components\Textarea::make('description')->label('Apraksts'),
+                Forms\Components\DatePicker::make('date')->label('Datums'),
+                Forms\Components\FileUpload::make('file_name')->multiple()->label('Attēlu faili'),
             ])
             ->columns([12]);
     }
@@ -37,9 +39,9 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('date'),
+                Tables\Columns\TextColumn::make('title')->label('Virsraksts'),
+                Tables\Columns\TextColumn::make('description')->label('Apraksts'),
+                Tables\Columns\TextColumn::make('date')->label('Datums'),
             ])
             ->filters([
                 //
@@ -49,7 +51,6 @@ class GalleryResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
