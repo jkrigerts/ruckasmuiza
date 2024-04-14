@@ -1,0 +1,9 @@
+.contacts-map {
+    display: flex;
+    justify-content: center;
+
+    iframe {
+        border-radius: 3px;
+        border: 0;
+    }
+}

@@ -1,0 +1,69 @@
+.simple-page {
+    max-width: calc($navWidth - $logoWidth);
+    margin: 0 auto 3rem;
+
+    .head {
+        text-align: center;
+        margin: 4rem 1rem 4rem;
+    }
+
+    section {
+        background-color: $color-white-gray;
+        text-align: justify;
+        border-radius: 3px;
+        box-shadow: 0 5px 70px $color-black-true;
+        position: relative;
+
+        padding: 2.5rem calc($logoWidth / 2);
+
+        .bg {
+            position: absolute;
+            z-index: -1;
+            top: -30px;
+            left: 10%;
+            width: 80%;
+            height: calc(100% + 60px);
+            background-color: $color-raspberry-red;
+            border-radius: 3px;
+        }
+
+        li {
+            font-size: $font-size-md;
+            margin-bottom: 0.5rem;
+        }
+
+        li:last-child {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include content-max-width-breakpoint {
+        margin: 0 calc(($logoWidth / 2) + $navPadding) 3rem;
+    }
+
+    @include lg-breakpoint {
+        margin: 0 $navPadding 3rem;
+
+        section {
+            padding: 2.5rem calc($logoWidth / 2);
+        }
+    }
+
+    @include lg-breakpoint {
+        section {
+            padding: 2rem;
+        }
+    }
+
+    @include xs-breakpoint {
+        section {
+            padding: $navPadding;
+            text-align: left;
+        }
+    }
+
+    p {
+        font-size: $font-size-md;
+        margin-bottom: 2rem;
+    }
+}

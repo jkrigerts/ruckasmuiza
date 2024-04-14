@@ -7,18 +7,23 @@ header {
     height: 60px;
     border-top: 8px solid $color-raspberry-red;
     background-color: $color-black;
+    padding: 0 1rem;
 
     > div {
-        max-width: 1280px;
+        max-width: $content-max-width;
         margin: 0 auto;
         height: 100%;
         display: flex;
         gap: 20px;
+
+        @include lg-breakpoint {
+            justify-content: space-between;
+        }
     }
 
     .logo-link {
         img {
-            width: 150px;
+            width: 130px;
             transform: translateY(-1px);
         }
     }
@@ -30,24 +35,158 @@ header {
             align-items: center;
             gap: 20px;
 
-            a {
+            li {
+                position: relative;
+            }
+
+            a,
+            button {
+                position: relative;
                 text-transform: uppercase;
                 color: $color-white;
                 text-decoration: none;
                 transition: color $transition-duration;
+                padding: 5px;
+                white-space: nowrap;
+                background-color: transparent;
+                border: none;
+                font-size: inherit;
+                font-family: inherit;
+                cursor: pointer;
+                display: inline-block;
+                transition: font-weight 0.25s;
 
                 &:hover {
                     color: $color-white-gray;
                 }
             }
 
-            .underline {
-                text-decoration: underline;
+            button:after,
+            a:after,
+            .active:after {
+                content: "";
+                position: absolute;
+                bottom: 15%;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $color-raspberry-red;
+                opacity: 0;
+                transition: transform 0.25s, opacity 0.25s;
+            }
+
+            button:hover:after,
+            a:hover:after {
+                opacity: 1;
+            }
+
+            @media (hover: none) {
+                button:hover {
+                    color: $color-white;
+                }
+                button:hover:after {
+                    opacity: 0;
+                }
+
+                .active:hover:after {
+                    opacity: 1;
+                }
+            }
+
+            .active {
+                font-weight: 700;
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+            @include lg-breakpoint {
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+            }
+        }
+        @include lg-breakpoint {
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: $color-black;
+            height: calc(100dvh - 52px);
+            width: 100vw;
+            padding: 70px 20px;
+            overflow-y: scroll;
+            z-index: -1;
+            transition: opacity 0.25s, visibility 0.25s, transform 0.25s;
+
+            > ul > li:last-child a {
+                margin-bottom: 70px;
             }
         }
     }
 
+    .dropdown {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: 0.9em;
+        gap: 20px;
+        padding: 18px 12px 12px;
+        min-width: 152px;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4px);
+        transition: opacity 0.25s, visibility 0.25s, transform 0.25s;
+        background-color: $color-black;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+        border: 1px solid rgb(25, 21, 22);
+
+        @include lg-breakpoint {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            background-color: $color-black;
+            box-shadow: none;
+            border: none;
+            padding: 0 0 0 16px;
+            gap: 5px;
+        }
+    }
+
+    li:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
     .hamburger {
         display: none;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: transparent;
+        margin-right: 20px;
+        cursor: pointer;
+
+        @include lg-breakpoint {
+            display: flex;
+        }
+
+        svg {
+            color: $color-white;
+        }
+    }
+    .mobile-navigation {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
     }
 }

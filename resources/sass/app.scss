@@ -7,14 +7,32 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/background-image";
+@import "components/button-link";
+@import "components/inner-chapter-heading";
 @import "components/navigation";
+@import "components/section-heading";
+@import "components/two-columns";
 
 @import "layout/app";
+@import "layout/simple-page";
 
 @import "pages/about";
-@import "pages/blog";
+@import "pages/blog/gabrans";
+@import "pages/blog/news";
+@import "pages/blog/sprogis";
+
+@import "pages/contacts";
 @import "pages/events";
 @import "pages/gallery";
 @import "pages/landing";
-@import "pages/services";
-@import "pages/stay";
+
+@import "pages/offers/gift_cards";
+@import "pages/offers/rest";
+@import "pages/offers/special_offers";
+
+@import "pages/services/celebrations";
+@import "pages/services/rent";
+@import "pages/services/services";
+@import "pages/services/stay";
+@import "pages/services/weddings";
