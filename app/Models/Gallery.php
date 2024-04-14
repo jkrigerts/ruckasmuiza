@@ -12,24 +12,6 @@ class Gallery extends Model
     
     protected $fillable = ['title', 'description', 'date', 'file_name'];
     protected $casts = [
-        'file_name' => 'json',
+        'images' => 'json',
     ];
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::updating(function ($model) {
-            if ($model->isDirty('file_name')) {
-                $originalFileNames = $model->getOriginal('file_name') ?? [];
-                $updatedFileNames = $model->file_name ?? [];
-                
-                $deletedFileNames = array_diff($originalFileNames, $updatedFileNames);
-                
-                foreach ($deletedFileNames as $fileName) {
-                    Storage::disk('public')->delete($fileName);
-                }
-            }
-        });
-    }
 }

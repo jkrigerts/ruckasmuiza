@@ -17,8 +17,12 @@ class EditGallery extends EditRecord
         return [
             Actions\DeleteAction::make()
               ->after(function (Gallery $record) {
-                if ($record->file_name) {
-                    Storage::disk('public')->delete($record->file_name);
+                if ($record->thumbnail) {
+                    Storage::disk('public')->delete($record->thumbnail);
+                }
+                // delete multiple
+                if ($record->images) {
+                    foreach ($record->images as $image) Storage::disk('public')->delete($image);
                  }
               }),
            ];
