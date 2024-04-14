@@ -25,7 +25,7 @@ use Filament\Tables\Columns\ImageColumn;
 class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
-    protected static ?string $navigationIcon = "heroicon-o-bars-3-center-left";
+    protected static ?string $navigationIcon = "heroicon-o-chat-bubble-oval-left-ellipsis";
 
     protected static ?string $modelLabel = 'Ieraksts';
     protected static ?string $pluralModelLabel = 'Muiža runā';
@@ -67,10 +67,11 @@ class BlogResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make("title")->sortable(),
-                Tables\Columns\TextColumn::make("section.name"),
-                ImageColumn::make("image"),
+                Tables\Columns\TextColumn::make("title")->label('Virsraksts')->sortable(),
+                Tables\Columns\TextColumn::make("section.name")->label('Sadaļa'),
+                ImageColumn::make("image")->label('Attēls'),
                 Tables\Columns\TextColumn::make("created_at")
+                    ->label('Izveides laiks')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: false),
@@ -88,7 +89,6 @@ class BlogResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
