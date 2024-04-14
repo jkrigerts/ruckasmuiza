@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-layouts.app metaName="landing">
 	
 	<div id="top"></div>
 <div class="landing" x-data="{ scrolled: false }" @scroll.throttle.debounce="scrolled = ($event.target.scrollTop > 0)" @scroll.window.throttle.debounce="scrolled = (window.scrollY > 10)">	

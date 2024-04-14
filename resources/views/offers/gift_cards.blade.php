@@ -1,4 +1,4 @@
-<x-layouts.simple-page bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="gift_cards" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Dāvanu kartes</x-slot:title>
   <p>
     Ruckas muižas piedāvājuma klāsts ir plašs – katrs
