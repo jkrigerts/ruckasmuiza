@@ -3,6 +3,7 @@
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GalleryController;
 use Livewire\Livewire;
 
 /*
@@ -16,14 +17,11 @@ use Livewire\Livewire;
 |
 */
 
-Route::get('/', function () {
-       return view('landing');
-})
+Route::get('/', function () { return view('landing');})
        ->name("landing");
 
-Route::get('/par-muizu', function () {
-       return view('about');
-})
+
+Route::get('/par-muizu', function () { return view('about');})
        ->name("about");
 
 Route::group(

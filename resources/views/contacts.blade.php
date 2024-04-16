@@ -1,4 +1,4 @@
-<x-layouts.simple-page bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="contacts" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Kontakti</x-slot:title>
   <ul>
     <li>Ruckas muiža</li>

@@ -1,11 +1,11 @@
-<x-layouts.simple-page bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="rest_offers" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Atpūtas iespējas</x-slot:title>
   <p>
     Ruckas muiža ir vieta, kur piedzīvot, iepazīt, izzināt 
     un sajust visai ģimenei! Ieskaties, kādas ir atpūtas
     iespējas Ruckas muižas kompleksā!
   </p>
-  <x-two-columns img_src='images/landing/landing.webp' img_alt="Ruckas muiža">
+  <x-two-columns img_src='images/offers/ekskursija.webp' img_alt="Ekskursija">
     <x-slot:title>Ekskursija pa muižu</x-slot:title>
     <p>Atklāj Ruckas muižas unikalitāti un izzini, kā muiža mainījusies kopš 1577. gada.</p>
     <p>Ekskursijas pieejamas grupās vai individuāli.</p>
@@ -14,7 +14,7 @@
     <x-button-link href="{{ route('contacts') }}" text="Pieteikt"/>
   </x-two-columns>
 
-  <x-two-columns img_src='images/landing/landing.webp' img_alt="Ruckas muiža" swap={{true}}>
+  <x-two-columns img_src='images/offers/dzirnavnieka-kurpes.webp' img_alt="Dzirnavnieka kurpēs" swap={{true}}>
     <x-slot:title>Iekāp dzirnavnieka kurpēs</x-slot:title>
     <p>
       Vai kādreiz esi domājis, kā top milti? Vai esi gribējis

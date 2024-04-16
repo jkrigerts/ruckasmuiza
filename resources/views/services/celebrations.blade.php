@@ -1,4 +1,4 @@
-<x-layouts.simple-page bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="celebrations" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Svinību vieta Cēsīs</x-slot:title>
   <p>
     Svini savus īpašos dzīves notikumus Cēsīs! Mūsu muižas greznās telpas
