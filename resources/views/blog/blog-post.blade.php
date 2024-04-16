@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-layouts.app metaName="manor_speaks">
     <div class="__news">
     <div class="__news-screen-image">
       <div class="gradient-reading"></div>

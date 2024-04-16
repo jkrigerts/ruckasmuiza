@@ -5,7 +5,7 @@
 
     $settings = [
         'events' => [
-            'title' => 'Atpūtas iespējas' . $afterTitle,
+            'title' => 'Pasākumi' . $afterTitle,
             'image' => $defaultImage,
             'desc'  => 'Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu – atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.',
         ],
@@ -66,6 +66,11 @@
         
         
         // Muiža runā
+        'manor_speaks' => [
+            'title' => 'Muiža runā' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Lasi un uzzini par aktuālajiem notikumiem Ruckas muižā!',
+        ],
         'news' => [
             'title' => 'Aktualitātes' . $afterTitle,
             'image' => $defaultImage,
