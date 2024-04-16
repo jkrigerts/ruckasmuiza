@@ -1,6 +1,7 @@
 $color-raspberry-red-light: hsl(330deg, 100%, 34%);
 $color-raspberry-red: hsl(330deg, 100%, 31%);
 $color-raspberry-red-dark: hsl(330deg, 100%, 28%);
+$color-raspberry-red-dark-opacity-90: rgba(143, 0, 72, 0.9);
 
 $color-clay-brown-light: hsl(9deg, 53%, 50%);
 $color-clay-brown: hsl(9deg, 53%, 45%);
@@ -31,6 +32,7 @@ $color-black-true: rgb(0, 0, 0);
 
 $transition-duration: 0.3s;
 
+// add onto this ja gribat
 $content-max-width: 1600px;
 $navWidth: $content-max-width;
 $logoWidth: 130px;
@@ -50,9 +52,16 @@ $font-size-md: 1.1rem;
 $font-size-sm: 0.8rem;
 $font-size-xs: 0.6rem;
 
+$spacing-xl: 4rem;
+$spacing-lg: 2rem;
+$spacing-md: 1.5rem;
+$spacing-sm: 1rem;
+$spacing-xs: 0.5rem;
+
 $font-display: "Playfair Display", serif;
 $font-body: "Roboto Condensed", sans-serif;
 
 $text-shadow: 0 0 100px $color-black-true;
 $box-shadow: 0 5px 150px $color-black-true;
+$box-shadow-light: 0 5px 30px rgba(0, 0, 0, 0.5);
 $border-radius: 3px;
