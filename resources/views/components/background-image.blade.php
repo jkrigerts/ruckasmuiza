@@ -5,5 +5,5 @@
 ])
 
 <div class="section-background-image {{$gradient ? "with-gradient" : ""}}">
-  <img src="{{ $src }}" alt="{{$alt}}">
+  <img src="{{ url($src) }}" alt="{{$alt}}">
 </div>

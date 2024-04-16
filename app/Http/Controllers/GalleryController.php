@@ -8,8 +8,14 @@ class GalleryController extends Controller
 {
     public function index()
     {
-        $images = Gallery::all();
+        $albums = Gallery::all();
+        return view("gallery", compact('albums'));
+    }
 
-        return view("gallery", compact('images'));
+
+    public function show(string $id)
+    {
+        $album = Gallery::find($id);
+        return view("album", compact('album'));
     }
 }

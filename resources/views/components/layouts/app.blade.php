@@ -11,7 +11,7 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=playfair-display:900|roboto-condensed:300,300i,400,400i,700,700i" rel="stylesheet" />
+        <link href="https://fonts.bunny.net/css?family=playfair-display:600,900|roboto-condensed:300,300i,400,400i,700,700i" rel="stylesheet" />
         <!-- Styles -->
         @vite('resources/sass/app.scss')
     </head>
