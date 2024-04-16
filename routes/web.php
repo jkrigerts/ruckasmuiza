@@ -98,12 +98,10 @@ Route::group(
        }
 );
 
-Route::get('/galerija', function () {
-       return view('gallery');
-})
+Route::get('/galerija', [GalleryController::class, "index"])
        ->name("gallery");
 
-Route::get('/kontakti', function () {
-       return view('contacts');
-})
+Route::get('/galerija/{id}', [GalleryController::class, "show"]);
+
+Route::get('/kontakti', function () { return view('contacts');})
        ->name("contacts");

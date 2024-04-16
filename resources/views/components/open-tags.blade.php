@@ -98,6 +98,11 @@
             'image' => $defaultImage,
             'desc'  => 'Ruckas muiža Piebalgas iela 19, Cēsis, Cēsu novads, LV-4101 Tālr. nr.: +371 28237566 E-pasts: kultura@ruckasmuiza.lv',
         ],
+        'error' => [
+            'title' => 'Kļūda' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Lapa nav atrasta vai notikusi servera kļūda',
+        ],
     ]
 @endphp
 
