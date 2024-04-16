@@ -26,10 +26,21 @@ class GalleryResource extends Resource
         return $form
             ->columns(1)
             ->schema([
-                Forms\Components\TextInput::make('title')->label('Virsraksts'),
-                Forms\Components\Textarea::make('description')->label('Apraksts'),
-                Forms\Components\DatePicker::make('date')->label('Datums'),
-                Forms\Components\FileUpload::make('file_name')->multiple()->label('Attēlu faili'),
+                Forms\Components\TextInput::make('title')
+                        ->label('Virsraksts')
+                        ->required(),
+                Forms\Components\Textarea::make('description')
+                        ->label('Apraksts')
+                        ->required(),
+                Forms\Components\FileUpload::make('thumbnail')
+                        ->label('Reprezentējošais attēls')
+                        ->required(),
+                Forms\Components\FileUpload::make('images')
+                        ->multiple()
+                        ->reorderable()
+                        ->appendFiles()
+                        ->required()
+                        ->label('Attēli galerijā'),
             ])
             ->columns([12]);
     }
@@ -41,7 +52,7 @@ class GalleryResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('title')->label('Virsraksts'),
                 Tables\Columns\TextColumn::make('description')->label('Apraksts'),
-                Tables\Columns\TextColumn::make('date')->label('Datums'),
+                Tables\Columns\ImageColumn::make('thumbnail')->label('Attēls'),
             ])
             ->filters([
                 //

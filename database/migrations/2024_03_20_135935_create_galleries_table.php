@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->date('date');
-            $table->json('file_name');
+            $table->string('thumbnail');
+            $table->json('images');
             $table->timestamps();
         });
     }
