@@ -9,6 +9,7 @@ class GalleryController extends Controller
     public function index()
     {
         $albums = Gallery::all();
+
         return view("gallery", compact('albums'));
     }
 

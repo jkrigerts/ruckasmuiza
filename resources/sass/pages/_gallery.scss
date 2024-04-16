@@ -51,6 +51,8 @@
 
                 img {
                     width: 100%;
+                    aspect-ratio: 4/3;
+                    object-fit: cover;
                 }
 
                 h2 {
@@ -91,5 +93,11 @@
         section {
             grid-template-columns: 1fr;
         }
+    }
+
+    .error {
+        color: $color-white;
+        font-size: $font-size-md;
+        text-align: center;
     }
 }

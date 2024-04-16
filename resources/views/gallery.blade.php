@@ -5,6 +5,10 @@
       <x-section-heading>Galerija</x-section-heading>
     </div>
 
+    @if(count($albums) == 0)
+        <p class="error">Neviens albums galerijā vēl nav izveidots</p>
+    @endif
+
     <section>
       @foreach ($albums as $album)
         <article class="album">
