@@ -1,0 +1,23 @@
+main {
+    margin-top: 100px;
+    margin: 100px 20px 0;
+}
+footer {
+    position: relative;
+    width: 100vw;
+    bottom: 0px;
+    display: grid;
+    place-items: center;
+}
+.tooltip{
+    padding: 0.5rem;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    border-radius: 0.4rem;
+    transition: opacity 0.5s ease-in-out; /* Add transition effect */
+    opacity: 0;
+}
+footer:hover .tooltip {
+    display: flex;
+    opacity: 1; /* Make tooltip fully visible when hovering */
+}

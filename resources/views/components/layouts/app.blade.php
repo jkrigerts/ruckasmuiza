@@ -17,5 +17,10 @@
         <main class="pt-10">
             {{ $slot }}
         </main>
+        <footer>
+            <p>Ruckas muiža {{ date('Y') }}</p>
+            <p>Mājaslapu taisīja VTDT kursa IPb21 audzēkņi</p>
+            <p class="tooltip">Leons Aleksandrovs, Silvestrs Lignickis, Roberts Briņķis, Tomass Artūrs Rudzītis</p>
+        </footer>
     </body>
 </html>
