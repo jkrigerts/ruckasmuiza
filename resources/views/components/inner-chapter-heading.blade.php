@@ -1,0 +1,1 @@
+<h2 class="inner-chapter-heading">{{ $slot }}</h2>

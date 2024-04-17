@@ -1,0 +1,27 @@
+.button-link {
+    display: block;
+    padding: 0.8rem 1.5rem;
+
+    border: none;
+    border-radius: 3px;
+    background-color: $color-raspberry-red;
+
+    color: $color-white;
+    font-size: $font-size-sm;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: ease-out $transition-duration;
+
+    &:hover {
+        background-color: $color-raspberry-red-dark;
+        color: $color-white-gray;
+    }
+    &:active {
+        background-color: $color-raspberry-red-light;
+        color: $color-white;
+    }
+}

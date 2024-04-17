@@ -9,11 +9,6 @@ class Blog extends Model
 {
     use HasFactory;
 
-    // public function category()
-    // {
-    //     return $this->hasMany(BlogCategory::class);
-    // }
-
     public function section()
     {
         return $this->belongsTo(Section::class);

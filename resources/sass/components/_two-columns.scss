@@ -1,0 +1,73 @@
+.two-columns {
+    width: 100%;
+    margin-bottom: 5.5rem;
+
+    &:first-of-type {
+        margin-top: 2rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0rem;
+    }
+
+    > div {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 20px;
+
+        .image {
+            height: 100%;
+            max-height: 400px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        .text {
+            p {
+                margin-bottom: 14px;
+                text-align: left;
+            }
+
+            .button-link {
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                @include md-breakpoint {
+                    margin-bottom: 0px;
+                }
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-family: $font-display;
+                font-size: $font-size-lg;
+                margin-bottom: 20px;
+                text-align: left;
+
+                @include md-breakpoint {
+                    font-size: calc(1.5rem + 1vw);
+                }
+            }
+        }
+
+        @include md-breakpoint {
+            grid-template-columns: 1fr;
+
+            img {
+                object-position: left;
+            }
+        }
+    }
+}
+
+.two-columns-swap {
+    .image {
+        grid-row: 1;
+        @include md-breakpoint {
+            grid-row: auto;
+        }
+    }
+}

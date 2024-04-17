@@ -1,0 +1,34 @@
+<x-layouts.simple-page metaName="contacts" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+  <x-slot:title>Kontakti</x-slot:title>
+  <ul>
+    <li>Ruckas muiža</li>
+    <li style="margin-bottom: 2rem">Piebalgas iela 19, Cēsis, Cēsu novads, LV-4101</li>
+    <li>Tālr. nr.: <a href="tel:+28237566">+371 28237566</a></li>
+  <li>E-pasts: <a href="mailto:kultura@ruckasmuiza.lv">kultura@ruckasmuiza.lv</a></li>
+  </ul>
+  <x-inner-chapter-heading>Rekvizīti</x-inner-chapter-heading>
+  <ul>
+    <li>"Live Latvija" biedrība</li>
+    <li>Adrese: Cēsu nov., Raiskuma pag., "Billes", LV-4146</li>
+    <li>Reģ. Nr.: 40008112263</li>
+    <li>Konta Nr.: LV78UNLA0055000054373</li>
+  </ul>
+  <x-inner-chapter-heading>Kā nokļūt?</x-inner-chapter-heading>
+  <p>
+    Braucot no Rīgas pa A2 autoceļu, ~77. kilometrā jāveic pagrieziens uz Cēsīm Melturos (P20).
+    Pirmajā rotācija aplī, sekojot zīmēm, jāiebrauc Cēsīs. Tieši tur ir galējais Piebalgas
+    ielas punkts. Braucot taisni, tiek šķērsots luksofora regulēts krustojums,
+    un īsi pirms dzelzceļa tilta jāgriež pa labi – tur, caurbraucot skaisto koku aleju,
+    nonāksi galamērķī.
+  </p>
+  <div class="contacts-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2154.910245241806!2d25.27950801271705!3d57.30939357092749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ebe1905c90041b%3A0x9325a24ba40de836!2sRuckas%20mui%C5%BEa!5e0!3m2!1slv!2slv!4v1712590953868!5m2!1slv!2slv"
+          width="100%" 
+          height="350"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+  </div>
+</x-layouts.simple-page>

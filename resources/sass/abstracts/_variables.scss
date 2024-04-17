@@ -1,0 +1,67 @@
+$color-raspberry-red-light: hsl(330deg, 100%, 34%);
+$color-raspberry-red: hsl(330deg, 100%, 31%);
+$color-raspberry-red-dark: hsl(330deg, 100%, 28%);
+$color-raspberry-red-dark-opacity-90: rgba(143, 0, 72, 0.9);
+
+$color-clay-brown-light: hsl(9deg, 53%, 50%);
+$color-clay-brown: hsl(9deg, 53%, 45%);
+$color-clay-brown-dark: hsl(9deg, 53%, 40%);
+
+$color-nature-green-light: hsl(69deg, 32%, 52%);
+$color-nature-green: hsl(69deg, 32%, 46%);
+$color-nature-green-dark: hsl(69deg, 32%, 40%);
+
+$color-sky-blue-light: hsl(202deg, 36%, 57%);
+$color-sky-blue: hsl(202deg, 36%, 51%);
+$color-sky-blue-dark: hsl(202deg, 36%, 45%);
+
+$color-stone-gray-light: hsl(72deg, 5%, 42%);
+$color-stone-gray: hsl(72deg, 5%, 37%);
+$color-stone-gray-dark: hsl(72deg, 5%, 32%);
+
+$color-sand-yellow-light: hsl(38deg, 69%, 57%);
+$color-sand-yellow: hsl(38deg, 69%, 51%);
+$color-sand-yellow-dark: hsl(38deg, 69%, 45%);
+
+$color-white: rgb(255, 255, 255);
+$color-white-gray: rgb(235, 235, 236);
+$color-black-gray: rgb(77, 77, 79);
+$color-black: rgb(35, 31, 32);
+$color-black-light: rgb(45, 38, 40);
+$color-black-true: rgb(0, 0, 0);
+
+$transition-duration: 0.3s;
+
+// add onto this ja gribat
+$content-max-width: 1600px;
+$navWidth: $content-max-width;
+$logoWidth: 130px;
+$navHeight: 60px;
+$navPadding: 16px;
+
+$xsBreakpoint: 480px;
+$smBreakpoint: 640px;
+$mdBreakpoint: 768px;
+$lgBreakpoint: 1024px;
+$xlBreakpoint: 1280px;
+
+$font-size-xxl: 6rem;
+$font-size-xl: 4.5rem;
+$font-size-lg: 2.1rem;
+$font-size-md: 1.1rem;
+$font-size-sm: 0.8rem;
+$font-size-xs: 0.6rem;
+
+$spacing-xl: 4rem;
+$spacing-lg: 2rem;
+$spacing-md: 1.5rem;
+$spacing-sm: 1rem;
+$spacing-xs: 0.5rem;
+
+$font-display: "Playfair Display", serif;
+$font-body: "Roboto Condensed", sans-serif;
+
+$text-shadow: 0 0 100px $color-black-true;
+$box-shadow: 0 5px 150px $color-black-true;
+$box-shadow-light: 0 5px 30px rgba(0, 0, 0, 0.5);
+$border-radius: 3px;

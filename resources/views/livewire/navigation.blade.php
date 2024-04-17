@@ -1,24 +1,61 @@
-<div class="sticky top-0 left-0 z-50 w-full h-14 border-t-8 border-red bg-black">
-    <div class="max-w-7xl mx-auto h-full flex justify-between md:justify-start md:gap-8">
-        <a href="{{ route('landing') }}" wire:navigate class="w-32 relative">
+<header x-data="mobilenavopener">
+    <div>
+        <a href="{{ route('landing') }}" wire:navigate class="logo-link">
             @persist('logo')
-                <img src="{{ asset('images/logo.png') }}" alt="Ruckas muižas logo" class="absolute -top-px left-0 w-full h-auto">
+                <img src="{{ asset('images/logo.png') }}" alt="Ruckas muižas logo">
             @endpersist
         </a>
-        <nav class="hidden md:block">
-            <ul class="h-full flex items-center gap-8">
+        <nav  :class="open ? 'mobile-navigation' : ''">
+            <ul>
+
+                <x-navigation.nav-link href="landing">Sākums</x-navigation.nav-link>
                 <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>
-                <x-navigation.nav-link href="events">Afiša</x-navigation.nav-link>
-                <x-navigation.nav-link href="services">Izklaide</x-navigation.nav-link>
-                <x-navigation.nav-link href="stay">Nakšņošana</x-navigation.nav-link>
-                <x-navigation.nav-link href="blog">Blogs</x-navigation.nav-link>
+                <x-navigation.nav-link href="services."
+                                       :items="[
+                                        ['title' => 'Nakšņošana', 'href' => 'services.stay'],
+                                        ['title' => 'Kāzas', 'href' => 'services.weddings'],
+                                        ['title' => 'Svinības', 'href' => 'services.celebrations'],
+                                        ['title' => 'Telpu noma', 'href' => 'services.rent'],
+                                        ]"
+                >Pakalpojumi</x-navigation.nav-link>
+                <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link>
+                <x-navigation.nav-link href="offers."
+                                       unchoosable
+                                       :items="[
+                                        ['title' => 'Īpašie piedāvājumi', 'href' => 'offers.special_offers'],
+                                        ['title' => 'Atpūtas iespējas', 'href' => 'offers.rest'],
+                                        ['title' => 'Dāvanu kartes', 'href' => 'offers.gift_cards'],
+                                        ]"
+                >Piedāvājumi</x-navigation.nav-link>
+                <x-navigation.nav-link href="blog."
+                                       unchoosable
+                                       :items="[
+                                        ['title' => 'Aktualitātes', 'href' => 'blog.news'],
+                                        ['title' => 'Renārs Sproģis runā', 'href' => 'blog.sprogis'],
+                                        ['title' => 'Jāņa Gabrāna piezīmes', 'href' => 'blog.gabrans'],
+                                        ]"
+                >Muiža runā</x-navigation.nav-link>
                 <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>
+                <x-navigation.nav-link href="contacts">Kontakti</x-navigation.nav-link>
             </ul>
         </nav>
-        <div class="flex items-center">
-            <x-navigation.hamburger class="md:hidden mr-2">
-            </x-navigation.hamburger>
-        </div>
-
+        <button x-on:click="toggleOpen" class="hamburger">
+            <x-navigation.hamburger x-show="!open"></x-navigation.hamburger>
+            <x-navigation.close x-show="open"></x-navigation.close>
+        </button>
     </div>
-</div>
+</header>
+
+@script
+<script>
+    Alpine.data('mobilenavopener', () => {
+        return {
+            open: 0,
+            toggleOpen() {
+                this.open = !this.open;
+                document.body.style.overflow = this.open ? "hidden" : "auto";
+            },
+        }
+    })
+</script>
+@endscript

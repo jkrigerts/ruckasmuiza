@@ -1,0 +1,103 @@
+.gallery {
+    max-width: calc($navWidth - $logoWidth);
+    margin: 0 auto 3rem;
+
+    .head {
+        text-align: center;
+        margin: 4rem 1rem 4rem;
+    }
+
+    section {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 60px;
+        row-gap: 5rem;
+        width: 100%;
+
+        .album {
+            max-width: 400px;
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 90%;
+                height: 110%;
+                position: absolute;
+                z-index: -1;
+                top: -5%;
+                left: 5%;
+                background-color: $color-raspberry-red;
+                border-radius: 3px;
+            }
+
+            a {
+                display: block;
+                background-color: $color-black;
+                border-radius: $border-radius;
+                box-shadow: 0 5px 70px $color-black-true;
+                width: 100%;
+                height: 100%;
+                border-radius: $border-radius;
+                overflow: hidden;
+                text-decoration: none;
+                transition: all $transition-duration;
+
+                &:hover {
+                    transform: scale(1.02);
+                    filter: brightness(1.1);
+                }
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 4/3;
+                    object-fit: cover;
+                }
+
+                h2 {
+                    font-size: 1.5rem;
+                    font-family: $font-display;
+                    font-weight: 300;
+                    color: $color-white;
+                    padding: 8px 5% 16px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @include content-max-width-breakpoint {
+        margin: 0 calc(($logoWidth / 2) + $navPadding) 3rem;
+    }
+
+    @include lg-breakpoint {
+        margin: 0 $navPadding 3rem;
+
+        section {
+            column-gap: 40px;
+
+            .album a h2 {
+                font-size: calc(0.8rem + 1vw);
+            }
+        }
+    }
+
+    @include md-breakpoint {
+        section {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include xs-breakpoint {
+        section {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .error {
+        color: $color-white;
+        font-size: $font-size-md;
+        text-align: center;
+    }
+}
