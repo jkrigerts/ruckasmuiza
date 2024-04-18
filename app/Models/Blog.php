@@ -9,6 +9,10 @@ class Blog extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'published' => 'boolean',
+    ];
+
     public function section()
     {
         return $this->belongsTo(Section::class);

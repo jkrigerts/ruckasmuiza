@@ -80,15 +80,15 @@ Route::group(
        ],
        function () {
               Route::get('/aktualitates', function () {
-                     $blogPost = Blog::where('section_id', 3)->get();
+                     $blogPost = Blog::where('section_id', 3)->where("published", true)->get();
                      return view('blog/news', ['blogPosts' => $blogPost]);
               })->name("news");
               Route::get('/renars-sprogis', function () {
-                     $blogPost = Blog::where('section_id', 1)->get();
+                     $blogPost = Blog::where('section_id', 1)->where("published", true)->get();
                      return view('blog/sprogis', ['blogPosts' => $blogPost]);
               })->name("sprogis");
               Route::get('/janis-gabrans', function () {
-                     $blogPost = Blog::where('section_id', 2)->get();
+                     $blogPost = Blog::where('section_id', 2)->where("published", true)->get();
                      return view('blog/gabrans', ['blogPosts' => $blogPost]);
               })->name("gabrans");
               Route::get('/{id}', function ($id) {
