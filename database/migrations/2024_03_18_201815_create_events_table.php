@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('info', 50);
             $table->string('infoLong');
             $table->string('price', 20);
+            $table->boolean('cancelled');
             $table->timestamps();
         });
     }
