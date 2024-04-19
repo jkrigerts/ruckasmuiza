@@ -22,6 +22,7 @@ use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\Indicator;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Forms\Components\Checkbox;
 
 class EventsResource extends Resource
 {
@@ -99,6 +100,9 @@ class EventsResource extends Resource
                             ->columnSpan(1) 
                             ->maxLength(20)
                             ->placeholder('5'),
+                        Checkbox::make("published")
+                            ->label("Publicēt")
+                            ->default(true)
 
                     ]),
             ]);
@@ -138,6 +142,8 @@ class EventsResource extends Resource
                     ->label('Atjaunots')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\CheckboxColumn::make("published")
+                    ->label("Publicēts")
             ])
             ->filters([ // TODO: Add filter for dates and prices
                 Filter::make('happens_at')

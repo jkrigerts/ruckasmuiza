@@ -17,6 +17,10 @@ class Events extends Model
         'infoLong',
         'price',
     ];
+
+    protected $casts = [
+        'published' => 'boolean',
+    ];
     
     public function type(){
         return $this->belongsTo(\App\Models\Type::class);

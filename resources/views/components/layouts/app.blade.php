@@ -12,6 +12,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=playfair-display:600,900|roboto-condensed:300,300i,400,400i,700,700i" rel="stylesheet" />
+        <link rel="icon" href="{{ url('/favicon.ico') }}">
         <!-- Styles -->
         {{-- @vite("resources/sass/app.scss") --}}
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])

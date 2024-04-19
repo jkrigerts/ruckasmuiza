@@ -63,6 +63,7 @@ class BlogResource extends Resource
                 ->required(),
             Checkbox::make("published")
                 ->label("Publicēt")
+                ->default(false)
         ])->columns(1);
     }
 
@@ -82,7 +83,8 @@ class BlogResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\CheckboxColumn::make("published")->label("Publicēts"),
+                Tables\Columns\CheckboxColumn::make("published")
+                    ->label("Publicēts")
             ])
             ->filters([
                 //
