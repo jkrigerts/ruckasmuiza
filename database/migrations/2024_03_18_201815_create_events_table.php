@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('type_id')->constrained()->cascadeOnDelete();
-            $table->string('title', 50);
+            $table->foreignId('type_id')->constrained()->restrictOnDelete();
+            $table->string('title', 100);
             $table->date('happens_at');
             $table->string('time', 50);
-            $table->string('info', 50);
-            $table->string('infoLong');
-            $table->string('price', 20);
+            $table->string('timeLong', 100)->nullable();
+            $table->string('info', 100);
+            $table->string('infoLong', 255)->nullable();
+            $table->string('price', 50);
             $table->boolean('cancelled')->default(false);
             $table->boolean('published');
             $table->timestamps();

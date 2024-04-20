@@ -30,6 +30,7 @@ class BlogResource extends Resource
 
     protected static ?string $modelLabel = 'Ieraksts';
     protected static ?string $pluralModelLabel = 'Muiža runā';
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {

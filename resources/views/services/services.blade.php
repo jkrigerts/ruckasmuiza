@@ -36,7 +36,7 @@
     <x-button-link href="{{ route('services.celebrations') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
-  <x-two-columns img_src='images/services/noma.webp' img_alt="Noma" swap={{true}}>
+  <x-two-columns img_src='images/services/telpu-noma.webp' img_alt="Noma" swap={{true}}>
     <x-slot:title>Telpu noma</x-slot:title>
     <p>
       Ja meklē telpas radošām nodarbēm, meistarklasēm, semināriem vai nometnēm –

@@ -7,7 +7,10 @@
     <div class="page-margins">
       <div class="head">
         <h1 class="page-title">{{$title}}</h1>
-        </div>
+      </div>
+      @if(count($blogPosts) == 0)
+        <p class="error">Neviens ieraksts vēl nav izveidots</p>
+      @endif
       <section class="blog-section">
         @foreach ($blogPosts as $post)
         <a class="blog-card" href="{{ route('blog.id', $post->id) }}" wire:navigate>

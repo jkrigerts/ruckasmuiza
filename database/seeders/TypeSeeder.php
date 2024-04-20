@@ -45,5 +45,9 @@ class TypeSeeder extends Seeder
             'name' => 'Bērniem',
             'color' => '#D9992D'
         ]);
+        Type::create([
+            'name' => 'Izrāde',
+            'color' => '#9E004F'
+        ]);
     }
 }

@@ -20,6 +20,7 @@ class GalleryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-photo';
     protected static ?string $modelLabel = 'Galerija';
     protected static ?string $pluralModelLabel = 'Galerijas';
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {

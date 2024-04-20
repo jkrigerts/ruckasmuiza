@@ -14,7 +14,7 @@
     <x-button-link href="{{ route('contacts') }}" text="Pieteikt"/>
   </x-two-columns>
 
-  <x-two-columns img_src='images/offers/dzirnavnieka-kurpes.webp' img_alt="Dzirnavnieka kurpēs" swap={{true}}>
+  <x-two-columns img_src='images/offers/melderis.webp' img_alt="Dzirnavnieka kurpēs" swap={{true}}>
     <x-slot:title>Iekāp dzirnavnieka kurpēs</x-slot:title>
     <p>
       Vai kādreiz esi domājis, kā top milti? Vai esi gribējis
