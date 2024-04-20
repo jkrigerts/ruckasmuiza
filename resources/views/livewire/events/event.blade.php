@@ -40,10 +40,10 @@
             
             <div>
                 <p>{{ \Carbon\Carbon::parse($event['happens_at'])->day }}. {{ $monthName }}</p>
-                <p>{{ $event['time'] }}</p>
+                <p>{{ $event['timeLong'] != "" ? $event['timeLong'] : $event['time'] }}</p>
             </div>
 
-            <p>{{ $event['infoLong'] }}</p>
+            <p>{{ $event['infoLong'] != "" ? $event['infoLong'] : $event['info'] }}</p>
             <p>Dalības maksa: <strong>{{ $event['price'] }}</strong></p>
 
             <div class="modal-contacts">

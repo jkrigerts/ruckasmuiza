@@ -15,9 +15,9 @@
     lai vienotos par detaļām un kāzu norises vietas rezervāciju!
   </p>
   <ul>
-    <li>1800 € par dienu pirmdienā, otrdienā, trešdienā</li>
-    <li>2000 € par dienu ceturtdienā, svētdienā</li>
-    <li>2500 € par dienu piektdienā, sestdienā </li>
+    <li>1800 € – pirmdiena, otrdiena, trešdiena</li>
+    <li>2000 € – ceturtdiena, svētdiena</li>
+    <li>2500 € – piektdiena, sestdiena</li>
   </ul>
   <p>
     Kāzas pie ozola (iekšpagalmā): 200 € / 2 h 

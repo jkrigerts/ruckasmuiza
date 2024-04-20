@@ -10,7 +10,7 @@
                 <x-section-heading>Pasākumu kalendārs</x-section-heading>
                 <p>Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu - atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.</p>
                 <div class="month-switcher">
-                    <div @click="() => {transition_left = true ; show_calendar = false; }" wire:click="down" >
+                    {{-- <div @click="() => {transition_left = true ; show_calendar = false; }" wire:click="down" >
                         <x-icons.caret-left />
                     </div>
 
@@ -18,7 +18,16 @@
                     
                     <div @click="() => {transition_left = false ; show_calendar = false; }" wire:click="up">
                         <x-icons.caret-right />
-                    </div>
+                    </div> --}}
+                    <a href="{{url("/pasakumi?monthOffset=") . ($monthOffset - 1)}}" wire:navigate>
+                        <x-icons.caret-left />
+                    </a>
+
+                    <p>{{ $thisMonth }} {{ $thisYear }}</p>
+                    
+                    <a href="{{url("/pasakumi?monthOffset=") . ($monthOffset + 1)}}" wire:navigate>
+                        <x-icons.caret-right />
+                    </a>
                 </div>
             </div>
             <p class="explanation">Uzziniet vairāk, izvēloties krāsaino datumu</p>

@@ -20,6 +20,7 @@ class GalleryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-photo';
     protected static ?string $modelLabel = 'Galerija';
     protected static ?string $pluralModelLabel = 'Galerijas';
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {
@@ -41,6 +42,8 @@ class GalleryResource extends Resource
                         ->appendFiles()
                         ->required()
                         ->label('Attēli galerijā'),
+                Forms\Components\Checkbox::make("published")
+                        ->label("Publicēt")->default(true)
             ])
             ->columns([12]);
     }
@@ -53,6 +56,7 @@ class GalleryResource extends Resource
                 Tables\Columns\TextColumn::make('title')->label('Virsraksts'),
                 Tables\Columns\TextColumn::make('description')->label('Apraksts'),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Attēls'),
+                Tables\Columns\CheckboxColumn::make("published")->label("Publicēts")->default(false),
             ])
             ->filters([
                 //

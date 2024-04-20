@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('thumbnail');
             $table->json('images');
+            $table->boolean('published');
             $table->timestamps();
         });
     }

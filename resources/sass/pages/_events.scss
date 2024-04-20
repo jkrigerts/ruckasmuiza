@@ -71,11 +71,17 @@
             align-items: center;
 
             margin: 0 auto;
-            max-width: 250px;
+            max-width: 280px;
             width: 100%;
 
-            font-size: calc($font-size-lg + 0.5rem);
-            font-weight: bold;
+            p {
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+
+            a {
+                color: $color-white-gray;
+            }
 
             svg {
                 cursor: pointer;
@@ -181,6 +187,9 @@
             font-size: 1.3rem;
             line-height: 1.3rem;
         }
+        .dim {
+            color: $color-gray;
+        }
 
         .event {
             flex-grow: 1;
@@ -240,6 +249,7 @@
                 font-size: $font-size-sm;
                 font-family: $font-display;
                 text-transform: uppercase;
+                font-weight: 900;
             }
 
             &:not(:only-of-type) {
@@ -404,6 +414,7 @@
         .modal-title {
             font-family: $font-display;
             font-size: 1.8rem;
+            font-weight: 900;
             text-transform: uppercase;
             color: var(--event-color);
         }
