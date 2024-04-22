@@ -1,6 +1,6 @@
 .simple-page {
     max-width: calc($navWidth - $logoWidth);
-    margin: 0 auto 3rem;
+    margin: 0 auto 4rem;
 
     .head {
         text-align: center;
@@ -38,11 +38,11 @@
     }
 
     @include content-max-width-breakpoint {
-        margin: 0 calc(($logoWidth / 2) + $navPadding) 3rem;
+        margin: 0 calc(($logoWidth / 2) + $navPadding) 4rem;
     }
 
     @include lg-breakpoint {
-        margin: 0 $navPadding 3rem;
+        margin: 0 $navPadding 4rem;
 
         section {
             padding: 2.5rem calc($logoWidth / 2);
