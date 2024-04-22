@@ -14,6 +14,7 @@
     Ruckas muižu! Iepazīsties ar aktuālo cenrādi un sazinies ar mums,
     lai vienotos par detaļām un kāzu norises vietas rezervāciju!
   </p>
+  <p style="margin-bottom: 1rem">Visas muižas noma</p>
   <ul>
     <li>1800 € – pirmdiena, otrdiena, trešdiena</li>
     <li>2000 € – ceturtdiena, svētdiena</li>
@@ -28,8 +29,7 @@
   <ul>
     <li>Līgavas pošanās telpas noma: 200 € (fotosesijai)</li>
     <li>Līgavaiņa pošanās telpas noma: 100 € (fotosesijai)</li>
-    <li>Jaunlaulāto numuriņš pēc izvēles: 90 – 120 €</li>
-    <li>Jaunlaulāto fotosesija muižā bez iepriekšējas pieteikšanās: 50 €</li>
+    <li>Jaunlaulāto fotosesija muižā: 50 €</li>
   </ul>
   <div class="gift_cards-centered-btn">
     <x-button-link href="{{ route('contacts') }}" text="Veikt rezervāciju"/>

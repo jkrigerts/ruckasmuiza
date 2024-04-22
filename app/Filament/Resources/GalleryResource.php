@@ -31,8 +31,7 @@ class GalleryResource extends Resource
                         ->label('Virsraksts')
                         ->required(),
                 Forms\Components\Textarea::make('description')
-                        ->label('Apraksts')
-                        ->required(),
+                        ->label('Apraksts'),
                 Forms\Components\FileUpload::make('thumbnail')
                         ->label('Reprezentējošais attēls')
                         ->required(),
