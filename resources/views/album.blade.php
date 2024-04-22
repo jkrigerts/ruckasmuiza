@@ -12,7 +12,9 @@
   <main class="single-album">
     <div class="head">
       <x-section-heading>{{ $album->title }}</x-section-heading>
-      <p>{{ $album->description }}</p>
+      @isset ($album->description)
+        <p>{{ $album->description }}</p>
+      @endisset
     </div>
 
     <section id="album" class="pswp-gallery">

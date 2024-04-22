@@ -46,6 +46,11 @@
             'image' => $defaultImage,
             'desc'  => 'Publiski pasākumi, konferences, semināri, nometnes un pat kultūras pasākumi – Ruckas muiža ir īstā vieta to norisei! Ja meklē plašas, autentiskas telpas, kas pārsteidz ar funkcionalitāti, – Tu esi īstajā vietā! Apstājies un iepazīsties ar cenu piedāvājumu.',
         ],
+        'excursion' => [
+            'title' => 'Ekskursija' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Atklāj Ruckas muižu un izzini, kā tā mainījusies kopš 1577. gada.',
+        ],
 
         // Piedāvājumi
         'special_offers' => [

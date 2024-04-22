@@ -45,6 +45,9 @@ Route::group(
               Route::get('/noma', function () {
                      return view('services/rent');
               })->name("rent");
+              Route::get('/ekskursija', function () {
+                     return view('services/excursion');
+              })->name("excursion");
        }
 );
 
@@ -64,9 +67,6 @@ Route::group(
               Route::get('/ipasie-piedavajumi', function () {
                      return view('offers/special_offers');
               })->name("special_offers");
-              Route::get('/atputa', function () {
-                     return view('offers/rest');
-              })->name("rest");
               Route::get('/davanu-kartes', function () {
                      return view('offers/gift_cards');
               })->name("gift_cards");

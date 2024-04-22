@@ -91,12 +91,10 @@
 			title="Nakšņot"
 			description="<p>Muižā netraucētu atpūtu iespējams baudīt kādā no 7 numuriņiem.
 										Iespējams rezervēt arī visus numuriņus, vienlaicīgi nakšņošanas
-										iespējas 12 (+3 guļvietas) personām. Piedāvājam ērtas, greznas naktsmājas Cēsīs,
+										iespējas 12 (+3 guļvietas) personām. Piedāvājam ērtas naktsmājas Cēsīs,
 										izvēloties sev piemērotāko numuru, no kura logiem paveras pasakains dabas skats.
 										TV un citas ierīces istabās nav pieejamas, lai Tu varētu patiesi labi un
-										netraucēti atpūsties.</p>
-										<p>Pieejams koplietošanas sanitārais mezgls un karsti dzērieni brokastīs.
-										Par papildus samaksu arī brokastis.</p>"
+										netraucēti atpūsties.</p>"
     		icon="components.icons.bedtime"
 			link="services.stay"
 			fade=true
@@ -130,10 +128,11 @@
 			id="skolas-soma"
 			bgImage="images/landing/skolas-soma.webp"
 			title="Skolas soma"
-			description="<p>Īsteno kādu no programmas “Latvijas skolas soma” aktivitātēm muižā!
-										Šī ir iespēja izmantot Ruckas muižas telpu, ļaujot skolas vecuma
-										bērniem un jauniešiem iepazīt Latvijas kultūras vērtības un
-										laikmetīgās izpausmes. Sazinies ar mums, lai uzzinātu vairāk par iespējām!</p>"
+			description='<p>Īsteno kādu no programmas "Latvijas skolas soma" aktivitātēm muižā! Šī ir
+				iespēja izmantot Ruckas muižas telpu, ļaujot skolas vecuma bērniem un jauniešiem iepazīt
+				Latvijas kultūras vērtības un laikmetīgās izpausmes.
+				Programma būs pieejama 2024./2025. mācību gadā. Sazinies ar mums, lai uzzinātu vairāk
+				par iespējām!</p>'
     		icon="components.icons.bag"
 			link="contacts"
 			linkText="Sazināties"

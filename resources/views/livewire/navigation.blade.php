@@ -16,6 +16,7 @@
                                         ['title' => 'Kāzas', 'href' => 'services.weddings'],
                                         ['title' => 'Svinības', 'href' => 'services.celebrations'],
                                         ['title' => 'Telpu noma', 'href' => 'services.rent'],
+                                        ['title' => 'Ekskursija', 'href' => 'services.excursion'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link>
@@ -23,7 +24,6 @@
                                        unchoosable
                                        :items="[
                                         ['title' => 'Īpašie piedāvājumi', 'href' => 'offers.special_offers'],
-                                        ['title' => 'Atpūtas iespējas', 'href' => 'offers.rest'],
                                         ['title' => 'Dāvanu kartes', 'href' => 'offers.gift_cards'],
                                         ]"
                 >Piedāvājumi</x-navigation.nav-link>

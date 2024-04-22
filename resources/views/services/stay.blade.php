@@ -3,10 +3,11 @@
   <p>
     Nedēļas nogale Cēsīs, atpūta ar ģimeni vai jaunlaulāto divvientulība –
     Ruckas muiža ir tās naktsmājas Vidzemē, kas neatstās vienaldzīgu!
-    Pie mums pieejamas nakšņošanas iespējas, sākot no 30 €/personai,
-    kādā no 7 numuriņiem.
-  </p>
-
+    Pie mums pieejamas nakšņošanas iespējas, sākot no 50 €/personai,
+    kādā no 7 numuriņiem. Pieejama tikai koplietošanas WC un dušas telpas.</p>
+    {{-- <div class="gift_cards-centered-btn" style="margin-bottom: 2rem">
+      <x-button-link href="{{ url('galerija/2') }}" text="Apskatīt istabiņas"></x-button-link>
+    </div> --}}
 
   <div class="stay-rooms">
     <table>
@@ -41,7 +42,7 @@
           <td>Jēkaba istaba</td>
           <td>Nr. 6</td>
           <td>Trīs vienguļamās gultas</td>
-          <td>75 € vai 2 personām 65 € vai 1 personai 30 €</td>
+          <td>75 € vai 2 personām 65 € par personu</td>
         </tr>
         <tr>
           <td>Margarētas istaba</td>
@@ -53,7 +54,7 @@
           <td>Franciska istaba</td>
           <td>Nr. 2</td>
           <td>Viena divguļamā gulta</td>
-          <td>80 €</td>
+          <td>75 €</td>
         </tr>
         <tr>
           <td>Jāņa istaba</td>
@@ -65,6 +66,7 @@
     </table>
   </div>
   <div class="gift_cards-centered-btn">
+    <x-button-link href="{{ url('galerija/2') }}" text="Apskatīt istabiņas"></x-button-link>
     <x-button-link href="{{ route('contacts') }}" text="Veikt rezervāciju"/>
   </div>
 </x-layouts.simple-page>
