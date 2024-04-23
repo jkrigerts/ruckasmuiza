@@ -33,6 +33,7 @@
           </div>
         </div>
       </div>
+      {!! $book->description !!}
     </section>
   </main>
 </x-layouts.app>

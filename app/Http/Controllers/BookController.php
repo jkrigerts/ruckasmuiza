@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::where("visible", true)->get();
+        $books = Book::where("visible", true)->paginate(2);
 
         return view("shop.books.index", compact('books'));
     }
