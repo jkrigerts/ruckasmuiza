@@ -1,4 +1,14 @@
-<x-layouts.app metaName="gallery">
+<x-layouts.app>
+  <x-slot:meta>
+    <title>{{ $album->title }} - Ruckas muiža</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ $album->title }}" />
+    <meta property="og:image" content="{{asset("/storage/" . $album->thumbnail)}}" />
+    <meta property="og:description" content='{{$album->description ?? "Apskati Ruckas muižas galeriju!"}}' />
+    
+  </x-slot:meta>
+
   <x-background-image
       src="images/landing/landing.webp"
       alt="Ruckas muiža"

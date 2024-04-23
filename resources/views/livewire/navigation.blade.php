@@ -23,8 +23,9 @@
                 <x-navigation.nav-link href="offers."
                                        unchoosable
                                        :items="[
-                                        ['title' => 'Īpašie piedāvājumi', 'href' => 'offers.special_offers'],
+                                        ['title' => 'Grāmatas', 'href' => 'offers.books'],
                                         ['title' => 'Dāvanu kartes', 'href' => 'offers.gift_cards'],
+                                        ['title' => 'Īpašie piedāvājumi', 'href' => 'offers.special_offers']
                                         ]"
                 >Piedāvājumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="blog."

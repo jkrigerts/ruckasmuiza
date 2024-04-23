@@ -1,16 +1,8 @@
 @props([
     'bg_src',
     'bg_alt',
-    'metaName'
+    'metaName'  => 'landing'
 ])
-
-
-@php
-    // fallback incase metaName is not provided
-    if(!isset($metaName)) {
-      $metaName = 'landing';
-    }
-@endphp
 
 
 <x-layouts.app :metaName=$metaName>

@@ -1,4 +1,4 @@
-.gallery {
+.books {
     max-width: calc($navWidth - $logoWidth);
     margin: 0 auto 3rem;
 
@@ -11,24 +11,24 @@
         position: relative;
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         justify-items: center;
         column-gap: 60px;
         row-gap: 5rem;
         width: 100%;
 
-        .album {
-            max-width: 400px;
+        .book {
+            max-width: 270px;
             position: relative;
 
             &:before {
                 content: "";
-                width: 90%;
-                height: 110%;
+                width: 88%;
+                height: 107%;
                 position: absolute;
                 z-index: -1;
-                top: -5%;
-                left: 5%;
+                top: -3.5%;
+                left: 6%;
                 background-color: $color-raspberry-red;
                 border-radius: 3px;
             }
@@ -52,7 +52,7 @@
 
                 img {
                     width: 100%;
-                    aspect-ratio: 4/3;
+                    aspect-ratio: 3/4;
                     object-fit: cover;
                 }
 
@@ -61,8 +61,16 @@
                     font-family: $font-display;
                     font-weight: 300;
                     color: $color-white;
-                    padding: 8px 5% 16px;
+                    padding: 8px 5% 6px;
                     text-align: center;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    color: $color-white;
+                    font-weight: 300;
+                    text-align: center;
+                    padding: 0px 5% 16px;
                 }
             }
         }
@@ -70,6 +78,10 @@
 
     @include content-max-width-breakpoint {
         margin: 0 calc(($logoWidth / 2) + $navPadding) 3rem;
+
+        section {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     @include lg-breakpoint {
