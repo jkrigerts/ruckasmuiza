@@ -92,6 +92,12 @@
             'desc'  => 'Atziņas un pieredzes stāsti no muižas saimnieka Renāra Sproģa skatupunkta.',
         ],
 
+        'books' => [
+            'title' => 'Grāmatas' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Iepazīsti un iegādājies kādu no "Mieram tuvu" grāmatām.',
+        ],
+
 
         'gallery' => [
             'title' => 'Galerija' . $afterTitle,

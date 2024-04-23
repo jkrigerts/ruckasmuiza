@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -70,6 +71,10 @@ Route::group(
               Route::get('/davanu-kartes', function () {
                      return view('offers/gift_cards');
               })->name("gift_cards");
+              Route::get('/gramatas', [BookController::class, "index"])
+                     ->name("books");
+
+              Route::get('/gramatas/{id}', [BookController::class, "show"]);
        }
 );
 

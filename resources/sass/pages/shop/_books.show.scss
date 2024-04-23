@@ -1,0 +1,140 @@
+.book-simple-page {
+    width: 850px;
+    margin: 0 auto 4rem;
+
+    .head {
+        text-align: center;
+        margin: 4rem 1rem 4rem;
+    }
+
+    section {
+        background-color: $color-white-gray;
+        text-align: justify;
+        border-radius: 3px;
+        box-shadow: 0 5px 70px $color-black-true;
+        position: relative;
+
+        padding: 2.5rem 2rem;
+
+        .bg {
+            position: absolute;
+            z-index: -1;
+            top: -20px;
+            left: 10%;
+            width: 80%;
+            height: calc(100% + 40px);
+            background-color: $color-raspberry-red;
+            border-radius: 3px;
+        }
+
+        li {
+            font-size: $font-size-md;
+            margin-bottom: 0.5rem;
+        }
+
+        li:last-child {
+            margin-bottom: 2rem;
+        }
+    }
+
+    p {
+        font-size: $font-size-md;
+        margin-bottom: 2rem;
+    }
+
+    @include xl-breakpoint {
+        margin: 0 calc($navPadding + $logoWidth) 4rem;
+        width: auto;
+
+        section {
+            padding: 2.5rem;
+        }
+    }
+
+    @include lg-breakpoint {
+        margin: 0 calc($navPadding + $logoWidth / 2) 4rem;
+        section {
+            padding: 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        margin: 0 $navPadding 4rem;
+    }
+
+    @include md-breakpoint {
+        margin: 0 calc($navPadding + $logoWidth / 2) 4rem;
+    }
+
+    @include sm-breakpoint {
+        margin: 0 $navPadding 4rem;
+    }
+
+    @include xs-breakpoint {
+        section {
+            padding: $navPadding;
+            text-align: left;
+        }
+    }
+}
+
+// Inner
+
+.book-show {
+    width: 100%;
+    margin-bottom: 5.5rem;
+
+    &:first-of-type {
+        margin-top: 2rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0rem;
+    }
+
+    > div {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: start;
+        gap: 30px;
+
+        img {
+            height: 100%;
+            max-height: 500px;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 3px;
+            justify-self: end;
+        }
+
+        .text {
+            p {
+                margin-bottom: 14px;
+                text-align: left;
+
+                strong {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .button-link {
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                @include md-breakpoint {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        @include md-breakpoint {
+            grid-template-columns: 1fr;
+
+            img {
+                justify-self: center;
+            }
+        }
+    }
+}
