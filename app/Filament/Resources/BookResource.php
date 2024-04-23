@@ -37,7 +37,7 @@ class BookResource extends Resource
                             ->required(),
                         Forms\Components\TextInput::make('author')
                             ->label('Autors'),
-                        Forms\Components\Richeditor::make('description')
+                        Forms\Components\RichEditor::make('description')
                             ->label('Apraksts')
                             ->toolbarButtons([
                                 "blockquote",
