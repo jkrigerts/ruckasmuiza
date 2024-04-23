@@ -24,5 +24,6 @@
         </article>
       @endforeach
     </section>
+    <div class="paginate">{{ $books->links() }}</div>
   </main>
 </x-layouts.app>

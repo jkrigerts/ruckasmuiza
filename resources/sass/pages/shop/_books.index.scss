@@ -113,4 +113,76 @@
         font-size: $font-size-md;
         text-align: center;
     }
+
+    .paginate {
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .flex {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: $border-radius;
+            color: $color-white;
+            font-weight: 300;
+        }
+        .items-center {
+            align-items: center;
+        }
+        .justify-between {
+            justify-content: center;
+        }
+
+        .w-5 {
+            width: 24px;
+        }
+        .h-5 {
+            height: 24px;
+            transform: translateY(2px);
+        }
+        .flex-1 {
+            display: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .hidden > div > span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+
+            > a,
+            > span {
+                padding: 4px 8px;
+                border-radius: $border-radius;
+                transition: all $transition-duration;
+
+                &:hover {
+                    background-color: $color-raspberry-red;
+                }
+            }
+
+            > a:first-child,
+            > a:last-child,
+            > span:first-child,
+            > span:last-child {
+                padding: 0;
+            }
+
+            [aria-disabled]:not([aria-disabled="false"]):hover {
+                background-color: transparent;
+            }
+
+            [aria-current]:not([aria-current="false"]) {
+                font-weight: bold;
+                background-color: $color-raspberry-red;
+            }
+        }
+    }
 }
