@@ -28,7 +28,7 @@ class BookResource extends Resource
                 Section::make('Vispārēji')
                     ->columns([
                         'sm' => 1,
-                        'md' => 2,
+                        'md' => 1,
                     ])
                     ->description('Vispārēja informācija par grāmatu')
                     ->schema([
@@ -37,8 +37,22 @@ class BookResource extends Resource
                             ->required(),
                         Forms\Components\TextInput::make('author')
                             ->label('Autors'),
-                        Forms\Components\Textarea::make('description')
-                            ->label('Apraksts'),
+                        Forms\Components\Richeditor::make('description')
+                            ->label('Apraksts')
+                            ->toolbarButtons([
+                                "blockquote",
+                                "bold",
+                                "bulletList",
+                                "h2",
+                                "h3",
+                                "italic",
+                                "link",
+                                "orderedList",
+                                "redo",
+                                "strike",
+                                "underline",
+                                "undo",
+                            ]),
                         Forms\Components\FileUpload::make('image')
                             ->label('Reprezentējošs attēls')
                             ->required(),
@@ -68,15 +82,15 @@ class BookResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->label('Nosaukums'),
-                Tables\Columns\TextColumn::make('author')->label('Autors'),
-                Tables\Columns\TextColumn::make('price')->label('Cena'),
-                Tables\Columns\TextColumn::make('count_available')->label('Pieejams'),
+                Tables\Columns\TextColumn::make('title')->label('Nosaukums')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('author')->label('Autors')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('price')->label('Cena')->sortable(),
+                Tables\Columns\TextColumn::make('count_available')->label('Pieejams')->sortable(),
                 Tables\Columns\ImageColumn::make('image')->label('Attēls'),
                 Tables\Columns\CheckboxColumn::make("visible")->label("Redzams"),
             ])
             ->filters([
-                //
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

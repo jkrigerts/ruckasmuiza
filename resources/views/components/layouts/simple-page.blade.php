@@ -6,6 +6,10 @@
 
 
 <x-layouts.app :metaName=$metaName>
+
+  <x-slot:meta>
+    {{$meta}}
+  </x-slot:meta>
   <x-background-image src="{{ asset($bg_src) }}" alt="{{$bg_alt}}" />
   <main class="simple-page">
     <div class="head">
