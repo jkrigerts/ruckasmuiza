@@ -3,16 +3,32 @@
         <div class="head">
           <x-section-heading>Grāmatas</x-section-heading>
 
-          <div class="search">
-            <form wire:submit="search">
-              <label for="filter-book">
-                Meklēt pēc nosaukuma vai autora: 
-              </label>
-              <div>
-                <input type="text" wire:model="query" id="filter-book">
-                <button type="submit">Meklēt</button>
-              </div>
-            </form>
+          <div class="intro">
+            <div class="desc">
+              <p>
+                Ir pierādīts, ka grāmatu lasīšanai ir daudz plusu, tostarp, tas palīdz
+                uzlabot veselību, stimulējot smadzeņu šūnas. Ne mazāk svarīgi, ka
+                izlasītais padara gudrāku. Ik dienu lasot 20 - 30 minūtes, sevi arvien
+                vairāk pilnveidosi, bagātināsi, iegūstot jaunas atziņas un zināšanas.
+                Tiesa, pie nosacījuma, ja tā būs garīgi bagātinoša literatūra.
+              </p>
+              <p>
+                Ruckas muiža gādās par šo iespēju, piedāvājot iegādāties izdevniecības 
+                "KALA Raksti" izdotās grāmatas sadarbībā ar "Mieram tuvu".
+              </p>
+            </div>
+
+            <div class="search">
+              <form wire:submit="search">
+                <label for="filter-book">
+                  Meklēt pēc nosaukuma vai autora: 
+                </label>
+                <div>
+                  <input type="text" wire:model="query" id="filter-book">
+                  <button type="submit">Meklēt</button>
+                </div>
+              </form>
+            </div>
           </div>
           
         </div>
