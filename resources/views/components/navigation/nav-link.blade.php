@@ -11,7 +11,7 @@
       {{$slot}}
     </button>  
   @else
-    <a href="{{route($href)}}" wire:navigate class="{{request()->routeIs($href.'*') ? 'active' : ''}}">
+    <a href="{{route($href)}}" wire:navigate class="{{(request()->routeIs($href) || request()->is(ltrim(route($href, [], false), "/") . "/*")) ? 'active' : ''}}">
       {{ $slot }}
     </a>
   @endif
@@ -19,7 +19,7 @@
     <ul class="dropdown">
       @foreach ($items as $item)
           <li>
-            <a href="{{route($item['href'])}}"  wire:navigate class="{{request()->routeIs($item['href']) ? 'active' : ''}}">
+            <a href="{{route($item['href'])}}"  wire:navigate class="{{(request()->routeIs($item['href']) || request()->is(ltrim(route($item['href'], [], false), "/") . "/*")) ? 'active' : ''}}">
               {{$item['title']}}
             </a>
           </li>
