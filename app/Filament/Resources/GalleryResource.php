@@ -55,8 +55,8 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->label('Virsraksts'),
-                Tables\Columns\TextColumn::make('description')->label('Apraksts'),
+                Tables\Columns\TextColumn::make('title')->label('Virsraksts')->limit(50),
+                Tables\Columns\TextColumn::make('description')->label('Apraksts')->limit(50),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Attēls'),
                 Tables\Columns\TextInputColumn::make("order_number")->label("Nr. p. k.")->rules(["numeric"]),
                 Tables\Columns\CheckboxColumn::make("published")->label("Publicēts")->default(false),

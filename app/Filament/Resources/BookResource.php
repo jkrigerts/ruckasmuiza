@@ -92,8 +92,8 @@ class BookResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->label('Nosaukums')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('author')->label('Autors')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('title')->label('Nosaukums')->searchable()->sortable()->limit(50),
+                Tables\Columns\TextColumn::make('author')->label('Autors')->searchable()->sortable()->limit(50),
                 Tables\Columns\TextColumn::make('price')->label('Cena')->sortable(),
                 Tables\Columns\TextColumn::make('count_available')->label('Pieejams')->sortable(),
                 Tables\Columns\ImageColumn::make('image')->label('Attēls'),
