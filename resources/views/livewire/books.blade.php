@@ -52,6 +52,6 @@
             </article>
           @endforeach
         </section>
-        <div class="paginate">{{ $books->links() }}</div>
+        <div class="paginate">{{ $books->onEachSide(1)->links() }}</div>
       </main>
 </div>
