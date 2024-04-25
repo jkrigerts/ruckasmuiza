@@ -1,13 +1,17 @@
 .section-heading {
+    --heading-decrease-size: 0px;
+
     font-family: $font-display;
     font-weight: bold;
     color: $color-white-gray;
-    font-size: $font-size-xl;
+    font-size: calc($font-size-xl - var(--heading-decrease-size));
     text-shadow: $text-shadow;
+    word-break: break-word;
+    hyphens: auto;
     text-transform: uppercase;
     transform: translateZ(0);
 
     @include md-breakpoint {
-        font-size: calc($font-size-lg + 3vw);
+        font-size: calc($font-size-lg + 3vw - var(--heading-decrease-size));
     }
 }
