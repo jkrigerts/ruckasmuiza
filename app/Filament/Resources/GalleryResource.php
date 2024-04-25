@@ -41,6 +41,9 @@ class GalleryResource extends Resource
                         ->appendFiles()
                         ->required()
                         ->label('Attēli galerijā'),
+                Forms\Components\TextInput::make('order_number')
+                        ->label('Numurs pēc kārtas (nosaka secību)')
+                        ->integer(),
                 Forms\Components\Checkbox::make("published")
                         ->label("Publicēt")->default(true)
             ])
@@ -55,6 +58,7 @@ class GalleryResource extends Resource
                 Tables\Columns\TextColumn::make('title')->label('Virsraksts'),
                 Tables\Columns\TextColumn::make('description')->label('Apraksts'),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Attēls'),
+                Tables\Columns\TextInputColumn::make("order_number")->label("Nr. p. k.")->rules(["numeric"]),
                 Tables\Columns\CheckboxColumn::make("published")->label("Publicēts")->default(false),
             ])
             ->filters([

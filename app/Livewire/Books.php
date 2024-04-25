@@ -5,6 +5,7 @@ namespace App\Livewire;
 use Livewire\WithPagination;
 use Livewire\Component;
 use App\Models\Book;
+use Illuminate\Database\Eloquent\Builder;
 
 class Books extends Component
 {
@@ -20,8 +21,12 @@ class Books extends Component
     public function render()
     {
         return view('livewire.books', [
-            'books' => Book::where('title', 'like', '%'.$this->query.'%')
-                            ->orWhere('author', 'like', '%'.$this->query.'%')
+            'books' => Book::where('visible', true)
+                            ->where(function (Builder $query) {
+                                $query->where('title', 'like', '%'.$this->query.'%')
+                                      ->orWhere('author', 'like', '%'.$this->query.'%');
+                            })
+                            ->orderByRaw("-order_number DESC")
                             ->paginate(12),
         ]);
     }
