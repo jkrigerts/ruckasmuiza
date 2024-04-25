@@ -12,7 +12,7 @@
   <x-background-image src="images/landing/landing.webp" alt="Ruckas muiža" />
   <main class="book-simple-page">
     <div class="head">
-      <x-section-heading>{{ $book->title }}</x-section-heading>
+      <x-section-heading style="--heading-decrease-size: {{strlen($book->title) > 30 ? round(strlen($book->title) / 100, 1) : '0'}}rem">{!! $book->title !!}</x-section-heading>
     </div>
 
     <section>
@@ -21,9 +21,9 @@
       <div class="bg"></div> 
       <div class="book-show">
         <div>
-          <img src='{{ url("storage/" . $book->image) }}' alt="{{$book->title}}">
+          <img src='{{ url("storage/" . $book->image) }}' alt="{!! $book->title !!}">
           <div class="text">
-            <p>Nosaukums: <strong>{{ $book->title }}</strong></p>
+            <p>Nosaukums: <strong>{!! $book->title !!}</strong></p>
             @isset ($book->author)
               <p>Autors: <strong>{{ $book->author }}</strong></p>
             @endisset

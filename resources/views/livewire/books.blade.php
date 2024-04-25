@@ -43,7 +43,7 @@
               <a href="{{url("piedavajumi/gramatas/" . $book->id)}}" wire:navigate>
                 <img src="{{ url("storage/" . $book->image) }}" alt="{{ $book->title }}"/>
                 <div class="book-info">
-                    <h2>{{$book->title}}</h2>
+                    <h2>{!! $book->title !!}</h2>
                     @isset($book->author)
                       <p>{{$book->author}}</p>
                     @endisset
@@ -52,6 +52,6 @@
             </article>
           @endforeach
         </section>
-        <div class="paginate">{{ $books->links() }}</div>
+        <div class="paginate">{{ $books->onEachSide(1)->links() }}</div>
       </main>
 </div>
