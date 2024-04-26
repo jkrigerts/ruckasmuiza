@@ -41,7 +41,7 @@
 
     <footer>
         <p>Ruckas muiža {{ date('Y') }}</p>
-        <p>Mājaslapu taisīja VTDT kursa IPb21 audzēkņi</p>
-        <p class="tooltip">Leons Aleksandrovs, Silvestrs Lignickis, Roberts Briņķis, Tomass Artūrs Rudzītis</p>
+        <p>Mājaslapu taisīja Vidzemes Tehnoloģiju un Dizaina Tehnikuma kursa IPb21 audzēkņi</p>
+        <p class="tooltip">Leons Aleksandrovs, Silvestrs Lignickis, Roberts Briņķis, Tomass Artūrs Rudzītis, Kristaps Polis, Jēkabs Krīgerts</p>
     </footer>
 </html>
