@@ -2,14 +2,11 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: hsl(330, 100%, 31%);
-    // width: 100%;
     justify-items: center;
     align-items: center;
     padding: 0.7rem;
-    // flex-basis: 100vh;
     flex: 0 0 auto; /* Allows footer to shrink when content overflows */
     width: 100%;
-    // position: sticky; /* Sticks the footer to the bottom */
     bottom: 0; /* Positions the footer at the bottom */
 }
 main{
