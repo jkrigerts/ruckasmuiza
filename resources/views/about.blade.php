@@ -24,4 +24,4 @@
     <p>
       Nāc ciemos, lai atklātu, piedzīvotu un sajustu Ruckas muižā!
     </p>
-</x-layouts.simple-page>
+  </x-layouts.simple-page>

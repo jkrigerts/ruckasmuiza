@@ -16,15 +16,26 @@
         {{-- @vite("resources/sass/app.scss") --}}
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
+
+    @if (Route::current()->getName() == "landing")
+        <body class="no-scroll">
+            <livewire:navigation />
+            <main class="">
+                {{ $slot }}
+            </main>
+        </body>
+    @else
     <body>
         <livewire:navigation />
         <main class="">
             {{ $slot }}
         </main>
-        <footer>
-            <p>Ruckas muiža {{ date('Y') }}</p>
-            <p>Mājaslapu taisīja VTDT kursa IPb21 audzēkņi</p>
-            <p class="tooltip">Leons Aleksandrovs, Silvestrs Lignickis, Roberts Briņķis, Tomass Artūrs Rudzītis</p>
-        </footer>
     </body>
+    @endif
+
+    <footer>
+        <p>Ruckas muiža {{ date('Y') }}</p>
+        <p>Mājaslapu taisīja VTDT kursa IPb21 audzēkņi</p>
+        <p class="tooltip">Leons Aleksandrovs, Silvestrs Lignickis, Roberts Briņķis, Tomass Artūrs Rudzītis</p>
+    </footer>
 </html>
