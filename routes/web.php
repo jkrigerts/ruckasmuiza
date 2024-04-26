@@ -43,12 +43,12 @@ Route::group(
               Route::get('/svinibas', function () {
                      return view('services/celebrations');
               })->name("celebrations");
-              Route::get('/noma', function () {
-                     return view('services/rent');
-              })->name("rent");
-              Route::get('/ekskursija', function () {
-                     return view('services/excursion');
-              })->name("excursion");
+              // Route::get('/noma', function () {
+              //        return view('services/rent');
+              // })->name("rent");
+              // Route::get('/ekskursija', function () {
+              //        return view('services/excursion');
+              // })->name("excursion");
        }
 );
 
@@ -65,9 +65,9 @@ Route::group(
               "as" => "offers.",
        ],
        function () {
-              Route::get('/ipasie-piedavajumi', function () {
-                     return view('offers/special_offers');
-              })->name("special_offers");
+              // Route::get('/ipasie-piedavajumi', function () {
+              //        return view('offers/special_offers');
+              // })->name("special_offers");
               Route::get('/davanu-kartes', function () {
                      return view('offers/gift_cards');
               })->name("gift_cards");
@@ -84,10 +84,10 @@ Route::group(
               "as" => "blog.",
        ],
        function () {
-              Route::get('/aktualitates', function () {
-                     $blogPost = Blog::where('section_id', 3)->where("published", true)->get();
-                     return view('blog/news', ['blogPosts' => $blogPost]);
-              })->name("news");
+              // Route::get('/aktualitates', function () {
+              //        $blogPost = Blog::where('section_id', 3)->where("published", true)->get();
+              //        return view('blog/news', ['blogPosts' => $blogPost]);
+              // })->name("news");
               Route::get('/renars-sprogis', function () {
                      $blogPost = Blog::where('section_id', 1)->where("published", true)->get();
                      return view('blog/sprogis', ['blogPosts' => $blogPost]);

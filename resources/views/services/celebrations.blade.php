@@ -5,7 +5,8 @@
     ir iekārtotas tā, lai ērti un mājīgi svinētu kā lielus, tā mazus svētkus!
     Baudi kopābūšanu ar kolēģiem, radiem, draugiem, kāzu viesiem vai sadarbības 
     partneriem – telpas vienlīdz labi piemērotas kā privātu, tā korporatīvu
-    svinību rīkošanai jebkurā gadalaikā.
+    svinību rīkošanai jebkurā gadalaikā. Piedāvājam nomai telpas gan atsevišķi,
+    gan visu muižu kopā – te labi jutīsies līdz pat 120 viesiem!
   </p>
   <x-inner-chapter-heading>Telpas svētkiem – cenas</x-inner-chapter-heading>
   <p>
@@ -13,10 +14,10 @@
     kas atbildīs ikvienām vēlmēm. Ieskaties, kādi tie ir!
   </p>
   <ul>
-    <li>1. stāva veranda (maksimums 80 cilvēki) – 80 €/h (minimums 3h)</li>
-    <li>2. stāva veranda (maksimums 80 cilvēki)  - 80 €/h (minimums 3h)</li>
-    <li>Mazā zāle (blakus 1. stāva verandai) – 50 €/h</li>
-    <li style="margin-bottom: 1rem">Ēdamzāle – 50 €/h</li>
+    <li>1. stāva veranda (līdz 60 personām) – 80 €/h (minimums 3h)</li>
+    <li>2. stāva veranda (līdz 30 personām)  - 80 €/h (minimums 3h)</li>
+    <li>Mazā zāle (blakus 1. stāva verandai, līdz 20 personām) – 50 €/h</li>
+    <li style="margin-bottom: 1rem">Ēdamzāle (līdz 15 personām) – 50 €/h</li>
   </ul>
   <p>
     <em>Cenā ietilpst telpas noma un krēsli, galdi. Papildus iespējams nomāt

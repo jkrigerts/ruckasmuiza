@@ -14,21 +14,15 @@
     Ruckas muižu! Iepazīsties ar aktuālo cenrādi un sazinies ar mums,
     lai vienotos par detaļām un kāzu norises vietas rezervāciju!
   </p>
-  <p style="margin-bottom: 1rem">Visas muižas noma</p>
+  <p style="margin-bottom: 1rem">Visas muižas noma no plkst. 14:00 līdz nākamās dienas plkst. 12:00</p>
   <ul>
-    <li>1800 € – pirmdiena, otrdiena, trešdiena</li>
-    <li>2000 € – ceturtdiena, svētdiena</li>
-    <li>2500 € – piektdiena, sestdiena</li>
+    <li>1200 € – pirmdiena, otrdiena, trešdiena</li>
+    <li>1800 € – ceturtdiena, svētdiena</li>
+    <li>2000 € – piektdiena, sestdiena</li>
   </ul>
-  <p>
-    Kāzas pie ozola (iekšpagalmā): 200 € / 2 h 
-  </p>
-  <p>
-    Kāzu pieturvieta: 200 € / līdz 2 h 
-  </p>
   <ul>
-    <li>Līgavas pošanās telpas noma: 200 € (fotosesijai)</li>
-    <li>Līgavaiņa pošanās telpas noma: 100 € (fotosesijai)</li>
+    <li>Laulību ceremonija pie ozola (iekšpagalmā): 200 € / 2 h </li>
+    <li>Kāzu pieturvieta muižas oranžērijā: 150 € / līdz 2 h </li>
     <li>Jaunlaulāto fotosesija muižā: 50 €</li>
   </ul>
   <div class="gift_cards-centered-btn">

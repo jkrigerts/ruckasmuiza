@@ -19,9 +19,8 @@ return new class extends Migration
         });
 
         DB::table('sections')->insert([
-            ['name' => 'Renārs Sproģis Runā'],
-            ['name' => 'Jāņa Gabrāna Piezīmes'],
-            ['name' => 'Aktualitātes'],
+            ['name' => 'Renāra Sproģa dienasgrāmata'],
+            ['name' => 'Jāņa Gabrāna piezīmes'],
         ]);
     }
 

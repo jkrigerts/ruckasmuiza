@@ -29,12 +29,12 @@
     <p>
       Ruckas muiža ir īstā vieta, kur grezni svinēt sev īpašus dzīves notikumus
       vai korporatīvus pasākumus – telpas ir plašas, mājīgas un gaišas!
-      Iespējams uzņemt līdz pat 80 personām.
+      Iespējams uzņemt līdz pat 120 viesiem.
     </p>
     <x-button-link href="{{ route('services.celebrations') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
-  <x-two-columns img_src='images/services/telpu-noma.webp' img_alt="Noma" swap={{true}}>
+  {{-- <x-two-columns img_src='images/services/telpu-noma.webp' img_alt="Noma" swap={{true}}>
     <x-slot:title>Telpu noma</x-slot:title>
     <p>
       Ja meklē telpas radošām nodarbēm, meistarklasēm, semināriem vai nometnēm –
@@ -47,5 +47,5 @@
       <x-slot:title>Ekskursija pa muižu</x-slot:title>
       <p>Atklāj Ruckas muižu un izzini, kā tā mainījusies kopš 1577. gada.</p>
       <x-button-link href="{{ route('services.excursion') }}" text="Uzzināt vairāk!"/>
-    </x-two-columns>
+    </x-two-columns> --}}
 </x-layouts.simple-page>

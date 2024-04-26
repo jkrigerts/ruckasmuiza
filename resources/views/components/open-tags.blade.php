@@ -87,7 +87,7 @@
             'desc'  => 'Kultūras dzīves mutuļo, pateicoties Ruckas muižas dvēselei – Jānim Gabrānam.',
         ],
         'sprogis' => [
-            'title' => 'Renārs Sproģis runā' . $afterTitle,
+            'title' => 'Renāra Sproģa dienasgrāmata' . $afterTitle,
             'image' => $defaultImage,
             'desc'  => 'Atziņas un pieredzes stāsti no muižas saimnieka Renāra Sproģa skatupunkta.',
         ],

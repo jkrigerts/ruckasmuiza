@@ -10,7 +10,7 @@
         </div>
         <h1 class="page-title">{{$blogPost->title}}</h1>
         <div class="metadata">
-            <p>{{ $blogPost->section_id == 1 ? 'Renārs Sproģis runā' : ($blogPost->section_id == 2 ? 'Jāņa Gabrāna piezīmes' : 'Aktualitātes') }}</p>
+            <p>{{ $blogPost->section_id == 1 ? 'Renāra Sproģa dienasgrāmata' : ($blogPost->section_id == 2 ? 'Jāņa Gabrāna piezīmes' : 'Aktualitātes') }}</p>
             <p class="date">{{ $blogPost->created_at }}</p>
         </div>
         <section class="blog-post-content">

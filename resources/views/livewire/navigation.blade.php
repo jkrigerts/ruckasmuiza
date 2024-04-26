@@ -15,8 +15,6 @@
                                         ['title' => 'Nakšņošana', 'href' => 'services.stay'],
                                         ['title' => 'Kāzas', 'href' => 'services.weddings'],
                                         ['title' => 'Svinības', 'href' => 'services.celebrations'],
-                                        ['title' => 'Telpu noma', 'href' => 'services.rent'],
-                                        ['title' => 'Ekskursija', 'href' => 'services.excursion'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link>
@@ -25,14 +23,12 @@
                                        :items="[
                                         ['title' => 'Grāmatas', 'href' => 'offers.books'],
                                         ['title' => 'Dāvanu kartes', 'href' => 'offers.gift_cards'],
-                                        ['title' => 'Īpašie piedāvājumi', 'href' => 'offers.special_offers']
                                         ]"
                 >Piedāvājumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="blog."
                                        unchoosable
                                        :items="[
-                                        ['title' => 'Aktualitātes', 'href' => 'blog.news'],
-                                        ['title' => 'Renārs Sproģis runā', 'href' => 'blog.sprogis'],
+                                        ['title' => 'Renāra Sproģa dienasgrāmata', 'href' => 'blog.sprogis'],
                                         ['title' => 'Jāņa Gabrāna piezīmes', 'href' => 'blog.gabrans'],
                                         ]"
                 >Muiža runā</x-navigation.nav-link>
