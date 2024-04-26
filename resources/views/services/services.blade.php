@@ -18,10 +18,8 @@
   <x-two-columns img_src='images/services/kazas.webp' img_alt="Kāzu kleita" swap={{true}}>
     <x-slot:title>Kāzas</x-slot:title>
     <p>
-      Plāno iestūrēt laulības ostā un meklē īsto vietu savām svinībām?
-      Vai arī ir aktuāla pasakaini skaista pieturvieta divvientulībai
-      kāzu dienā? Un kā ar kāzu ceremonijas vietu? To visu vari piedzīvot
-      Ruckas muižā – iespējas ir bezgalīgas!
+      Vai meklē īsto vietu svarīgākajiem dzīves mirkļiem? Pasakaini skaista
+      kāzu pieturvieta divvientulībai, laulību ceremonijai vai svinībām. To visu vari piedzīvot Ruckas muižā!
     </p>
     <x-button-link href="{{ route('services.weddings') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
@@ -31,12 +29,12 @@
     <p>
       Ruckas muiža ir īstā vieta, kur grezni svinēt sev īpašus dzīves notikumus
       vai korporatīvus pasākumus – telpas ir plašas, mājīgas un gaišas!
-      Iespējams uzņemt līdz pat 80 personām.
+      Iespējams uzņemt līdz pat 120 viesiem.
     </p>
     <x-button-link href="{{ route('services.celebrations') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
-  <x-two-columns img_src='images/services/noma.webp' img_alt="Noma" swap={{true}}>
+  {{-- <x-two-columns img_src='images/services/telpu-noma.webp' img_alt="Noma" swap={{true}}>
     <x-slot:title>Telpu noma</x-slot:title>
     <p>
       Ja meklē telpas radošām nodarbēm, meistarklasēm, semināriem vai nometnēm –
@@ -44,5 +42,10 @@
       Iespējams uzņemt līdz pat 80 dalībniekiem.
     </p>
     <x-button-link href="{{ route('services.rent') }}" text="Uzzināt vairāk!"/>
-  </x-two-columns>
+    </x-two-columns>
+    <x-two-columns img_src='images/offers/ekskursija.webp' img_alt="Ekskursija">
+      <x-slot:title>Ekskursija pa muižu</x-slot:title>
+      <p>Atklāj Ruckas muižu un izzini, kā tā mainījusies kopš 1577. gada.</p>
+      <x-button-link href="{{ route('services.excursion') }}" text="Uzzināt vairāk!"/>
+    </x-two-columns> --}}
 </x-layouts.simple-page>

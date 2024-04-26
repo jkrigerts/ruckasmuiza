@@ -20,6 +20,7 @@ class GalleryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-photo';
     protected static ?string $modelLabel = 'Galerija';
     protected static ?string $pluralModelLabel = 'Galerijas';
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {
@@ -30,8 +31,7 @@ class GalleryResource extends Resource
                         ->label('Virsraksts')
                         ->required(),
                 Forms\Components\Textarea::make('description')
-                        ->label('Apraksts')
-                        ->required(),
+                        ->label('Apraksts'),
                 Forms\Components\FileUpload::make('thumbnail')
                         ->label('Reprezentējošais attēls')
                         ->required(),
@@ -41,6 +41,11 @@ class GalleryResource extends Resource
                         ->appendFiles()
                         ->required()
                         ->label('Attēli galerijā'),
+                Forms\Components\TextInput::make('order_number')
+                        ->label('Numurs pēc kārtas (nosaka secību)')
+                        ->integer(),
+                Forms\Components\Checkbox::make("published")
+                        ->label("Publicēt")->default(true)
             ])
             ->columns([12]);
     }
@@ -50,9 +55,11 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->label('Virsraksts'),
-                Tables\Columns\TextColumn::make('description')->label('Apraksts'),
+                Tables\Columns\TextColumn::make('title')->label('Virsraksts')->limit(50),
+                Tables\Columns\TextColumn::make('description')->label('Apraksts')->limit(50),
                 Tables\Columns\ImageColumn::make('thumbnail')->label('Attēls'),
+                Tables\Columns\TextInputColumn::make("order_number")->label("Nr. p. k.")->rules(["numeric"]),
+                Tables\Columns\CheckboxColumn::make("published")->label("Publicēts")->default(false),
             ])
             ->filters([
                 //

@@ -67,8 +67,7 @@
     color: $color-white;
     text-align: center;
     text-transform: uppercase;
-    line-height: 80%;
-    opacity: 0.9;
+    line-height: 110%;
 }
 
 .blog-section {
@@ -190,7 +189,6 @@
         }
         .page-title {
             font-size: calc(2.1rem + 3vw);
-            line-height: 1.2;
         }
 
         .blog-post-content {
@@ -223,4 +221,10 @@
             grid-template-columns: 1fr;
         }
     }
+}
+
+.error {
+    color: $color-white;
+    font-size: $font-size-md;
+    text-align: center;
 }

@@ -39,7 +39,7 @@
 							title="Apmeklēt kultūras pasākumus"
 							link="apmeklet-kulturas-pasakumus"
 						/>
-						<x-landing.option
+						{{-- <x-landing.option
 							icon="components.icons.fireplace"
 							title="Telpu noma"
 							link="telpu-noma"
@@ -53,7 +53,7 @@
 							icon="components.icons.bird"
 							title="Iepazīt muižas putnus"
 							link="iepazit-muizas-putnus"
-						/>
+						/> --}}
 						<x-landing.option
 							icon="components.icons.plant"
 							title="Kļūt par melderi"
@@ -91,12 +91,10 @@
 			title="Nakšņot"
 			description="<p>Muižā netraucētu atpūtu iespējams baudīt kādā no 7 numuriņiem.
 										Iespējams rezervēt arī visus numuriņus, vienlaicīgi nakšņošanas
-										iespējas 12 (+3 guļvietas) personām. Piedāvājam ērtas, greznas naktsmājas Cēsīs,
+										iespējas 12 (+3 guļvietas) personām. Piedāvājam ērtas naktsmājas Cēsīs,
 										izvēloties sev piemērotāko numuru, no kura logiem paveras pasakains dabas skats.
 										TV un citas ierīces istabās nav pieejamas, lai Tu varētu patiesi labi un
-										netraucēti atpūsties.</p>
-										<p>Pieejams koplietošanas sanitārais mezgls un karsti dzērieni brokastīs.
-										Par papildus samaksu arī brokastis.</p>"
+										netraucēti atpūsties.</p>"
     		icon="components.icons.bedtime"
 			link="services.stay"
 			fade=true
@@ -113,7 +111,7 @@
 			link="events"
 			fade=true
 		/>
-		<x-landing.section
+		{{-- <x-landing.section
 			id="telpu-noma"
 			bgImage="images/landing/noma.webp"
 			title="Telpu noma"
@@ -124,24 +122,25 @@
     		icon="components.icons.fireplace"
 			link="services.rent"
 			fade=true
-		/>
-		<x-landing.section
+			right=true
+		/> --}}
+		{{-- <x-landing.section
 			id="skolas-soma"
-			bgImage="images/landing/landing.webp"
+			bgImage="images/landing/skolas-soma.webp"
 			title="Skolas soma"
-			description="<p>Īsteno kādu no programmas “Latvijas skolas soma” aktivitātēm muižā!
-										Šī ir iespēja izmantot Ruckas muižas telpu, ļaujot skolas vecuma
-										bērniem un jauniešiem iepazīt Latvijas kultūras vērtības un
-										laikmetīgās izpausmes. Sazinies ar mums, lai uzzinātu vairāk par iespējām!</p>"
+			description='<p>Īsteno kādu no programmas "Latvijas skolas soma" aktivitātēm muižā! Šī ir
+				iespēja izmantot Ruckas muižas telpu, ļaujot skolas vecuma bērniem un jauniešiem iepazīt
+				Latvijas kultūras vērtības un laikmetīgās izpausmes.
+				Programma būs pieejama 2024./2025. mācību gadā. Sazinies ar mums, lai uzzinātu vairāk
+				par iespējām!</p>'
     		icon="components.icons.bag"
 			link="contacts"
 			linkText="Sazināties"
 			fade=true
-			right=true
-		/>
-		<x-landing.section
+		/> --}}
+		{{-- <x-landing.section
 			id="iepazit-muizas-putnus"
-			bgImage="images/landing/putni.webp"
+			bgImage="images/landing/iepazisti-putnus.webp"
 			title="Iepazīt muižas putnus"
 			description="<p>Mūsu muižā ir putnu istaba ar 12 putniem. Katram no viņiem ir savs vārds un stāsts,
 											ko kāds no muižas ļaudīm gatavs izstāstīt. Tāpat mazajiem apmeklētājiem ir 
@@ -150,10 +149,12 @@
     		icon="components.icons.bird"
 			link="gallery"
 			linkText="Apskatīt"
-		/>
+			right=true
+			fade=false
+		/> --}}
 		<x-landing.section
 			id="klut-par-melderi"
-			bgImage="images/landing/landing3.webp"
+			bgImage="images/landing/melderis.webp"
 			title="Kļūt par melderi"
 			description="<p>Tev ir iespēja kļūt par melderi uz stundu! Ruckas muižā vari apmeklēt
 										ekskursiju griķu dzirnavām. Aizrautīgs dzirnavnieks parādīs, kā grauds
@@ -166,25 +167,25 @@
     		icon="components.icons.plant"
 			link="contacts"
 			linkText="Sazināties"
-			fade=true
+			fade=false
 		/>
 		<x-landing.section
 			id="aktivitates-muizas-parka"
-			bgImage="images/landing/parks.webp"
+			bgImage="images/landing/aktivitates-parka.webp"
 			title="Aktivitātes muižas parkā"
 			description="<p>Vai zināji, ka Ruckas muižā ietilpst arī 6 hektārus liels parks,
 										kas atvērts apmeklētājiem visu diennakti? Ziemā vari veidot sniega enģeļus, 
 										velt sniegavīrus, slēpot un pikoties. Turpretī gada siltajos mēnešos – izskriet
-										rīta krosu vai vienkārši uz soliņa baudīt dabu un skaisto apkārtni.
-										Iespējams arī iegādāties kafiju vai tēju, iepriekš piezvanot!</p>"
+										rīta krosu vai vienkārši uz soliņa baudīt dabu un skaisto apkārtni.</p>"
     		icon="components.icons.forest"
 			link="gallery"
 			right=true
 			linkText="Apskatīt"
+			fade=false
 		/>
 		<x-landing.section
 			id="dzivas-gleznas"
-			bgImage="images/landing/landing.webp"
+			bgImage="images/landing/dzivas-gleznas.webp"
 			title="Dzīvās gleznas"
 			description="<p>Baibas Feoktistovas vārds daudziem liekus jautājumus neraisa. 
 				Viņa rada krāšņas, drosmīgas un unikālas gleznas, kas pārsteidz ikvienu.
@@ -192,6 +193,8 @@
     		icon="components.icons.brush"
 			link="contacts"
 			linkText="Sazināties"
+			fade=false
+			right=true
 		/>
 	</div>
 </x-layouts.app>

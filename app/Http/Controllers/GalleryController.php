@@ -8,7 +8,9 @@ class GalleryController extends Controller
 {
     public function index()
     {
-        $albums = Gallery::all();
+        $albums = Gallery::where("published", true)
+                           ->orderByRaw("-order_number DESC")
+                           ->get();
 
         return view("gallery", compact('albums'));
     }
@@ -16,7 +18,7 @@ class GalleryController extends Controller
 
     public function show(string $id)
     {
-        $album = Gallery::find($id);
+        $album = Gallery::where("published", true)->find($id);
         return view("album", compact('album'));
     }
 }

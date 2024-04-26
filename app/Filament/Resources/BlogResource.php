@@ -15,6 +15,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components;
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
@@ -29,6 +30,7 @@ class BlogResource extends Resource
 
     protected static ?string $modelLabel = 'Ieraksts';
     protected static ?string $pluralModelLabel = 'Muiža runā';
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {
@@ -60,6 +62,9 @@ class BlogResource extends Resource
             FileUpload::make("image")
                 ->label("Attēls")
                 ->required(),
+            Checkbox::make("published")
+                ->label("Publicēt")
+                ->default(false)
         ])->columns(1);
     }
 
@@ -79,6 +84,8 @@ class BlogResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\CheckboxColumn::make("published")
+                    ->label("Publicēts")
             ])
             ->filters([
                 //

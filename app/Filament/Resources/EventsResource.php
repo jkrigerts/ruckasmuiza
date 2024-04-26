@@ -22,6 +22,7 @@ use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\Indicator;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Forms\Components\Checkbox;
 
 class EventsResource extends Resource
 {
@@ -30,8 +31,7 @@ class EventsResource extends Resource
     
     protected static ?string $modelLabel = 'Pasākums';
     protected static ?string $pluralModelLabel = 'Pasākumi';
-
-    
+    protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
     {
@@ -51,10 +51,14 @@ class EventsResource extends Resource
                             ->required()
                             ->minDate(now()),
                         TextInput::make('time')
-                            ->label('Laiks/Laiki')
+                            ->label('Laiks')
                             ->required()
                             ->maxLength(50)
                             ->placeholder('12:30 - 14:00'),
+                        TextInput::make('timeLong')
+                            ->label('Laiks uznirstošajā logā')
+                            ->maxLength(100)
+                            ->placeholder('10:00 (3 - 5 gadi) / 11:30 (6 - 9 gadi)'),
                     ]),
 
                 Section::make('Informācija')
@@ -62,20 +66,19 @@ class EventsResource extends Resource
                         'sm' => 1,
                         'md' => 2,
                     ])
-                    ->description('Ievadiet informāciju par jauno afišu.')
+                    ->description('Ievadiet informāciju par jauno afišu')
                     ->schema([
                         TextInput::make('title')
                             ->label('Virsraksts')
                             ->required()
-                            ->maxLength(50),
+                            ->maxLength(100),
                         TextInput::make('info')
                             ->label('Kopsavilkums')
                             ->required()
-                            ->maxLength(50)
+                            ->maxLength(100)
                             ->placeholder('Kino vakars ar popkornu'),
                         Textarea::make('infoLong')
-                            ->required()
-                            ->label('Apraksts')
+                            ->label('Apraksts uznirstošajā logā')
                             ->autosize()
                             ->columnSpanFull()
                             ->placeholder('Harija Potera fanu kluba kino vakars ar popkornu skolas vecuma bērniem.')
@@ -97,8 +100,11 @@ class EventsResource extends Resource
                             ->required()
                             ->label('Dalības maksa')
                             ->columnSpan(1) 
-                            ->maxLength(20)
+                            ->maxLength(50)
                             ->placeholder('5'),
+                        Checkbox::make("published")
+                            ->label("Publicēt")
+                            ->default(true)
 
                     ]),
             ]);
@@ -114,10 +120,6 @@ class EventsResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('type.name')
                     ->label('Kategorija')
-                    ->toggleable()
-                    ->toggledHiddenByDefault(),
-                Tables\Columns\TextColumn::make('info')
-                    ->label('Kopsavilkums')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('happens_at')
                     ->label('Datums')
@@ -138,6 +140,8 @@ class EventsResource extends Resource
                     ->label('Atjaunots')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\CheckboxColumn::make("published")
+                    ->label("Publicēts")
             ])
             ->filters([ // TODO: Add filter for dates and prices
                 Filter::make('happens_at')
@@ -172,6 +176,7 @@ class EventsResource extends Resource
                         return $indicators;
                     }),
                 SelectFilter::make('category_id')
+                    ->label("Kategorija")
                     ->searchable()
                     ->preload()
                     ->indicator('Kategorija')

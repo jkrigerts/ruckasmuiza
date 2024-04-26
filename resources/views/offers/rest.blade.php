@@ -7,14 +7,14 @@
   </p>
   <x-two-columns img_src='images/offers/ekskursija.webp' img_alt="Ekskursija">
     <x-slot:title>Ekskursija pa muižu</x-slot:title>
-    <p>Atklāj Ruckas muižas unikalitāti un izzini, kā muiža mainījusies kopš 1577. gada.</p>
+    <p>Atklāj Ruckas muižu un izzini, kā tā mainījusies kopš 1577. gada.</p>
     <p>Ekskursijas pieejamas grupās vai individuāli.</p>
-    <p>Cena: 5 - 7 € no personas (min. cena 30 € ekskursijai līdz 6 personām)</p>
+    <p>Cena: 5 € personai (min. cena 30 €)</p>
     <p>Ilgums: ~ 40 minūtes</p>
     <x-button-link href="{{ route('contacts') }}" text="Pieteikt"/>
   </x-two-columns>
 
-  <x-two-columns img_src='images/offers/dzirnavnieka-kurpes.webp' img_alt="Dzirnavnieka kurpēs" swap={{true}}>
+  <x-two-columns img_src='images/offers/melderis.webp' img_alt="Dzirnavnieka kurpēs" swap={{true}}>
     <x-slot:title>Iekāp dzirnavnieka kurpēs</x-slot:title>
     <p>
       Vai kādreiz esi domājis, kā top milti? Vai esi gribējis

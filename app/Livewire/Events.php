@@ -71,8 +71,8 @@ class Events extends Component
         for($i = $firstDayPlace - 1; $i >= 1; $i--){
             $day = Carbon::parse($today)->startOfMonth()->subDays($i);
             $dayName = $day->format($dateFormat);
-            $events = EventsModal::where('happens_at', $dayName)->with('type')->get();
-
+            // $events = EventsModal::where("published", true)->where('happens_at', $dayName)->with('type')->get();
+            $events = [];
             $return[$dayName] = [
                 'monthName' => $monthsKas[$day->month - 1],
                 'day' => $day->day,
@@ -85,7 +85,7 @@ class Events extends Component
         // add this month days
         $currentDate = $firstDayOfMonth;
         while ($currentDate <= $lastDayOfMonth) {
-            $events = EventsModal::where('happens_at', $currentDate)->with('type')->get();
+            $events = EventsModal::where("published", true)->where('happens_at', $currentDate)->with('type')->get();
             
             $return[$currentDate] = [
                 'monthName' => $monthsKas[Carbon::parse($currentDate)->month - 1],
@@ -101,8 +101,8 @@ class Events extends Component
         $currentDate = $lastDayOfMonth;
         while(count($return) < 35){
             $currentDate = Carbon::parse($currentDate)->addDay()->format($dateFormat);
-            $events = EventsModal::where('happens_at', $currentDate)->with('type')->get();
-            
+            //$events = EventsModal::where("published", true)->where('happens_at', $currentDate)->with('type')->get();
+            $events = [];
             $return[$currentDate] = [
                 'monthName' => $monthsKas[Carbon::parse($currentDate)->month - 1],
                 'day' => Carbon::parse($currentDate)->day,
@@ -116,7 +116,7 @@ class Events extends Component
         if(Carbon::parse($currentDate)->dayOfWeek == 1){
             while(count($return) < 42){
                 $currentDate = Carbon::parse($currentDate)->addDay()->format($dateFormat);
-                $events = EventsModal::where('happens_at', $currentDate)->with('type')->get();
+                $events = EventsModal::where("published", true)->where('happens_at', $currentDate)->with('type')->get();
                 
                 $return[$currentDate] = [
                     'monthName' => $monthsKas[Carbon::parse($currentDate)->month - 1],
@@ -127,7 +127,6 @@ class Events extends Component
                 ];
             }
         }
-        
         
         $this->calendarData = array_chunk($return, 7, true);
         $this->previousMonth = $monthsKas[$today->subMonth()->month - 1];

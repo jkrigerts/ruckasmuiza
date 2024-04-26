@@ -13,5 +13,6 @@ class Gallery extends Model
     protected $fillable = ['title', 'description', 'date', 'file_name'];
     protected $casts = [
         'images' => 'json',
+        'published' => 'boolean',
     ];
 }

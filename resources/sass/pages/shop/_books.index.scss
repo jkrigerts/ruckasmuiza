@@ -1,0 +1,279 @@
+.books {
+    max-width: calc($navWidth - $logoWidth);
+    margin: 0 auto 3rem;
+
+    .head {
+        text-align: center;
+        margin: 4rem 0rem 4rem;
+
+        .intro {
+            border-radius: $border-radius;
+            background-color: rgba(5, 5, 5, 0.55);
+            color: $color-white;
+            font-size: $font-size-md;
+            font-weight: 300;
+            padding: 2rem 0;
+
+            > .desc {
+                padding: 0 2rem;
+            }
+
+            @include md-breakpoint {
+                font-size: calc($font-size-md - 0.05rem);
+                padding: 2rem 0;
+
+                > .desc {
+                    padding: 0 1.5rem;
+                }
+            }
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+
+            form {
+                margin-top: 0.5rem;
+                padding: 15px 20px 0px;
+
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                @include sm-breakpoint {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                div {
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    input {
+                        border: 2px solid $color-white;
+                        background-color: $color-white;
+                        padding: 4px;
+                        border-radius: $border-radius;
+                        outline: none;
+                        transition: all $transition-duration;
+                        color: black;
+                        font-size: 0.9rem;
+
+                        &:focus {
+                            border: 2px solid $color-raspberry-red;
+                        }
+                    }
+
+                    button {
+                        border: none;
+                        border-radius: $border-radius;
+                        background-color: $color-raspberry-red;
+                        color: $color-white;
+                        padding: 10px 14px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        cursor: pointer;
+                        transition: all $transition-duration;
+                        font-size: 0.8rem;
+
+                        @include md-breakpoint {
+                            font-size: 0.7rem;
+                        }
+
+                        &:hover {
+                            background-color: $color-raspberry-red-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        column-gap: 60px;
+        row-gap: 5rem;
+        width: 100%;
+
+        .book {
+            max-width: 270px;
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 88%;
+                height: 107%;
+                position: absolute;
+                z-index: -1;
+                top: -3.5%;
+                left: 6%;
+                background-color: $color-raspberry-red;
+                border-radius: 3px;
+            }
+
+            a {
+                display: block;
+                background-color: $color-black;
+                border-radius: $border-radius;
+                box-shadow: 0 5px 70px $color-black-true;
+                width: 100%;
+                height: 100%;
+                border-radius: $border-radius;
+                overflow: hidden;
+                text-decoration: none;
+                transition: all $transition-duration;
+
+                &:hover {
+                    transform: scale(1.02);
+                    filter: brightness(1.1);
+                }
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 3/4;
+                    object-fit: cover;
+                }
+
+                h2 {
+                    font-size: 1.5rem;
+                    font-family: $font-display;
+                    font-weight: 300;
+                    word-break: break-word;
+                    color: $color-white;
+                    padding: 8px 5% 6px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    color: $color-white;
+                    font-weight: 300;
+                    text-align: center;
+                    padding: 0px 5% 16px;
+                }
+            }
+        }
+    }
+
+    @include content-max-width-breakpoint {
+        margin: 0 calc(($logoWidth / 2) + $navPadding) 3rem;
+    }
+
+    @media only screen and (max-width: 1350px) {
+        section {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @include lg-breakpoint {
+        margin: 0 $navPadding 3rem;
+
+        section {
+            column-gap: 40px;
+
+            .album a h2 {
+                font-size: calc(0.8rem + 1vw);
+            }
+        }
+    }
+
+    @include md-breakpoint {
+        section {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include xs-breakpoint {
+        section {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .error {
+        color: $color-white;
+        font-size: $font-size-md;
+        text-align: center;
+    }
+
+    .paginate {
+        margin-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .flex {
+            display: flex;
+            background-color: rgba(5, 5, 5, 0.55);
+            padding: 10px 20px;
+            border-radius: $border-radius;
+            color: $color-white;
+            font-weight: 300;
+            font-size: 1rem;
+            max-width: 100vw;
+            text-align: center;
+        }
+        .items-center {
+            align-items: center;
+        }
+        .justify-between {
+            justify-content: center;
+        }
+
+        .w-5 {
+            width: 30px;
+        }
+        .h-5 {
+            height: 28px;
+            transform: translateY(2px);
+        }
+        .flex-1 {
+            display: none;
+        }
+
+        .hidden > div > span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+
+            button {
+                color: inherit;
+                border: none;
+                background-color: transparent;
+                font-family: inherit;
+                font-size: inherit;
+                cursor: pointer;
+                padding: 6px 11px;
+                margin: 0 1px;
+                border-radius: $border-radius;
+                transition: all $transition-duration;
+
+                &:hover {
+                    background-color: $color-raspberry-red;
+                }
+            }
+
+            span:last-child button,
+            span:first-child button {
+                padding: 0;
+            }
+
+            [aria-current]:not([aria-current="false"]) {
+                font-weight: bold;
+                background-color: $color-raspberry-red;
+                padding: 6px 11px;
+                margin: 0 1px;
+                border-radius: $border-radius;
+            }
+
+            [aria-disabled]:not([aria-disabled="false"]) {
+                color: $color-gray;
+            }
+        }
+    }
+}
