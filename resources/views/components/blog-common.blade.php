@@ -6,7 +6,7 @@
     </div>
     <div class="page-margins">
       <div class="head">
-        <h1 class="page-title">{{$title}}</h1>
+        <h1 class="page-title">{!! $title !!}</h1>
       </div>
       @if(count($blogPosts) == 0)
         <p class="error">Neviens ieraksts vēl nav izveidots</p>

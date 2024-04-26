@@ -3,6 +3,8 @@
     <p>
       Ruckas muižas parks ir Cēsu ģeogrāfiskais centrs, tāpēc pavisam droši varam teikt
       – mūsu senatnes skaistākais piemineklis slejas pašā Cēsu sirdī jau kopš 1577. gada.
+      Savu nosaukumu muiža ieguvusi tā sauktajos poļu laikos, kad 1584. gadā tā nonāca poļa
+      Rucka īpašumā. Tieši viņa uzvārds palicis nemainīgs un nes muižas vārdu arī šodien.
       Laiki mainās, bet muižas unikālā aura un mājīgais gars ir nemainīgs.
     </p>
     <p>
@@ -11,9 +13,9 @@
       kad pašvaldība objektu nodeva apsaimniekošanā biedrībai "Live Latvija".
     </p>
     <p>
-      Tās vadītājs ir Cēsīs un tālu aiz tās robežām zināmais Renārs Sproģis, kura mīlestība
+      Tās vadītājs ir Renārs Sproģis, kura mīlestība
       pret savu zemi un neizmērojamais patriotisms ir atzinības vērti. Viņš kopā ar ģimeni
-      uzņēmies rūpes par iespaidīgo būvi. Tieši pateicoties muižas jaunajiem, centīgajiem
+      un komandu uzņēmies rūpes par iespaidīgo būvi. Tieši pateicoties muižas jaunajiem, centīgajiem
       saimniekiem veikti vērienīgi ieguldījumi muižas atjaunošanas darbos, saglabājot
       tās vēsturisko šarmu.
     </p>

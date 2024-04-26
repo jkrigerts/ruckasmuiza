@@ -39,7 +39,7 @@
 							title="Apmeklēt kultūras pasākumus"
 							link="apmeklet-kulturas-pasakumus"
 						/>
-						<x-landing.option
+						{{-- <x-landing.option
 							icon="components.icons.fireplace"
 							title="Telpu noma"
 							link="telpu-noma"
@@ -53,7 +53,7 @@
 							icon="components.icons.bird"
 							title="Iepazīt muižas putnus"
 							link="iepazit-muizas-putnus"
-						/>
+						/> --}}
 						<x-landing.option
 							icon="components.icons.plant"
 							title="Kļūt par melderi"
@@ -111,7 +111,7 @@
 			link="events"
 			fade=true
 		/>
-		<x-landing.section
+		{{-- <x-landing.section
 			id="telpu-noma"
 			bgImage="images/landing/noma.webp"
 			title="Telpu noma"
@@ -123,8 +123,8 @@
 			link="services.rent"
 			fade=true
 			right=true
-		/>
-		<x-landing.section
+		/> --}}
+		{{-- <x-landing.section
 			id="skolas-soma"
 			bgImage="images/landing/skolas-soma.webp"
 			title="Skolas soma"
@@ -137,8 +137,8 @@
 			link="contacts"
 			linkText="Sazināties"
 			fade=true
-		/>
-		<x-landing.section
+		/> --}}
+		{{-- <x-landing.section
 			id="iepazit-muizas-putnus"
 			bgImage="images/landing/iepazisti-putnus.webp"
 			title="Iepazīt muižas putnus"
@@ -151,7 +151,7 @@
 			linkText="Apskatīt"
 			right=true
 			fade=false
-		/>
+		/> --}}
 		<x-landing.section
 			id="klut-par-melderi"
 			bgImage="images/landing/melderis.webp"
@@ -176,8 +176,7 @@
 			description="<p>Vai zināji, ka Ruckas muižā ietilpst arī 6 hektārus liels parks,
 										kas atvērts apmeklētājiem visu diennakti? Ziemā vari veidot sniega enģeļus, 
 										velt sniegavīrus, slēpot un pikoties. Turpretī gada siltajos mēnešos – izskriet
-										rīta krosu vai vienkārši uz soliņa baudīt dabu un skaisto apkārtni.
-										Iespējams arī iegādāties kafiju vai tēju, iepriekš piezvanot!</p>"
+										rīta krosu vai vienkārši uz soliņa baudīt dabu un skaisto apkārtni.</p>"
     		icon="components.icons.forest"
 			link="gallery"
 			right=true
