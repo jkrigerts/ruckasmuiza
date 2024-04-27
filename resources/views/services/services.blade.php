@@ -1,5 +1,10 @@
-<x-layouts.simple-page metaName="services" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
-  <x-slot:title>Pakalpojumi</x-slot:title>
+<x-layouts.simple-page
+        metaName="services"
+        bg_src='images/landing/landing.webp'
+        bg_alt="Ruckas muiža"
+        style="--heading-decrease-size: 0.2rem"
+>
+  <x-slot:title>Pakal&shy;pojumi</x-slot:title>
   <p>
     Ruckas muiža ir īstā vieta, kur svinēt dzīvi, īpašus notikumus,
     baudīt atpūtu vai organizēt kādu plašākam pulkam aktuālu pasākumu.

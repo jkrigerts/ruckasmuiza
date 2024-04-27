@@ -1,5 +1,10 @@
-<x-layouts.simple-page metaName="stay" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
-  <x-slot:title>Nakšņošana Cēsīs</x-slot:title>
+<x-layouts.simple-page
+    metaName="stay"
+    bg_src='images/landing/landing.webp'
+    bg_alt="Ruckas muiža"
+    style="--heading-decrease-size: 0.2rem"
+>
+  <x-slot:title>Nakšņo&shy;šana Cēsīs</x-slot:title>
   <p>
     Nedēļas nogale Cēsīs, atpūta ar ģimeni vai jaunlaulāto divvientulība –
     Ruckas muiža ir tās naktsmājas Vidzemē, kas neatstās vienaldzīgu!

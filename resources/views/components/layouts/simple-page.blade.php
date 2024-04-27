@@ -1,6 +1,7 @@
 @props([
     'bg_src',
     'bg_alt',
+    'style' => "",
     'metaName'  => 'landing'
 ])
 
@@ -15,7 +16,7 @@
   <x-background-image src="{{ asset($bg_src) }}" alt="{{$bg_alt}}" />
   <main class="simple-page">
     <div class="head">
-      <x-section-heading>{{ $title }}</x-section-heading>
+      <x-section-heading style="{{$style}}">{{ $title }}</x-section-heading>
     </div>
 
     <section>
