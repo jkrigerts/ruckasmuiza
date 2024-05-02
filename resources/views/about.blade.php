@@ -13,8 +13,7 @@
       kad pašvaldība objektu nodeva apsaimniekošanā biedrībai "Live Latvija".
     </p>
     <p>
-      Tās vadītājs ir Renārs Sproģis, kura mīlestība
-      pret savu zemi un neizmērojamais patriotisms ir atzinības vērti. Viņš kopā ar ģimeni
+      Tās vadītājs Renārs Sproģis kopā ar ģimeni
       un komandu uzņēmies rūpes par iespaidīgo būvi. Tieši pateicoties muižas jaunajiem, centīgajiem
       saimniekiem veikti vērienīgi ieguldījumi muižas atjaunošanas darbos, saglabājot
       tās vēsturisko šarmu.
