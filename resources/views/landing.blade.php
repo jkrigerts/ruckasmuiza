@@ -185,16 +185,11 @@
 		/>
 		<x-landing.section
 			id="dzivas-gleznas"
-			bgImage="images/landing/dzivas-gleznas.webp"
+			bgImage="images/landing/landing3.webp"
 			title="Dzīvās gleznas"
-			description="<p>Baibas Feoktistovas vārds daudziem liekus jautājumus neraisa. 
-				Viņa rada krāšņas, drosmīgas un unikālas gleznas, kas pārsteidz ikvienu.
-				Ja vēlies tās raudzīt savām acīm vai iemācīties gleznot viņas vadībā – šī ir vieta Tev!</p>"
-    		icon="components.icons.brush"
-			link="contacts"
-			linkText="Sazināties"
+			description="<p>Jau pavisam drīz...</p>"
+    	icon="components.icons.brush"
 			fade=false
-			right=true
 		/>
 	</div>
 </x-layouts.app>
