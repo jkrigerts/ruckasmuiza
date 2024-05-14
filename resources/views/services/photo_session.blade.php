@@ -1,4 +1,4 @@
-<x-layouts.simple-page metaName="special_offers" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="photo_session" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Fotosesija</x-slot:title>
   <div class="photo-session-description">
       <img src={{ asset("images/services/photo-session/karina-jurcina.jpeg") }} alt="Karīna Jurciņa">  

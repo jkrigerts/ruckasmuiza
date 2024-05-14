@@ -68,6 +68,11 @@
             'image' => $defaultImage,
             'desc'  => 'Atklāj Ruckas muižu un izzini, kā tā mainījusies kopš 1577. gada.',
         ],
+        'photo_session' => [
+            'title' => 'Fotosesija' . $afterTitle,
+            'image' => 'images/services/photo-session/oranzerija-romantika-sm.webp',
+            'desc'  => 'Fotogrāfe Karīna Jurciņa un Ruckas muiža piedāvā iespēju notvert īpašos dzīves mirkļus kadros!',
+        ],
 
         // Piedāvājumi
         'special_offers' => [
