@@ -42,7 +42,7 @@
   <x-two-columns img_src='images/services/photo-session/oranzerija-romantika-sm.webp' img_alt="Ruckas muižas oranžērijā" swap={{true}}>
     <x-slot:title>Fotosesija</x-slot:title>
     <p>
-      Ruckas muiža piedāvā izmantot iespēju notvert īpašos
+      Ruckas muiža piedāvā iespēju notvert īpašos
       dzīves mirkļus kadros pieredzējušās fotogrāfes Karīnas Jurciņas
       vadībā.
     </p>
