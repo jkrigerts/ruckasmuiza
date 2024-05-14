@@ -47,7 +47,7 @@
 
   const lightbox = new window.PhotoSwipeLightbox({
     gallery: '#album',
-    bgOpacity: 0.95,
+    bgOpacity: 0.9,
     showHideAnimationType: 'fade',
     children: 'a',
     pswpModule: window.photoswipe

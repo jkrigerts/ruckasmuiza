@@ -1,5 +1,5 @@
 <x-layouts.simple-page
-        metaName="services"
+        metaName="living_paintings"
         bg_src='images/landing/landing.webp'
         bg_alt="Ruckas muiža"
 >
@@ -10,7 +10,8 @@
   </p>
 
   <x-two-columns img_src='images/offers/dzivas-gleznas.webp' img_alt="Dzīvās gleznas">
-    <x-slot:title>Mīts - Cilvēks - Daba</x-slot:title>
+    <x-slot:title>Mīts – Cilvēks – Daba</x-slot:title>
+    <h3 class="special-heading-for-living-paintings">Simbolisms Latvijas mākslā</h3>
     <p>
       Janis Rozentāls, Vilhelms Purvītis, Rihards Zariņš, Emīls Dārziņš,
       Edvards Virza un citi simbolisma laikmeta mākslinieki unikālā multimediālā piedzīvojumā.

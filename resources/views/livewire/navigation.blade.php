@@ -10,7 +10,7 @@
 
                 <x-navigation.nav-link href="living-paintings."
                                        :items="[
-                                        ['title' => 'Mīts - Cilvēks - Daba', 'href' => 'living-paintings.myth'],
+                                        ['title' => 'Mīts – Cilvēks – Daba', 'href' => 'living-paintings.myth'],
                                         ['title' => 'Manas iedvesmas dārzi', 'href' => 'living-paintings.gardens'],
                                         ]"
                 >Dzīvās gleznas</x-navigation.nav-link>
@@ -20,6 +20,7 @@
                                         ['title' => 'Nakšņošana', 'href' => 'services.stay'],
                                         ['title' => 'Kāzas', 'href' => 'services.weddings'],
                                         ['title' => 'Svinības', 'href' => 'services.celebrations'],
+                                        ['title' => 'Fotosesija', 'href' => 'services.photo_session'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link>

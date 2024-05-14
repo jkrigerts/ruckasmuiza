@@ -20,6 +20,23 @@
             'desc'  => 'Ruckas muižas parks ir Cēsu ģeogrāfiskais centrs, tāpēc pavisam droši varam teikt – mūsu senatnes skaistākais piemineklis slejas pašā Cēsu sirdī jau kopš 1577. gada. Laiki mainās, bet muižas unikālā aura un mājīgais gars ir nemainīgs.',
         ],
 
+        // Dzīvās gleznas
+        'living_paintings' => [
+            'title' => 'Dzīvās gleznas' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Unikāls multimediāls piedzīvojums, kurā jaunākās tehnoloģijas divās izrādēs uz ekrāniem ļauj iepazīt mākslu un mūziku.',
+        ],
+        'gardens' => [
+            'title' => 'Manas iedvesmas dārzi' . $afterTitle,
+            'image' => 'images/offers/naktstaurins.webp',
+            'desc'  => 'Mākslinieces Baibas Feoktistovas veidots, īstenots sapnis, kas sagādā negaidītus un emocijām bagātus pārsteigumus.',
+        ],
+        'myth' => [
+            'title' => 'Mīts - Cilvēks - Daba' . $afterTitle,
+            'image' => 'images/offers/dzivas-gleznas.webp',
+            'desc'  => 'Simbolisms Latvijas mākslā. Piedzīvojums, kurā jaunākās tehnoloģijas ļauj iepazīt mākslu un mūziku.',
+        ],
+
         // Pakalpojumi
         'services' => [
             'title' => 'Pakalpojumi' . $afterTitle,

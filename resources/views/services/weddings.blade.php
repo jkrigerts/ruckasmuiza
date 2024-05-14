@@ -23,7 +23,7 @@
   <ul>
     <li>Laulību ceremonija pie ozola (iekšpagalmā): 200 € / 2 h </li>
     <li>Kāzu pieturvieta muižas oranžērijā: 150 € / līdz 2 h </li>
-    <li>Jaunlaulāto fotosesija muižā: 50 €</li>
+    <li>Jaunlaulāto fotosesija muižā: pēc vienošanās</li>
   </ul>
   <div class="gift_cards-centered-btn">
     <x-button-link href="{{ route('contacts') }}" text="Veikt rezervāciju"/>
