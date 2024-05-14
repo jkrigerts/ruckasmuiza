@@ -1,4 +1,4 @@
-<x-layouts.simple-page metaName="special_offers" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+<x-layouts.simple-page metaName="gardens" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Manas iedves&shy;mas dārzi</x-slot:title>
   <p>
     Manas iedvesmas dārzi. Baiba Feoktistova.
@@ -22,7 +22,7 @@
   </p>
   <p>
     Multimediju instalācija izspēlē, izpauž skaniskā kustībā to maģisko noslēpumu, ko sevī slēpj 
-    gleznas. Intuīcija, sajūtas un nojausma, sapnis par savu dārzu - tas viss jāpiedzīvo telpā un laikā, ko 
+    gleznas. Intuīcija, sajūtas un nojausma, sapnis par savu dārzu – tas viss jāpiedzīvo telpā un laikā, ko 
     šodien tik ierastais viedierīču vai datora ekrāns nespēs izdarīt, tas jāpiedzīvo šajā virtuāli jaunradītajā realitātē, radot katra personisko un unikālo iedvesmu, sirdī un apziņā
   </p>
   <p>

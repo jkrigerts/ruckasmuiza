@@ -39,6 +39,16 @@
     <x-button-link href="{{ route('services.celebrations') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
+  <x-two-columns img_src='images/services/photo-session/oranzerija-romantika-sm.webp' img_alt="Ruckas muižas oranžērijā" swap={{true}}>
+    <x-slot:title>Fotosesija</x-slot:title>
+    <p>
+      Ruckas muiža piedāvā izmantot iespēju notvert īpašos
+      dzīves mirkļus kadros pieredzējušās fotogrāfes Karīnas Jurciņas
+      vadībā.
+    </p>
+    <x-button-link href="{{ route('services.photo_session') }}" text="Uzzināt vairāk!"/>
+  </x-two-columns>
+
   {{-- <x-two-columns img_src='images/services/telpu-noma.webp' img_alt="Noma" swap={{true}}>
     <x-slot:title>Telpu noma</x-slot:title>
     <p>

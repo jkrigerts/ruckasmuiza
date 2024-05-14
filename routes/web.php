@@ -60,6 +60,9 @@ Route::group(
               Route::get('/svinibas', function () {
                      return view('services/celebrations');
               })->name("celebrations");
+              Route::get('/fotosesija', function () {
+                     return view('services/photo_session');
+              })->name("photo_session");
               // Route::get('/noma', function () {
               //        return view('services/rent');
               // })->name("rent");

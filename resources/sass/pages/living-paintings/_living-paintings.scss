@@ -1,0 +1,8 @@
+.special-heading-for-living-paintings {
+    transform: translateY(-20px);
+    font-size: 1.27rem;
+
+    @include md-breakpoint {
+        font-size: calc(1.1rem + 0.4vw);
+    }
+}
