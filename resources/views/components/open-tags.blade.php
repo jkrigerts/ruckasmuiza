@@ -68,6 +68,11 @@
             'image' => $defaultImage,
             'desc'  => 'Ruckas muižas piedāvājuma klāsts ir plašs – katrs šeit atradīs, ko pieredzēt, sajust un izdzīvot. Pārsteidz kādu ar īpašu dāvanu – iespēju apmeklēt Ruckas muižu pēc saviem ieskatiem!',
         ],
+        'painting_classes' => [
+            'title' => 'Gleznošanas meistarklases' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Baiba Feoktistova rada krāšņas, drosmīgas un unikālas gleznas, kas pārsteidz ikvienu. Ja vēlies tās raudzīt savām acīm un iemācīties gleznot viņas vadībā – šī ir vieta Tev!',
+        ],
         
         
         // Muiža runā

@@ -185,9 +185,12 @@
 		/>
 		<x-landing.section
 			id="dzivas-gleznas"
-			bgImage="images/landing/landing3.webp"
+			bgImage="images/offers/naktstaurins.webp"
 			title="Dzīvās gleznas"
-			description="<p>Jau pavisam drīz...</p>"
+			description="<p>Unikāls multimediāls piedzīvojums, kurā jaunākās tehnoloģijas
+				divās izrādēs uz ekrāniem ļauj iepazīt mākslu un mūziku. Izstāžu režisors
+				un scenārija autors - Māris Kalve.</p>"
+			link="living-paintings."
     	icon="components.icons.brush"
 			fade=false
 		/>

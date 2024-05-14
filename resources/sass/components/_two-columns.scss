@@ -54,7 +54,7 @@
         }
 
         @include md-breakpoint {
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
 
             img {
                 object-position: left;
