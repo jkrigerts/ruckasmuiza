@@ -16,6 +16,10 @@ header {
         display: flex;
         gap: 20px;
 
+        @include xl-breakpoint {
+            gap: 16px;
+        }
+
         @include lg-breakpoint {
             justify-content: space-between;
         }
@@ -34,6 +38,10 @@ header {
             display: flex;
             align-items: center;
             gap: 20px;
+
+            @include xl-breakpoint {
+                gap: 16px;
+            }
 
             li {
                 position: relative;

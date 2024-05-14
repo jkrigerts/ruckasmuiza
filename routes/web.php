@@ -21,6 +21,23 @@ use Livewire\Livewire;
 Route::get('/', function () { return view('landing');})
        ->name("landing");
 
+Route::group(
+       [
+              "prefix" => "/dzivas-gleznas",
+              "as" => "living-paintings.",
+       ],
+       function () {
+              Route::get('/', function () {
+                     return view('living-paintings/living-paintings');
+              })->name("");
+              Route::get('/manas-iedvesmas-darzi', function () {
+                     return view('living-paintings/gardens');
+              })->name("gardens");
+              Route::get('/mits-cilveks-daba', function () {
+                     return view('living-paintings/myth');
+              })->name("myth");
+       }
+);
 
 Route::get('/par-muizu', function () { return view('about');})
        ->name("about");
@@ -73,8 +90,10 @@ Route::group(
               })->name("gift_cards");
               Route::get('/gramatas', [BookController::class, "index"])
                      ->name("books");
-
               Route::get('/gramatas/{id}', [BookController::class, "show"]);
+              Route::get('/gleznosanas-meistarklases', function () {
+                     return view('offers/painting_classes');
+              })->name("painting_classes");
        }
 );
 
