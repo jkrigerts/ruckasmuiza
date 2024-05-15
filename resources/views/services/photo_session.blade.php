@@ -55,6 +55,16 @@
            loading="lazy"
       >
     </a>
+    <a class="image"
+       href="{{url("images/services/photo-session/zens-lasa.jpg")}}"
+       data-pswp-width="1435" 
+       data-pswp-height="2048"
+    >
+      <img src={{ asset("images/services/photo-session/zens-lasa.jpg") }}
+           alt="Divas sievietes Ruckas muižā"
+           loading="lazy"
+      >
+    </a>
     </a>
     <a class="image"
        href="{{url("images/services/photo-session/sievietes-pie-muizas.jpg")}}"
@@ -116,16 +126,7 @@
            loading="lazy"
       >
     </a>
-    <a class="image"
-       href="{{url("images/services/photo-session/zens-lasa.jpg")}}"
-       data-pswp-width="1435" 
-       data-pswp-height="2048"
-    >
-      <img src={{ asset("images/services/photo-session/zens-lasa.jpg") }}
-           alt="Divas sievietes Ruckas muižā"
-           loading="lazy"
-      >
-    </a>
+    
     
 
   </div>
