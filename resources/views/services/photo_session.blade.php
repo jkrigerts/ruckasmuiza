@@ -4,6 +4,10 @@
       <img src={{ asset("images/services/photo-session/karina-jurcina.jpeg") }} alt="Karīna Jurciņa">  
     <div>
       <p>
+        Ruckas muiža piedāvā iespēju notvert īpašos dzīves mirkļus kadros pieredzējušās
+        fotogrāfes Karīnas Jurciņas vadībā!
+      </p>
+      <p>
         <strong>Karīna Jurciņa</strong> ir profesionāla fotogrāfe ar <strong>17 gadu pieredzi</strong>.
       </p>
       <p style="margin-bottom: 0.5rem;">
@@ -42,14 +46,15 @@
       >
     </a>
     <a class="image"
-       href="{{url("images/services/photo-session/oranzerija-gaisa.jpg")}}"
-       data-pswp-width="2048" 
-       data-pswp-height="1434"
+       href="{{url("images/services/photo-session/sievietes-pie-kleitas.jpg")}}"
+       data-pswp-width="1435" 
+       data-pswp-height="2048"
     >
-      <img src={{ asset("images/services/photo-session/oranzerija-gaisa-sm.webp") }}
-           alt="Ruckas muižas oranžērija"
+      <img src={{ asset("images/services/photo-session/sievietes-pie-kleitas-sm.webp") }}
+           alt="Divas sievietes Ruckas muižā"
            loading="lazy"
       >
+    </a>
     </a>
     <a class="image"
        href="{{url("images/services/photo-session/sievietes-pie-muizas.jpg")}}"
@@ -102,15 +107,26 @@
       >
     </a>
     <a class="image"
-       href="{{url("images/services/photo-session/sievietes-pie-kleitas.jpg")}}"
+       href="{{url("images/services/photo-session/gleznotaji.jpg")}}"
        data-pswp-width="1435" 
        data-pswp-height="2048"
     >
-      <img src={{ asset("images/services/photo-session/sievietes-pie-kleitas-sm.webp") }}
+      <img src={{ asset("images/services/photo-session/gleznotaji.jpg") }}
            alt="Divas sievietes Ruckas muižā"
            loading="lazy"
       >
     </a>
+    <a class="image"
+       href="{{url("images/services/photo-session/zens-lasa.jpg")}}"
+       data-pswp-width="1435" 
+       data-pswp-height="2048"
+    >
+      <img src={{ asset("images/services/photo-session/zens-lasa.jpg") }}
+           alt="Divas sievietes Ruckas muižā"
+           loading="lazy"
+      >
+    </a>
+    
 
   </div>
 </x-layouts.simple-page>
