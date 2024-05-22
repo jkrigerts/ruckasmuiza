@@ -3,25 +3,20 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BlogResource\Pages;
-use App\Filament\Resources\BlogResource\RelationManagers;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Section;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Filters\SelectFilter;
 
 class BlogResource extends Resource
 {
@@ -37,10 +32,13 @@ class BlogResource extends Resource
         return $form->schema([
             TextInput::make("title")->required()
                 ->label("Virsraksts"),
-            Select::make("section_id")
+                Select::make("section_id")
                 ->label("Sadaļa")
                 ->options(Section::all()->pluck("name", "id"))
-                ->required()
+                ->required(),
+            Select::make("blog_category_id")
+                ->label("Kategorija")
+                ->options(BlogCategory::all()->pluck("name", "id"))
                 ->native(false),
             RichEditor::make("content")
                 ->label("Saturs")
@@ -74,6 +72,9 @@ class BlogResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make("title")->label('Virsraksts')->sortable(),
                 Tables\Columns\TextColumn::make("section.name")->label('Sadaļa'),
+                Tables\Columns\TextColumn::make('blogCategory.name')
+                    ->label('Kategorija')
+                    ->sortable(),
                 ImageColumn::make("image")->label('Attēls'),
                 Tables\Columns\TextColumn::make("created_at")
                     ->label('Izveides laiks')
@@ -88,7 +89,12 @@ class BlogResource extends Resource
                     ->label("Publicēts")
             ])
             ->filters([
-                //
+                SelectFilter::make('blog_category_id')
+                    ->label("Kategorija")
+                    ->searchable()
+                    ->preload()
+                    ->indicator('Kategorija')
+                    ->relationship('blogCategory', 'name'),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
