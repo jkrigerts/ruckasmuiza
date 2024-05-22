@@ -17,4 +17,8 @@ class Blog extends Model
     {
         return $this->belongsTo(Section::class);
     }
+
+    public function blogCategory(){
+        return $this->belongsTo(\App\Models\BlogCategory::class);
+    }
 }

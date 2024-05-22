@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookController;
 use App\Models\Blog;
 use Illuminate\Http\Request;
@@ -106,22 +107,12 @@ Route::group(
               "as" => "blog.",
        ],
        function () {
-              // Route::get('/aktualitates', function () {
-              //        $blogPost = Blog::where('section_id', 3)->where("published", true)->get();
-              //        return view('blog/news', ['blogPosts' => $blogPost]);
-              // })->name("news");
-              Route::get('/renars-sprogis', function () {
-                     $blogPost = Blog::where('section_id', 1)->where("published", true)->get();
-                     return view('blog/sprogis', ['blogPosts' => $blogPost]);
-              })->name("sprogis");
-              Route::get('/janis-gabrans', function () {
-                     $blogPost = Blog::where('section_id', 2)->where("published", true)->get();
-                     return view('blog/gabrans', ['blogPosts' => $blogPost]);
-              })->name("gabrans");
-              Route::get('/{id}', function ($id) {
-                     $blogPost = Blog::where('id', $id)->firstOrFail();
-                     return view('blog/blog-post', ['blogPost' => $blogPost]);
-              })->name("id");
+              Route::get('/renars-sprogis', [BlogController::class, "index"])
+                     ->name("sprogis");
+              Route::get('/janis-gabrans', [BlogController::class, "index"])
+                     ->name("gabrans");
+              Route::get('/renars-sprogis/{id}', [BlogController::class, "show"]);
+              Route::get('/janis-gabrans/{id}', [BlogController::class, "show"]);
        }
 );
 
