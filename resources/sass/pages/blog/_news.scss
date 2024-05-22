@@ -64,6 +64,7 @@
     top: 0;
     height: calc(100vh - 60px); // 60px - nav height
     margin-top: 60px;
+    transform: scale(1); // Fixes iOS problem, when URL bar minimizes
     width: 100%;
     z-index: -1;
 
