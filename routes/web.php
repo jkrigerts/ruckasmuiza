@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookController;
 use App\Models\Blog;
 use Illuminate\Http\Request;
@@ -21,6 +22,23 @@ use Livewire\Livewire;
 Route::get('/', function () { return view('landing');})
        ->name("landing");
 
+Route::group(
+       [
+              "prefix" => "/dzivas-gleznas",
+              "as" => "living-paintings.",
+       ],
+       function () {
+              Route::get('/', function () {
+                     return view('living-paintings/living-paintings');
+              })->name("");
+              Route::get('/manas-iedvesmas-darzi', function () {
+                     return view('living-paintings/gardens');
+              })->name("gardens");
+              Route::get('/mits-cilveks-daba', function () {
+                     return view('living-paintings/myth');
+              })->name("myth");
+       }
+);
 
 Route::get('/par-muizu', function () { return view('about');})
        ->name("about");
@@ -43,6 +61,9 @@ Route::group(
               Route::get('/svinibas', function () {
                      return view('services/celebrations');
               })->name("celebrations");
+              Route::get('/fotosesija', function () {
+                     return view('services/photo_session');
+              })->name("photo_session");
               // Route::get('/noma', function () {
               //        return view('services/rent');
               // })->name("rent");
@@ -73,8 +94,10 @@ Route::group(
               })->name("gift_cards");
               Route::get('/gramatas', [BookController::class, "index"])
                      ->name("books");
-
               Route::get('/gramatas/{id}', [BookController::class, "show"]);
+              Route::get('/gleznosanas-meistarklases', function () {
+                     return view('offers/painting_classes');
+              })->name("painting_classes");
        }
 );
 
@@ -84,22 +107,12 @@ Route::group(
               "as" => "blog.",
        ],
        function () {
-              // Route::get('/aktualitates', function () {
-              //        $blogPost = Blog::where('section_id', 3)->where("published", true)->get();
-              //        return view('blog/news', ['blogPosts' => $blogPost]);
-              // })->name("news");
-              Route::get('/renars-sprogis', function () {
-                     $blogPost = Blog::where('section_id', 1)->where("published", true)->get();
-                     return view('blog/sprogis', ['blogPosts' => $blogPost]);
-              })->name("sprogis");
-              Route::get('/janis-gabrans', function () {
-                     $blogPost = Blog::where('section_id', 2)->where("published", true)->get();
-                     return view('blog/gabrans', ['blogPosts' => $blogPost]);
-              })->name("gabrans");
-              Route::get('/{id}', function ($id) {
-                     $blogPost = Blog::where('id', $id)->firstOrFail();
-                     return view('blog/blog-post', ['blogPost' => $blogPost]);
-              })->name("id");
+              Route::get('/renars-sprogis', [BlogController::class, "index"])
+                     ->name("sprogis");
+              Route::get('/janis-gabrans', [BlogController::class, "index"])
+                     ->name("gabrans");
+              Route::get('/renars-sprogis/{id}', [BlogController::class, "show"]);
+              Route::get('/janis-gabrans/{id}', [BlogController::class, "show"]);
        }
 );
 

@@ -1,5 +1,10 @@
-<x-layouts.simple-page metaName="services" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
-  <x-slot:title>Pakalpojumi</x-slot:title>
+<x-layouts.simple-page
+        metaName="services"
+        bg_src='images/landing/landing.webp'
+        bg_alt="Ruckas muiža"
+        style="--heading-decrease-size: 0.2rem"
+>
+  <x-slot:title>Pakal&shy;pojumi</x-slot:title>
   <p>
     Ruckas muiža ir īstā vieta, kur svinēt dzīvi, īpašus notikumus,
     baudīt atpūtu vai organizēt kādu plašākam pulkam aktuālu pasākumu.
@@ -32,6 +37,16 @@
       Iespējams uzņemt līdz pat 120 viesiem.
     </p>
     <x-button-link href="{{ route('services.celebrations') }}" text="Uzzināt vairāk!"/>
+  </x-two-columns>
+
+  <x-two-columns img_src='images/services/photo-session/oranzerija-romantika-sm.webp' img_alt="Ruckas muižas oranžērijā" swap={{true}}>
+    <x-slot:title>Fotosesija</x-slot:title>
+    <p>
+      Ruckas muiža piedāvā iespēju notvert īpašos
+      dzīves mirkļus kadros pieredzējušās fotogrāfes Karīnas Jurciņas
+      vadībā.
+    </p>
+    <x-button-link href="{{ route('services.photo_session') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
   {{-- <x-two-columns img_src='images/services/telpu-noma.webp' img_alt="Noma" swap={{true}}>

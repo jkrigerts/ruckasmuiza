@@ -8,19 +8,27 @@
         <nav  :class="open ? 'mobile-navigation' : ''">
             <ul>
 
-                <x-navigation.nav-link href="landing">Sākums</x-navigation.nav-link>
+                <x-navigation.nav-link href="living-paintings."
+                                       :items="[
+                                        ['title' => 'Mīts – Cilvēks – Daba', 'href' => 'living-paintings.myth'],
+                                        ['title' => 'Manas iedvesmas dārzi', 'href' => 'living-paintings.gardens'],
+                                        ]"
+                >Dzīvās gleznas</x-navigation.nav-link>
                 <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>
                 <x-navigation.nav-link href="services."
                                        :items="[
                                         ['title' => 'Nakšņošana', 'href' => 'services.stay'],
                                         ['title' => 'Kāzas', 'href' => 'services.weddings'],
                                         ['title' => 'Svinības', 'href' => 'services.celebrations'],
+                                        ['title' => 'Fotosesija', 'href' => 'services.photo_session'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="offers."
                                        unchoosable
                                        :items="[
+                                        ['title' => 'Dzīvās gleznas', 'href' => 'living-paintings.'],
+                                        ['title' => 'Gleznošana ar Baibu Feoktistovu', 'href' => 'offers.painting_classes'],
                                         ['title' => 'Grāmatas', 'href' => 'offers.books'],
                                         ['title' => 'Dāvanu kartes', 'href' => 'offers.gift_cards'],
                                         ]"

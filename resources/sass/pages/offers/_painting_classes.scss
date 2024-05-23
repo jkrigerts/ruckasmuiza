@@ -1,0 +1,11 @@
+.list-with-bullets {
+    padding-left: 40px;
+
+    & li {
+        list-style-type: disc;
+    }
+
+    @include xs-breakpoint {
+        padding-left: 20px;
+    }
+}

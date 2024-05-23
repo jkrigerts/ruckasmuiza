@@ -185,16 +185,14 @@
 		/>
 		<x-landing.section
 			id="dzivas-gleznas"
-			bgImage="images/landing/dzivas-gleznas.webp"
+			bgImage="images/offers/naktstaurins.webp"
 			title="Dzīvās gleznas"
-			description="<p>Baibas Feoktistovas vārds daudziem liekus jautājumus neraisa. 
-				Viņa rada krāšņas, drosmīgas un unikālas gleznas, kas pārsteidz ikvienu.
-				Ja vēlies tās raudzīt savām acīm vai iemācīties gleznot viņas vadībā – šī ir vieta Tev!</p>"
-    		icon="components.icons.brush"
-			link="contacts"
-			linkText="Sazināties"
+			description="<p>Unikāls multimediāls piedzīvojums, kurā jaunākās tehnoloģijas
+				divās izrādēs uz ekrāniem ļauj iepazīt mākslu un mūziku. Izstāžu režisors
+				un scenārija autors - Māris Kalve.</p>"
+			link="living-paintings."
+    	icon="components.icons.brush"
 			fade=false
-			right=true
 		/>
 	</div>
 </x-layouts.app>

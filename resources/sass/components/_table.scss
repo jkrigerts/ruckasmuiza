@@ -1,0 +1,66 @@
+.general-table {
+    $table-border-color: $color-stone-gray;
+    $table-border-alpha: 0.2;
+    $table-border-radius: 3px;
+
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 0.5rem;
+    border-radius: $table-border-radius;
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        border-bottom: 1px solid rgba($table-border-color, $table-border-alpha);
+        border-left: 1px solid rgba($table-border-color, $table-border-alpha);
+    }
+
+    th:last-child,
+    td:last-child {
+        border-right: 1px solid rgba($table-border-color, $table-border-alpha);
+    }
+
+    th {
+        background-color: $color-raspberry-red;
+        color: $color-white-gray;
+        text-align: left;
+
+        @include md-breakpoint {
+            padding: 12px 8px;
+        }
+    }
+
+    tbody td {
+        font-size: 1.05rem;
+        @include md-breakpoint {
+            padding: 8px;
+        }
+
+        @include xs-breakpoint {
+            padding: 4px;
+        }
+    }
+
+    tr:nth-child(even) {
+        background-color: $color-white;
+    }
+
+    th:first-child {
+        border-top-left-radius: $table-border-radius;
+    }
+    th:last-child {
+        border-top-right-radius: $table-border-radius;
+    }
+    tr:last-child td:first-child {
+        border-bottom-left-radius: $table-border-radius;
+    }
+    tr:last-child td:last-child {
+        border-bottom-right-radius: $table-border-radius;
+    }
+}
