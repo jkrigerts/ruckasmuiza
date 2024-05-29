@@ -6,6 +6,12 @@
     Izstāde atspoguļo un izteiksmīgi parāda mūsu – latviešu, nacionālās identitātes
     smalkās nianses.
   </p>
+  <p style="margin-bottom: 0">
+    Idejas autore un radošā producente – <strong>Leonarda Ķestere</strong>.
+  </p>
+  <p>
+    Izstādes režisors un un scenārija autors – <strong>Māris Kalve</strong>.
+  </p>
 
   <p>
     Izstādes režisors un scenārija autors Māris Kalve: "Pirms 100 gadiem radīti
