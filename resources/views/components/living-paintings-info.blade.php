@@ -2,19 +2,25 @@
   <x-slot:title>Seansi</x-slot:title>
   <p>Seansi notiek katru dienu no otrdienas līdz svētdienai ieskaitot.</p>
   <ul>
-    <li style="margin-bottom: 0.2rem">10.00, 10.20 Manas iedvesmas dārzi</li>
-    <li style="margin-bottom: 0.2rem">10.40 Mīts – Cilvēks – Daba</li>
-    <li style="margin-bottom: 0.2rem">11.10, 11.30 Manas iedvesmas dārzi</li>
-    <li style="margin-bottom: 0.2rem">11.50 Mīts – Cilvēks – Daba</li>
-    <li style="margin-bottom: 0.2rem">12.20, 12.40 Manas iedvesmas dārzi</li>
-    <li style="margin-bottom: 0.2rem">13.00 Mīts – Cilvēks – Daba</li>
-    <li></li>
-    <li style="margin-bottom: 0.2rem">14.00, 14.20 Manas iedvesmas dārzi</li>
-    <li style="margin-bottom: 0.2rem">14.40 Mīts – Cilvēks – Daba</li>
-    <li style="margin-bottom: 0.2rem">15.10, 15.30 Manas iedvesmas dārzi</li>
-    <li style="margin-bottom: 0.2rem">15.50 Mīts – Cilvēks – Daba</li>
-    <li style="margin-bottom: 0.2rem">16.20, 16.40 Manas iedvesmas dārzi</li>
-    <li style="margin-bottom: 0.2rem">17.00 Mīts – Cilvēks – Daba</li>
+    <li style="margin-bottom: 0.2rem">10.00 – 10.30 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">10.30 – 11.00 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">11.00 – 11.30 Mīts – Cilvēks – Daba</li>
+
+    <li style="margin-bottom: 0.2rem">11.30 – 12.00 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">12.00 – 12.30 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">12.30 – 13.00 Mīts – Cilvēks – Daba</li>
+
+    <li style="margin-bottom: 0.2rem">13.00 – 13.30 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">13.30 – 14.00 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">14.00 – 14.30 Mīts – Cilvēks – Daba</li>
+
+    <li style="margin-bottom: 0.2rem">14.30 – 15.00 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">15.00 – 15.30 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">15.30 – 16.00 Mīts – Cilvēks – Daba</li>
+
+    <li style="margin-bottom: 0.2rem">16.00 – 16.30 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">16.30 – 17.00 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">17.00 – 17.30 Mīts – Cilvēks – Daba</li>
   </ul>
   <x-slot:second_slot>
     <h2>Cenas</h2>
