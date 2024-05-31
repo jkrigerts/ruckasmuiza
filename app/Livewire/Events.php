@@ -26,8 +26,20 @@ class Events extends Component
 
     public function data(){
         $dateFormat = 'Y-m-d';
-
-        $today = Carbon::parse(now()->addMonths($this->monthOffset)->format($dateFormat));
+        
+        /* 
+            Explanation for further code:
+                now() -> gets current date
+                startOfMonth() -> 
+                    is very important because we are going to use addMonths,
+                    and if todays date is 31st, and next month wont have 31 days in it,
+                    it will eventually skip two months
+                addMonths() -> 
+                    after setting to the first month of the day, we can safely add months,
+                    without the worry that it will skip two months
+                format() -> formats the date according to the $dateFormat value
+        */
+        $today = Carbon::parse(now()->startOfMonth()->addMonths($this->monthOffset)->format($dateFormat));
 
         $monthsKa = [ // atbild uz jautājumu Kā?
             'janvāra',
