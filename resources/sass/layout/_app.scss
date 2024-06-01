@@ -2,9 +2,11 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: hsl(330, 100%, 31%);
+    opacity: 0.7;
     justify-items: center;
     align-items: center;
-    padding: 0.7rem;
+    text-align: center;
+    padding: 0.5rem;
     flex: 0 0 auto; /* Allows footer to shrink when content overflows */
     width: 100%;
     bottom: 0; /* Positions the footer at the bottom */
@@ -13,7 +15,7 @@ main{
     min-height: calc(100vh - 60px);
 }
 .tooltip{
-    padding: 0.5rem;
+    padding: 0.3rem;
     background-color: rgb(33, 33, 33);
     color: white;
     border-radius: 0.4rem;
