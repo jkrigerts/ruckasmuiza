@@ -102,10 +102,12 @@ class EventsResource extends Resource
                             ->columnSpan(1) 
                             ->maxLength(50)
                             ->placeholder('5'),
+                        Checkbox::make("reservation_needed")
+                            ->label("Iepriekšēja pieteikšanās")
+                            ->default(true),
                         Checkbox::make("published")
                             ->label("Publicēt")
                             ->default(true)
-
                     ]),
             ]);
     }
