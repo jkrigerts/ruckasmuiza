@@ -47,7 +47,9 @@
             <p>Dalības maksa: <strong>{{ $event['price'] }}</strong></p>
 
             <div class="modal-contacts">
-                <p>Iepriekšēja pieteikšanās:</p>
+                @if ($event->reservation_needed)   
+                    <p>Iepriekšēja pieteikšanās</p>
+                @endif
                 <div class="contacts">
                     <a href="tel:+37128237566"><x-icons.phone /> Zvanīt</a>
                     <a href="mailto:ruckasm@gmail.com"><x-icons.mail /> Rakstīt</a>
