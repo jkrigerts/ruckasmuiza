@@ -66,11 +66,18 @@
         </tr> --}}
       </tbody>
     </x-table>
-    <p style="margin-top:1.5rem;">Grupas atlaide (grupa virs 10 personām, t. sk. skolēnu grupas): 10&nbsp;%</p>
-    <p>Cēsu Drauga kartes atlaide: 10&nbsp;%</p>
+    <p style="margin-top:1.5rem; margin-bottom: 0">Grupas atlaide (grupa virs 10 personām, t. sk. skolēnu grupas): 10&nbsp;%</p>
+    <p style="margin-bottom: 0">Cēsu Drauga kartes atlaide: 10&nbsp;%</p>
+    <p>3+ Ģimenes karte atlaide: 10%</p>
+
+    <p style="margin-bottom: 0">Bezmaksas ieeja:</p>
+    <ul style="padding-left: 20px">
+      <li style="margin-bottom: 0; list-style-type: disc">pirmsskolas vecuma bērniem,</li>
+      <li style="list-style-type: disc">personām ar I un II grupas invaliditāti un vienai personai, kas pavada personu ar I grupas invaliditāti. </li>
+    </ul>
   </x-slot:second_slot>
 </x-two-columns>
 
-<div class="gift_cards-centered-btn">
+{{-- <div class="gift_cards-centered-btn">
   <x-button-link href="{{ route('contacts') }}" text="Pieteikties!"/>
-</div>
+</div> --}}

@@ -109,10 +109,10 @@ Route::group(
        function () {
               Route::get('/renars-sprogis', [BlogController::class, "index"])
                      ->name("sprogis");
-              Route::get('/janis-gabrans', [BlogController::class, "index"])
-                     ->name("gabrans");
+              // Route::get('/janis-gabrans', [BlogController::class, "index"])
+              //        ->name("gabrans");
               Route::get('/renars-sprogis/{id}', [BlogController::class, "show"]);
-              Route::get('/janis-gabrans/{id}', [BlogController::class, "show"]);
+              // Route::get('/janis-gabrans/{id}', [BlogController::class, "show"]);
        }
 );
 
