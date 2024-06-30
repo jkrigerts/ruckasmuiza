@@ -37,7 +37,7 @@
                                        unchoosable
                                        :items="[
                                         ['title' => 'Renāra Sproģa dienasgrāmata', 'href' => 'blog.sprogis'],
-                                        ['title' => 'Jāņa Gabrāna piezīmes', 'href' => 'blog.gabrans'],
+                                        // ['title' => 'Jāņa Gabrāna piezīmes', 'href' => 'blog.gabrans'],
                                         ]"
                 >Muiža runā</x-navigation.nav-link>
                 <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>

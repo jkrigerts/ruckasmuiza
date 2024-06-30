@@ -1,38 +1,60 @@
 <x-layouts.simple-page metaName="gardens" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Manas iedves&shy;mas dārzi</x-slot:title>
+
   <p>
-    Manas iedvesmas dārzi. Baiba Feoktistova.
+    "Manas iedvesmas dārzi" – tā savu gleznu multimediālo piedāvajumu
+    nosaukusi gleznotāja <strong>Baiba Feoktistova</strong>, kuras
+    gleznošanas studija iekārtota Ruckas muižā. Viņas gleznas ir košas,
+    izteiksmīgas, uzrunājošas, un tieši tāds ir viss multimediālais
+    priekšnesums.
   </p>
+
   <p>
-    Dārzs ir paša veidots, īstenots sapnis, kas gan izpauž autora motīvus, gan sagādā negaidītus un 
-    emocijām bagātus pārsteigumus. Tas nav viens stāsts, Baibas gleznu audzētais dārzs ir bagāts un 
-    daudzveidīgs, kura izpaustie motīvi paši rada negaidītas un transformējošas metamorfozes.
+    "Mākslas darbos savu dārzu esmu veidojusi vairāku gadu garumā.
+    Nu tas izplaucis košās krāsās un iedvesmojošos skaņdarbos.
+    Redzēt gleznas atdzīvojamies uz septiņiem lielformāta ekrāniem –
+    tā ir saviļņojoša pieredze! "Mani iedvesmas dārzi"
+    būs klātienes audiovizuāls piedzīvojums ikvienam apmeklētājam,
+    kurš to piedzīvos šajā skaistajā un vēsturiskajā vietā,"
+    stāsta māksliniece Baiba Feoktistova.
   </p>
+
   <p>
-    Radot gleznu kustīgo, laikā un telpā uztveramo stāstu, tiek veidots pilnīgi jauns darbs,
-    izmantojot Baibas Feoktistovas statiskā oriģināla motīvus, maksimāli respektējot
-    oriģināla kompozīciju un ievirzi. Katram motīvam, to ilustrējot un atdzīvinot,
-    izmantota Mocarta, Baha, Šopēna un Bizē komponētā mūziku profesionālā izpildījumā. 
+    Videomākslinieks <strong>Māris Kalve</strong>, radot gleznu kustīgo, laikā un
+    telpā uztveramo stāstu, izveidojis pilnīgi jaunu darbu,
+    izmantojot Baibas Feoktistovas statiskā oriģināla motīvus,
+    maksimāli respektējot oriģināla kompozīciju un ievirzi.
+    Katram motīvam, to ilustrējot un atdzīvinot, izmantota
+    Mocarta, Baha, Šopēna un Bizē komponētā mūzika
+    profesionālā izpildījumā.  
   </p>
+
   <p>
-    Tā, kā ekspozīcijas scenogrāfijas izmēri un formāts ievērojami atšķiras no gleznu
-    formātiem, izmēru paplašinājumi un vairāki dinamiskie elementi tiek ģenerēti ar
-    jaunāko mākslīgā intelekta algoritmu palīdzību, kas piešķir kompozīcijām papildinātu,
-    jaunu realitāti.
+    Pati gleznotāja kopš bērnības dzīvojusi krāsu un mākslas pasaulē.
+    Mācoties juveliera profesijā pie Oļega Auzera, viņa guvusi vērtīgu
+    pieredzi un telpisku domāšanu, tā ļāvusi izprast, kā veidojas formas
+    un kā tās attēlot plaknē. Izcila pieredze gūta, mācoties pie
+    gleznotāja Artūra Auzera, darbojoties plenēros. Taču lielāko daļu
+    iemaņu māksliniece apguvusi pašmācības procesā, kopš bērnības
+    izrādot spēcīgu interesi par mākslu un ieguldot ļoti daudz laika
+    savu prasmju izkopšanā.
   </p>
+
   <p>
-    Multimediju instalācija izspēlē, izpauž skaniskā kustībā to maģisko noslēpumu, ko sevī slēpj 
-    gleznas. Intuīcija, sajūtas un nojausma, sapnis par savu dārzu – tas viss jāpiedzīvo telpā un laikā, ko 
-    šodien tik ierastais viedierīču vai datora ekrāns nespēs izdarīt, tas jāpiedzīvo šajā virtuāli jaunradītajā realitātē, radot katra personisko un unikālo iedvesmu, sirdī un apziņā
-  </p>
-  <p>
-    Mācoties juveliera profesijā pie Oļega Auzera, Baiba Feoktistova guvusi vērtīgu
-    pieredzi un telpisku domāšanu, tā ļāvusi izprast, kā veidojas formas un kā tās
-    attēlot plaknē. Izcila pieredze gūta, mācoties pie gleznotāja Artūra Auzera,
-    darbojoties plenēros. Taču lielāko daļu iemaņu māksliniece apguvusi pašmācības
-    procesā, kopš bērnības izrādot spēcīgu interesi par mākslu un ieguldot ļoti daudz
-    laika savu prasmju izkopšanā. 
+    "Manas iedvesmas dārzi" seansi skatāmi katru dienu plkst. 10.00 – 17.30, pirmdienas brīvas. 
   </p>
   <x-living-paintings-info />
 
 </x-layouts.simple-page>
+
+
+<script language="JavaScript" type="module">
+  const lightbox = new window.PhotoSwipeLightbox({
+    gallery: '#photo-session-gallery',
+    bgOpacity: 0.9,
+    showHideAnimationType: 'fade',
+    children: 'a',
+    pswpModule: window.photoswipe
+  });
+  lightbox.init();
+</script>

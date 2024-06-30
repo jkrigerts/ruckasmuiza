@@ -1,52 +1,71 @@
 <x-layouts.simple-page metaName="myth" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title>Mīts - Cilvēks - Daba</x-slot:title>
   <p>
-    Dzīvās gleznas ir piedzīvojums visai ģimenei, kurā jaunākās tehnoloģijas 25 minūšu izrādē
-    uz ekrāniem ļauj iepazīt mākslu un mūziku stāstā "Mīts – Cilvēks – Daba".
-    Izstāde atspoguļo un izteiksmīgi parāda mūsu – latviešu, nacionālās identitātes
-    smalkās nianses.
+    Izstāde "Mīts - Cilvēks - Daba" ir veltījums simbolismam
+    Latvijas mākslā, kuras laikā jaunās krāsās, skaņās un kustībā
+    atdzīvojas vairāk nekā 40 spilgtākās tā laika gleznas.
+    Virtuālā mākslinieku veidotā animācijas performancē redzami
+    tādu latviešu vecmeistaru kā Jaņa Rozentāla, Vilhelma Purvīša,
+    Johana Valtera, Pētera Kalves, Rūdolfa Pērles u.c. autoru darbi,
+    kas ierakstīti arī Latvijas Kultūras kanonā. 
+  </p>
+  <p>
+    Multimediju darbā izmantoti mākslas darbi no Latvijas Nacionālā
+    Mākslas muzeja plašā krājuma, no Zuzānu kolekcijas un
+    citām privātkolekcijām.
   </p>
   <p style="margin-bottom: 0">
-    Idejas autore un radošā producente – <strong>Leonarda Ķestere</strong>.
+    Radošā producente un līdzautore – <strong>Leonarda Ķestere-Kļaviņa</strong>.
   </p>
   <p>
-    Izstādes režisors un un scenārija autors – <strong>Māris Kalve</strong>.
-  </p>
-
-  <p>
-    Izstādes režisors un scenārija autors Māris Kalve: "Pirms 100 gadiem radīti
-    darbi jau paši par sevi pastāv zināmā simbiozē. Mums ir izcilas latviešu
-    stājmākslas paraugi, mums ir tā laika mūzika mūsdienu interpretācijā
-    un mums ir tā laika uz simbolismu attiecināma dzeja. Dzejas sastāvdaļa ir
-    mainīgais, kur pielietojam citas kultūras – franču, krievu vai angļu
-    nacionālo dzejnieku darbus, kas saturiski iekļaujas stāstā. 100-gadīga māksla
-    mūsdienu sakausējumā, kas pauž vienotu stāstu. Stāsts ir par katru no mums,
-    par būtiskāko daļu mūsos, kas attīstās un evolucionē. Sākot no mīta bērnībā
-    (cilvēces jaunībā), ko mēs nosaucam par MĪTS, cauri jaunības pašapliecinājuma
-    gadiem (cilvēces renesanse), ko mēs saucam par CILVĒKS, līdz mūsdienu dzenam,
-    kur apziņa pilnībā izplešas bezgalīgā telpā, ko mēs nosaucam par DABA".
+    Režisors un un scenārija autors – <strong>Māris Kalve</strong>.
   </p>
 
   <p>
-    Izcilais pianists Andrejs Osokins ieskaņojis melodijas katram mākslas darbam
-    un visam priekšnesumam kopumā, interpretējot triju izcilo latviešu simbolisma
-    laika skaņražu – Jāzepa Vītola, Emīla Dārziņa un Jāņa Mediņa darbus.
-    Unikālo skaņu celiņu papildina Edvarta Virzas, Fallija, Zemgaliešu
-    Birutas dzeja, ko ierunājuši aktieri Sandra Kļaviņa, Voldemārs
-    Šoriņš un Jēkabs Reinis.
+    "Patiess prieks, ka Ruckas muiža guvusi jaunu elpu kultūrtelpas
+    veidošanā! Izstāde "Mīts - Cilvēks - Daba" plašu skatītāju ievērību
+    un lielus panākumus guvusi tepat Latvijā, un nu tā atgriezusies mājās,
+    Cēsīs. Esmu pārliecināta, ka mūsdienīgiem tehnoloģiskajiem risinājumiem
+    veidotā izstāde būs kā magnēts ne tikai kultūras un mākslas pazinējiem,
+    bet arī brīnišķīgs formāts, lai ar mākslu iepazīstinātu bērnus,"
+    stāsta idejas autore un radošā producente Leonarda Ķestere Kļaviņa.  
   </p>
 
   <p>
-    Digitālā izstāžu nama "Lumiere" vadītājs Renārs Sproģis:
-    "Multimediālā simbolisma mākslas izstāde ir digitāli izglītojošs
-    mākslas – mūzikas – literatūras projekts. Pateicoties labākajiem multimediālās
-    jomas māksliniekiem, izstāde ir veidota mūsdienīgā tehnikā,
-    lai tā ar savu sniegumu vienlīdz aizrautu gan mākslas pazinējus, gan arī tādus,
-    kas līdz šim ar to ir bijuši sveši, tostarp arī bērnus.
-    Īpaši radītas kustīgas animācijas, tā laika un sajūtu raksturojoša mūzika un dzeja,
-    kas atdzīvina telpu neparastā piedzīvojumā."
+    "Stāsts ir par katru no mums, par būtiskāko daļu mūsos, kas attīstās
+    un evolucionē. Sākot no mīta bērnībā (cilvēces jaunībā),
+    ko mēs nosaucam par MĪTS, cauri jaunības pašapliecinājuma
+    gadiem (cilvēces renesanse), ko saucam par CILVĒKS,
+    līdz mūsdienu dzenam, kur apziņa pilnībā izplešas bezgalīgā telpā,
+    ko mēs nosaucam par DABA," tā šo multimediālo piedzīvojumu raksturo
+    režisors un un scenārija autors Māris Kalve.   
+  </p>
+
+  <p>
+    Melodijas katram mākslas darbam un visam priekšnesumam kopumā
+    ieskaņojis izcilais pianists Andrejs Osokins, interpretējot
+    triju izcilo latviešu simbolisma laika skaņražu Jāzepa Vītola,
+    Emīla Dārziņa un Jāņa Mediņa darbus. Skaņu celiņu papildina
+    Edvarta Virzas, Fallija, Zemgaliešu Birutas dzeja, ko ierunājuši
+    aktieri Sandra Kļaviņa, Voldemārs Šoriņš un Jēkabs Reinis.   
+  </p>
+  
+  <p>
+    "Mīts – Cilvēks – Daba" seansi skatāmi katru dienu plkst. 10.00 – 17.30, pirmdienas brīvas. 
   </p>
 
   <x-living-paintings-info />
   
 </x-layouts.simple-page>
+
+
+<script language="JavaScript" type="module">
+  const lightbox = new window.PhotoSwipeLightbox({
+    gallery: '#photo-session-gallery',
+    bgOpacity: 0.9,
+    showHideAnimationType: 'fade',
+    children: 'a',
+    pswpModule: window.photoswipe
+  });
+  lightbox.init();
+</script>
