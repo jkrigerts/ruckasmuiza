@@ -29,43 +29,37 @@
           <td>Marijas istaba</td>
           <td>Nr. 10</td>
           <td>Viena divguļamā gulta</td>
-          <td>75 €</td>
+          <td rowspan="7">2 personām <strong>55 €</strong> vai 1 personai <strong>40 €</strong></td>
         </tr>
         <tr>
           <td>Jāzepa istaba</td>
           <td>Nr. 9</td>
           <td>Divas vienguļamās gultas</td>
-          <td>70 € vai 1 personai 50 €</td>
         </tr>
         <tr>
           <td>Martas istaba</td>
           <td>Nr. 8</td>
           <td>Divas vienguļamās gultas</td>
-          <td>70 € vai 1 personai 50 €</td>
         </tr>
         <tr>
           <td>Jēkaba istaba</td>
           <td>Nr. 6</td>
-          <td>Trīs vienguļamās gultas</td>
-          <td>75 € vai 2 personām 65 € par personu</td>
+          <td>Viena divguļamā gulta</td>
         </tr>
         <tr>
           <td>Margarētas istaba</td>
           <td>Nr. 3</td>
           <td>Viena divguļamā gulta</td>
-          <td>75 €</td>
         </tr>
         <tr>
           <td>Franciska istaba</td>
           <td>Nr. 2</td>
           <td>Viena divguļamā gulta</td>
-          <td>75 €</td>
         </tr>
         <tr>
           <td>Jāņa istaba</td>
           <td>Nr. 1</td>
           <td>Divas vienguļamās gultas</td>
-          <td>70 € vai 1 personai 50 €</td>
         </tr>
       </tbody>
     </table>

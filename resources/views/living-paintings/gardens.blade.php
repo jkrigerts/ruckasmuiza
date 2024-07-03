@@ -40,21 +40,17 @@
     savu prasmju izkopšanā.
   </p>
 
+  <x-image-row :images='[
+                          ["src" => "/images/living-paintings/gardens/dzivas_gleznas_01.webp", "alt" => "Manas iedvesmas dārzi titulgleznas demonstrējums", "height" => 1066, "width" => 1600],
+                          ["src" => "/images/living-paintings/gardens/dzivas_gleznas_02.webp", "alt" => "Manas iedvesmas dārzi caur viedtālruni", "height" => 1066, "width" => 1600],
+                          ["src" => "/images/living-paintings/gardens/dzivas_gleznas_04.webp", "alt" => "Manas iedvesmas dārzi demonstrācija", "height" => 1066, "width" => 1600],
+                          ["src" => "/images/living-paintings/gardens/dzivas_gleznas_03.webp", "alt" => "Manas iedvesmas dārzi noslēgums", "height" => 1066, "width" => 1600],
+                        ]'>
+  </x-image-row>
+
   <p>
     "Manas iedvesmas dārzi" seansi skatāmi katru dienu plkst. 10.00 – 17.30, pirmdienas brīvas. 
   </p>
   <x-living-paintings-info />
 
 </x-layouts.simple-page>
-
-
-<script language="JavaScript" type="module">
-  const lightbox = new window.PhotoSwipeLightbox({
-    gallery: '#photo-session-gallery',
-    bgOpacity: 0.9,
-    showHideAnimationType: 'fade',
-    children: 'a',
-    pswpModule: window.photoswipe
-  });
-  lightbox.init();
-</script>
