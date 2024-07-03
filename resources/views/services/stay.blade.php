@@ -8,7 +8,7 @@
   <p>
     Nedēļas nogale Cēsīs, atpūta ar ģimeni vai jaunlaulāto divvientulība –
     Ruckas muiža ir tās naktsmājas Vidzemē, kas neatstās vienaldzīgu!
-    Pie mums pieejamas nakšņošanas iespējas, sākot no 50 €/personai,
+    Pie mums pieejamas nakšņošanas iespējas, sākot no 40 €/personai,
     kādā no 7 numuriņiem. Pieejama tikai koplietošanas WC un dušas telpas.</p>
     {{-- <div class="gift_cards-centered-btn" style="margin-bottom: 2rem">
       <x-button-link href="{{ url('galerija/2') }}" text="Apskatīt istabiņas"></x-button-link>
