@@ -49,6 +49,14 @@
     Edvarta Virzas, Fallija, Zemgaliešu Birutas dzeja, ko ierunājuši
     aktieri Sandra Kļaviņa, Voldemārs Šoriņš un Jēkabs Reinis.   
   </p>
+
+  <x-image-row :images='[
+                          ["src" => "/images/living-paintings/myth/simbolisms_01.webp", "alt" => "Mīts - Cilvēks - Daba", "height" => 1536, "width" => 2048],
+                          ["src" => "/images/living-paintings/myth/simbolisms_02.webp", "alt" => "Mīts - Cilvēks - Daba", "height" => 1536, "width" => 2048],
+                          ["src" => "/images/living-paintings/myth/simbolisms_04.webp", "alt" => "Mīts - Cilvēks - Daba", "height" => 1548, "width" => 2048],
+                          ["src" => "/images/living-paintings/myth/simbolisms_03.webp", "alt" => "Mīts - Cilvēks - Daba", "height" => 1536, "width" => 2048],
+                        ]'>
+  </x-image-row>
   
   <p>
     "Mīts – Cilvēks – Daba" seansi skatāmi katru dienu plkst. 10.00 – 17.30, pirmdienas brīvas. 

@@ -1,13 +1,24 @@
 .image-row {
     width: 100%;
+    margin-bottom: 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: $border-radius;
+    overflow: hidden;
 
-    @include lg-breakpoint {
-        grid-template-columns: repeat(2, 1fr);
+    // @include lg-breakpoint {
+    //     grid-template-columns: repeat(2, 1fr);
+    // }
+
+    @include sm-breakpoint {
+        grid-template-columns: 1fr;
     }
 
-    @include md-breakpoint {
-        grid-template-columns: 1fr;
+    .image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
