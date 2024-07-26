@@ -74,10 +74,10 @@ Route::group(
 );
 
 
-Route::get('/pasakumi', function (Request $req) {
-       if ($req->monthOffset == null) return redirect(route('events', ['monthOffset' => 0])); // month offset pārbaude
-       return view('events');
-})->name("events");
+// Route::get('/pasakumi', function (Request $req) {
+//        if ($req->monthOffset == null) return redirect(route('events', ['monthOffset' => 0])); // month offset pārbaude
+//        return view('events');
+// })->name("events");
 
 
 Route::group(

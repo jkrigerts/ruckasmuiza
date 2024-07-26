@@ -108,7 +108,7 @@
 										koncertiem, kinolektorijiem un teātra izrādēm – Tevi gaida plašs kultūras
 										pasākumu klāsts.</p>"
     		icon="components.icons.calendar"
-			link="events"
+			link="contacts"
 			fade=true
 		/>
 		{{-- <x-landing.section
