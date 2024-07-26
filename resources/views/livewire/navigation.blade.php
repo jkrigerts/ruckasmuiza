@@ -23,7 +23,7 @@
                                         ['title' => 'Fotosesija', 'href' => 'services.photo_session'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
-                <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link>
+                {{-- <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link> --}}
                 <x-navigation.nav-link href="offers."
                                        unchoosable
                                        :items="[
