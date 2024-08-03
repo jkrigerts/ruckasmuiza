@@ -63,6 +63,7 @@
         </tr>
       </tbody>
     </table>
+    <p style="margin-bottom: 0; margin-top: 1rem;">Cēsu Drauga kartes īpašniekiem atlaide <strong>10&nbsp;%</strong></p>
   </div>
   <div class="gift_cards-centered-btn">
     <x-button-link href="{{ url('galerija/2') }}" text="Apskatīt istabiņas"></x-button-link>
