@@ -123,3 +123,6 @@ Route::get('/galerija/{id}', [GalleryController::class, "show"]);
 
 Route::get('/kontakti', function () { return view('contacts');})
        ->name("contacts");
+
+Route::get('/trattoria', function () { return view('trattoria');})
+       ->name("trattoria");
