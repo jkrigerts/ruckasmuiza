@@ -1,5 +1,5 @@
 @props([
-    'style' => ""
+    'style' => "",
 ])
 
 <h1 class="section-heading" style="{{$style}}">

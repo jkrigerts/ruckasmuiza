@@ -12,6 +12,17 @@
     transform: translateZ(0);
 
     @include md-breakpoint {
-        font-size: calc($font-size-lg + 3vw - var(--heading-decrease-size));
+        font-size: calc(
+            $font-size-lg - 0.4rem + 5.5vw - var(--heading-decrease-size)
+        );
+    }
+}
+
+.heading-prefix {
+    font-size: 0.7em;
+    display: block;
+
+    @include md-breakpoint {
+        font-size: 0.6em;
     }
 }
