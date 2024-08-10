@@ -41,8 +41,8 @@
                                         ]"
                 >Muiža runā</x-navigation.nav-link>
                 <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>
-                <x-navigation.nav-link href="contacts">Kontakti</x-navigation.nav-link>
                 <x-navigation.nav-link href="trattoria">Trattoria</x-navigation.nav-link>
+                <x-navigation.nav-link href="contacts">Kontakti</x-navigation.nav-link>
             </ul>
         </nav>
         <button x-on:click="toggleOpen" class="hamburger">
