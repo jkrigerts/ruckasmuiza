@@ -76,4 +76,11 @@
       </tr>
     </x-table>
   </div>
+
+  <x-inner-chapter-heading>Ēdienkarte</x-inner-chapter-heading>
+  <iframe class="trattoria-iframe" src="{{ url('Ruckas_muiza-Trattoria-edienkarte.pdf') }}" width="100%"></iframe>
+
+  <div class="gift_cards-centered-btn">
+    <a href="{{ url('Ruckas_muiza-Trattoria-edienkarte.pdf') }}" class="button-link" target="_blank">Apskatīt ēdienkarti</a>
+  </div>
 </x-layouts.simple-page>
