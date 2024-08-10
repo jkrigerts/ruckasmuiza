@@ -29,7 +29,7 @@
 
 
   <x-inner-chapter-heading>Darba laiks</x-inner-chapter-heading>
-  <ul>
+  {{-- <ul>
     <li>Pirmdiena – slēgts</li>
     <li>Otrdiena – no 12.00 līdz 20.00</li>
     <li>Trešdiena – no 12.00 līdz 20.00</li>
@@ -37,5 +37,43 @@
     <li>Piektdiena – no 12.00 līdz 21.00</li>
     <li>Sestdiena – no 12.00 līdz 21.00</li>
     <li>Svētdiena – no 12.00 līdz 20.00</li>
-  </ul>
+  </ul> --}}
+  <div class="trattoria-table-center">
+    <x-table >
+      <thead>
+        <tr>
+          <th>Diena</th>
+          <th>Darba laiks</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Pirmdiena</td>
+        <td>slēgts</td>
+      </tr>
+      <tr>
+        <td>Otrdiena</td>
+        <td>12.00 – 20.00</td>
+      </tr>
+      <tr>
+        <td>Trešdiena</td>
+        <td>12.00 – 20.00</td>
+      </tr>
+      <tr>
+        <td>Ceturtdiena</td>
+        <td>12.00 – 20.00</td>
+      </tr>
+      <tr>
+        <td>Piektdiena</td>
+        <td>12.00 – 21.00</td>
+      </tr>
+      <tr>
+        <td>Sestdiena</td>
+        <td>12.00 – 21.00</td>
+      </tr>
+      <tr>
+        <td>Svētdiena</td>
+        <td>12.00 – 20.00</td>
+      </tr>
+    </x-table>
+  </div>
 </x-layouts.simple-page>
