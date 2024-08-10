@@ -1,0 +1,9 @@
+.trattoria-table-center {
+    display: flex;
+    justify-content: start;
+
+    .general-table {
+        width: 500px;
+        max-width: 100%;
+    }
+}
