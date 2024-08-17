@@ -64,11 +64,11 @@
       </tr>
       <tr>
         <td>Piektdiena</td>
-        <td>12.00 – 21.00</td>
+        <td>12.00 – 20.00</td>
       </tr>
       <tr>
         <td>Sestdiena</td>
-        <td>12.00 – 21.00</td>
+        <td>12.00 – 20.00</td>
       </tr>
       <tr>
         <td>Svētdiena</td>
@@ -76,6 +76,9 @@
       </tr>
     </x-table>
   </div>
+
+  <x-inner-chapter-heading>Rezervācija</x-inner-chapter-heading>
+  <p>Tālruņa numurs galdiņu rezervācijai: <a href="tel:+37129407566">+371 29407566</a></p>
 
   <x-inner-chapter-heading>Ēdienkarte</x-inner-chapter-heading>
   <iframe class="trattoria-iframe" src="{{ url('assets/Ruckas_muiza-Trattoria-edienkarte.pdf') }}" width="100%"></iframe>
