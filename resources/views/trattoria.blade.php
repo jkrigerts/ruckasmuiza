@@ -27,63 +27,146 @@
     Uz tikšanos Ruckas muižā!
   </p>
 
+  <div id="pizza" style="margin-top:5.5rem">
+    <x-two-columns swap={{true}} style="gap:30px">
+      <x-slot:title>Darba laiks</x-slot:title>
+      <div class="trattoria-table-center">
+        <x-table >
+          <thead>
+            <tr>
+              <th>Diena</th>
+              <th>Darba laiks</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Pirmdiena</td>
+            <td>slēgts</td>
+          </tr>
+          <tr>
+            <td>Otrdiena</td>
+            <td>12.00 – 20.00</td>
+          </tr>
+          <tr>
+            <td>Trešdiena</td>
+            <td>12.00 – 20.00</td>
+          </tr>
+          <tr>
+            <td>Ceturtdiena</td>
+            <td>12.00 – 20.00</td>
+          </tr>
+          <tr>
+            <td>Piektdiena</td>
+            <td>12.00 – 20.00</td>
+          </tr>
+          <tr>
+            <td>Sestdiena</td>
+            <td>12.00 – 20.00</td>
+          </tr>
+          <tr>
+            <td>Svētdiena</td>
+            <td>12.00 – 20.00</td>
+          </tr>
+        </x-table>
+      </div>
 
-  <x-inner-chapter-heading>Darba laiks</x-inner-chapter-heading>
-  {{-- <ul>
-    <li>Pirmdiena – slēgts</li>
-    <li>Otrdiena – no 12.00 līdz 20.00</li>
-    <li>Trešdiena – no 12.00 līdz 20.00</li>
-    <li>Ceturtdiena – no 12.00 līdz 20.00</li>
-    <li>Piektdiena – no 12.00 līdz 21.00</li>
-    <li>Sestdiena – no 12.00 līdz 21.00</li>
-    <li>Svētdiena – no 12.00 līdz 20.00</li>
-  </ul> --}}
-  <div class="trattoria-table-center">
-    <x-table >
-      <thead>
-        <tr>
-          <th>Diena</th>
-          <th>Darba laiks</th>
-        </tr>
-      </thead>
-      <tr>
-        <td>Pirmdiena</td>
-        <td>slēgts</td>
-      </tr>
-      <tr>
-        <td>Otrdiena</td>
-        <td>12.00 – 20.00</td>
-      </tr>
-      <tr>
-        <td>Trešdiena</td>
-        <td>12.00 – 20.00</td>
-      </tr>
-      <tr>
-        <td>Ceturtdiena</td>
-        <td>12.00 – 20.00</td>
-      </tr>
-      <tr>
-        <td>Piektdiena</td>
-        <td>12.00 – 20.00</td>
-      </tr>
-      <tr>
-        <td>Sestdiena</td>
-        <td>12.00 – 20.00</td>
-      </tr>
-      <tr>
-        <td>Svētdiena</td>
-        <td>12.00 – 20.00</td>
-      </tr>
-    </x-table>
-  </div>
+      
+      <x-slot:second_slot>
+        <a class="trattoria-image"
+         href="{{url("images/trattoria/trattoria_24.webp")}}"
+         data-pswp-width="1200" 
+         data-pswp-height="1714"
+        >
+          <img src={{ asset("images/trattoria/trattoria_24.webp") }}
+              alt="Ruckas muižas Trattoria ceptā pica"
+              loading="lazy"
+          >
+        </a>
+      </x-slot:second_slot>
+    </x-two-columns>
 
-  <x-inner-chapter-heading>Rezervācija</x-inner-chapter-heading>
-  <p>Tālruņa numurs galdiņu rezervācijai: <a href="tel:+37129407566">+371 29407566</a></p>
+    <x-two-columns style="gap:30px">
+      <x-slot:title>Rezervācija</x-slot:title>
+      <p>Tālruņa numurs galdiņu rezervācijai: <a href="tel:+37129407566">+371&nbsp;29407566</a></p>
+      
+      <x-slot:second_slot>
+        <a class="trattoria-image"
+         href="{{url("images/trattoria/trattoria_25.webp")}}"
+         data-pswp-width="1200" 
+         data-pswp-height="1714"
+        >
+          <img src={{ asset("images/trattoria/trattoria_25.webp") }}
+              alt="Ruckas muižas Trattoria ceptā pica"
+              loading="lazy"
+          >
+        </a>
+      </x-slot:second_slot>
+    </x-two-columns>
 
-  <x-inner-chapter-heading>Ēdienkarte</x-inner-chapter-heading>
-  <iframe class="trattoria-iframe" src="{{ url('assets/Ruckas_muiza-Trattoria-edienkarte.pdf') }}" width="100%"></iframe>
+    <article>
+      <x-inner-chapter-heading>Ēdienkarte</x-inner-chapter-heading>
+      <iframe class="trattoria-iframe" src="{{ url('assets/Ruckas_muiza-Trattoria-edienkarte.pdf') }}" width="100%"></iframe>
 
-  <div class="gift_cards-centered-btn">
-    <a href="{{ url('assets/Ruckas_muiza-Trattoria-edienkarte.pdf') }}" class="button-link" target="_blank">Apskatīt ēdienkarti</a>
+      <div class="trattoria-centered-btn">
+        <a href="{{ url('assets/Ruckas_muiza-Trattoria-edienkarte.pdf') }}" class="button-link" target="_blank">Apskatīt ēdienkarti</a>
+      </div>
+    </article>
+
+    <div class="trattoria-image-row">
+      <a class="trattoria-image"
+          href="{{url("images/trattoria/trattoria_01.webp")}}"
+          data-pswp-width="1200" 
+          data-pswp-height="1714"
+        >
+        <img src={{ asset("images/trattoria/trattoria_01.webp") }}
+            alt="Ruckas muižas Trattoria ceptā pica"
+            loading="lazy"
+        >
+      </a>
+      <a class="trattoria-image"
+          href="{{url("images/trattoria/trattoria_17.webp")}}"
+          data-pswp-width="1200" 
+          data-pswp-height="1714"
+        >
+        <img src={{ asset("images/trattoria/trattoria_17.webp") }}
+            alt="Ruckas muižas Trattoria ceptā pica"
+            loading="lazy"
+        >
+      </a>
+      <a class="trattoria-image"
+          href="{{url("images/trattoria/trattoria_11.webp")}}"
+          data-pswp-width="1200" 
+          data-pswp-height="1714"
+        >
+        <img src={{ asset("images/trattoria/trattoria_11.webp") }}
+            alt="Ruckas muižas Trattoria ceptā pica"
+            loading="lazy"
+        >
+      </a>
+      <a class="trattoria-image"
+          href="{{url("images/trattoria/trattoria_05.webp")}}"
+          data-pswp-width="1200" 
+          data-pswp-height="1714"
+        >
+        <img src={{ asset("images/trattoria/trattoria_05.webp") }}
+            alt="Ruckas muižas Trattoria ceptā pica"
+            loading="lazy"
+        >
+      </a>
+      
+
+    </div>
   </div>
 </x-layouts.simple-page>
+
+
+<script language="JavaScript" type="module">
+
+  const lightbox = new window.PhotoSwipeLightbox({
+    gallery: '#pizza',
+    bgOpacity: 0.9,
+    showHideAnimationType: 'fade',
+    children: '.trattoria-image',
+    pswpModule: window.photoswipe
+  });
+  lightbox.init();
+</script>

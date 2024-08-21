@@ -3,7 +3,6 @@
     justify-content: start;
 
     .general-table {
-        width: 500px;
         max-width: 100%;
     }
 }
@@ -17,5 +16,46 @@
 
     @include xl-breakpoint {
         display: none;
+    }
+}
+
+.trattoria-image > img {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.trattoria-image-row {
+    width: 100%;
+    margin-block: 5.5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    @media only screen and (max-width: 820px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm-breakpoint {
+        grid-template-columns: 1fr;
+    }
+
+    @include xs-breakpoint {
+        gap: 10px;
+    }
+}
+
+.trattoria-centered-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    @include md-breakpoint {
+        justify-content: start;
     }
 }
