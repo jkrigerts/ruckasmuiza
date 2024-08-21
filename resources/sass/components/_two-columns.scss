@@ -64,7 +64,8 @@
 }
 
 .two-columns-swap {
-    .image {
+    .image,
+    .second {
         grid-row: 1;
         @include md-breakpoint {
             grid-row: auto;

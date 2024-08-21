@@ -18,7 +18,7 @@
     @isset($img_src)
       <img src="{{ asset($img_src) }}" alt="{{ $img_alt }}" class="image" />
     @else
-      <div class="text">
+      <div class="text second">
         {{ $second_slot }}
       </div>
     @endisset
