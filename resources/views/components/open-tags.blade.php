@@ -36,6 +36,11 @@
             'image' => 'images/offers/dzivas-gleznas.webp',
             'desc'  => 'Simbolisms Latvijas mākslā. Piedzīvojums, kurā jaunākās tehnoloģijas ļauj iepazīt mākslu un mūziku.',
         ],
+        'school_bag' => [
+            'title' => 'Latvijas skolas soma' . $afterTitle,
+            'image' => 'images/offers/dzivas-gleznas.webp',
+            'desc'  => 'Ruckas muiža aicina Latvijas skolu skolēnus un skolotājus atgriezties laikā, kad dzima mūsu tautas nacionālā identitāte, latviešu kultūra!',
+        ],
 
         // Pakalpojumi
         'services' => [

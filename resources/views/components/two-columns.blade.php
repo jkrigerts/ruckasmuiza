@@ -3,10 +3,11 @@
     'img_alt',
     "title",
     'swap' => false,
-    'style' => ""
+    'style' => "",
+    'style_outer' => ""
 ])
 
-<article class="two-columns {{$swap ? "two-columns-swap" : "" }}">
+<article class="two-columns {{$swap ? "two-columns-swap" : "" }}" style={{$style_outer}}>
   <div style={{ $style }}>
     <div class="text">
       @isset($title)

@@ -3,10 +3,10 @@
   <ul>
     <li>Ruckas muiža</li>
     <li style="margin-bottom: 2rem">Piebalgas iela 19, Cēsis, Cēsu novads, LV-4101</li>
-    <li>Tālr. nr.: <a href="tel:+37128237566">+371 28237566</a></li>
+    <li>Tālr. nr.: <a href="tel:+37128237566">+371&nbsp;28237566</a></li>
     <li style="margin-bottom: 2rem">E-pasts: <a href="mailto:kultura@ruckasmuiza.lv">kultura@ruckasmuiza.lv</a></li>
     
-    <li>Tālr. nr. <em>Trattoria</em> galdiņu rezervācijai: <a href="tel:+37129407566">+371 29407566</a></li>
+    <li>Tālr. nr. <em>Trattoria</em> galdiņu rezervācijai: <a href="tel:+37129407566">+371&nbsp;29407566</a></li>
   
   </ul>
   <x-inner-chapter-heading>Rekvizīti</x-inner-chapter-heading>
