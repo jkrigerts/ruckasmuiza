@@ -16,7 +16,7 @@
   </p>
   <x-slot:second_slot>
     <video controls class="living-paintings-school-bag-video">
-      <source src="{{asset('assets/aicinajums-pedagogiem-skolas-soma.mp4')}}" type="video/mp4">
+      <source src="{{asset('assets/aicinajums-pedagogiem-skolas-soma.mp4')}}#t=0.001" type="video/mp4">
       Pārlūkprogramma neatbalsta video!
     </video> 
   </x-slot:second_slot>
