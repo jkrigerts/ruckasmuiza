@@ -12,6 +12,7 @@
                                        :items="[
                                         ['title' => 'Mīts – Cilvēks – Daba', 'href' => 'living-paintings.myth'],
                                         ['title' => 'Manas iedvesmas dārzi', 'href' => 'living-paintings.gardens'],
+                                        ['title' => 'Latvijas skolas soma', 'href' => 'living-paintings.school-bag'],
                                         ]"
                 >Dzīvās gleznas</x-navigation.nav-link>
                 <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>

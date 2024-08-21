@@ -37,6 +37,9 @@ Route::group(
               Route::get('/mits-cilveks-daba', function () {
                      return view('living-paintings/myth');
               })->name("myth");
+              Route::get('/skolas-soma', function () {
+                     return view('living-paintings/school-bag');
+              })->name("school-bag");
        }
 );
 

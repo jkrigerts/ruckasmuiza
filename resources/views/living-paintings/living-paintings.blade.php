@@ -27,9 +27,9 @@
     <x-button-link href="{{ route('living-paintings.gardens') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
-  
-  
-
   <x-living-paintings-info />
+
+  <x-inner-chapter-heading>Latvijas skolas soma</x-inner-chapter-heading>
+  <x-living-paintings-school-bag-common></x-living-paintings-school-bag-common>
 
 </x-layouts.simple-page>
