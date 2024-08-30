@@ -2,11 +2,11 @@
   <x-slot:title>Seansi</x-slot:title>
   <p>Seansi notiek katru dienu no otrdienas līdz svētdienai ieskaitot.</p>
   <ul>
-    <li style="margin-bottom: 0.2rem">10.00 – 10.30 Mīts – Cilvēks – Daba</li>
+    {{-- <li style="margin-bottom: 0.2rem">10.00 – 10.30 Mīts – Cilvēks – Daba</li>
     <li style="margin-bottom: 0.2rem">10.30 – 11.00 Manas iedvesmas dārzi</li>
     <li style="margin-bottom: 0.2rem">11.00 – 11.30 Mīts – Cilvēks – Daba</li>
+    <li style="margin-bottom: 0.2rem">11.30 – 12.00 Manas iedvesmas dārzi</li> --}}
 
-    <li style="margin-bottom: 0.2rem">11.30 – 12.00 Manas iedvesmas dārzi</li>
     <li style="margin-bottom: 0.2rem">12.00 – 12.30 Mīts – Cilvēks – Daba</li>
     <li style="margin-bottom: 0.2rem">12.30 – 13.00 Manas iedvesmas dārzi</li>
 
