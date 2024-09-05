@@ -59,7 +59,7 @@
   </x-image-row>
   
   <p>
-    "Mīts – Cilvēks – Daba" seansi skatāmi katru dienu plkst. 10.00 – 17.30, pirmdienas brīvas. 
+    "Mīts – Cilvēks – Daba" seansi skatāmi katru dienu plkst. 12.00 – 17.30, pirmdienas brīvas. 
   </p>
 
   <x-living-paintings-info />

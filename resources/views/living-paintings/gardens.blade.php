@@ -49,7 +49,7 @@
   </x-image-row>
 
   <p>
-    "Manas iedvesmas dārzi" seansi skatāmi katru dienu plkst. 10.00 – 17.30, pirmdienas brīvas. 
+    "Manas iedvesmas dārzi" seansi skatāmi katru dienu plkst. 12.30 – 17.00, pirmdienas brīvas. 
   </p>
   <x-living-paintings-info />
 
