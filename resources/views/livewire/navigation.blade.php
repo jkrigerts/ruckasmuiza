@@ -8,6 +8,7 @@
         <nav  :class="open ? 'mobile-navigation' : ''">
             <ul>
 
+                <x-navigation.nav-link href="trattoria">Trattoria</x-navigation.nav-link>
                 <x-navigation.nav-link href="living-paintings."
                                        :items="[
                                         ['title' => 'Mīts – Cilvēks – Daba', 'href' => 'living-paintings.myth'],
@@ -42,7 +43,6 @@
                                         ]"
                 >Muiža runā</x-navigation.nav-link>
                 <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>
-                <x-navigation.nav-link href="trattoria">Trattoria</x-navigation.nav-link>
                 <x-navigation.nav-link href="contacts">Kontakti</x-navigation.nav-link>
             </ul>
         </nav>

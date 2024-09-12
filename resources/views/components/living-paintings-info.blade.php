@@ -1,6 +1,6 @@
 <x-two-columns style="align-items:start;margin-top:5.5rem;">
   <x-slot:title>Seansi</x-slot:title>
-  <p>Seansi notiek katru dienu no otrdienas līdz svētdienai ieskaitot.</p>
+  <p>Seansi notiek katru dienu no otrdienas līdz svētdienai ieskaitot. <strong style="color: #9E004F; font-size: 1.2rem">Izstāde skatāmas līdz šī gada 15. oktobrim</strong>.</p>
   <ul>
     {{-- <li style="margin-bottom: 0.2rem">10.00 – 10.30 Mīts – Cilvēks – Daba</li>
     <li style="margin-bottom: 0.2rem">10.30 – 11.00 Manas iedvesmas dārzi</li>
