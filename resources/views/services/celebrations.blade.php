@@ -11,22 +11,20 @@
   <x-inner-chapter-heading>Telpas svētkiem – cenas</x-inner-chapter-heading>
   <p>
     Cik cilvēku, tik vajadzību! Tieši tāpēc esam sagatavojuši piedāvājumus,
-    kas atbildīs ikvienām vēlmēm. Ieskaties, kādi tie ir!
+    kas atbildīs ikvienām vēlmēm. 
+    Cenas par telpu nomu tiek pielāgotas individuāli.
+      Uzziniet vairāk, zvanot <a href="tel:+37128237566">+371&nbsp;28237566</a>
+      vai rakstot <a href="mailto:kultura@ruckasmuiza.lv">kultura@ruckasmuiza.lv</a>.
   </p>
-  <ul>
-    <li>1. stāva veranda (līdz 60 personām) – 80 €/h (minimums 3h)</li>
-    <li>2. stāva veranda (līdz 30 personām)  - 80 €/h (minimums 3h)</li>
-    <li>Mazā zāle (blakus 1. stāva verandai, līdz 20 personām) – 50 €/h</li>
-    <li style="margin-bottom: 1rem">Ēdamzāle (līdz 15 personām) – 50 €/h</li>
-  </ul>
-  <p>
+  {{-- <p>
     <em>Cenā ietilpst telpas noma un krēsli, galdi. Papildus iespējams nomāt
       projektoru un datoru, kā arī 1. stāva verandā – projektora ekrānu.</em>
-  </p>
+  </p> --}}
   <p>
     Par atsevišķu samaksu sagatavosim un nodrošināsim uzkodu galdu,
     kafijas pauzes, ūdeni, telpu noformējumu, florista pakalpojumus u.c.
-    pēc vienošanās.
+    pēc vienošanās.  Papildus iespējams nomāt
+    projektoru un datoru.
   </p>
   <x-inner-chapter-heading>Visas muižas noma</x-inner-chapter-heading>
   <p>

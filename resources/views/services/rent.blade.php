@@ -3,18 +3,16 @@
   <p>
     Publiski pasākumi, konferences, semināri, nometnes un pat kultūras pasākumi –
     Ruckas muiža ir īstā vieta to norisei! Ja meklē plašas, autentiskas telpas,
-    kas pārsteidz ar funkcionalitāti, – Tu esi īstajā vietā! Apstājies un
-    iepazīsties ar cenu piedāvājumu.
+    kas pārsteidz ar funkcionalitāti, – Tu esi īstajā vietā!
   </p>
-  <ul>
-    <li>1. stāva veranda (maksimums 80 cilvēki) – 80 €/h (minimums 3h)</li>
-    <li>2. stāva veranda (maksimums 80 cilvēki)  - 80 €/h (minimums 3h)</li>
-    <li>Mazā zāle (blakus 1. stāva verandai) – 50 €/h</li>
-    <li style="margin-bottom: 1rem">Ēdamzāle – 50 €/h</li>
-  </ul>
   <p>
-    <em>Cenā ietilpst telpas noma un krēsli, galdi. Papildus iespējams nomāt
-       projektoru un datoru, kā arī 1. stāva verandā – projektora ekrānu.</em>
+    <em>Cenas par telpu nomu tiek pielāgotas individuāli.
+      Uzziniet vairāk, zvanot <a href="tel:+37128237566">+371&nbsp;28237566</a>
+      vai rakstot <a href="mailto:kultura@ruckasmuiza.lv">kultura@ruckasmuiza.lv</a>.
+  </p>
+  <p>
+    Cenā ietilpst telpas noma un krēsli, galdi. Papildus iespējams nomāt
+    projektoru un datoru, kā arī 1. stāva verandā – projektora ekrānu.</em>
   </p>
   <p>
     Par atsevišķu samaksu sagatavosim un nodrošināsim uzkodu galdu,
