@@ -5,7 +5,6 @@
 >
   <x-slot:title>Dzīvās gleznas</x-slot:title>
   <p>
-    <strong style="color: #9E004F; font-size: 1.2rem">Izstādes skatāmas līdz šī gada 15. oktobrim</strong>!</p>
     <p> Unikāls multimediāls piedzīvojums, kurā jaunākās tehnoloģijas divās izrādēs uz ekrāniem
     ļauj iepazīt mākslu un mūziku. Izstāžu režisors un scenārija autors - Māris Kalve.
   </p>
