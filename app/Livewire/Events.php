@@ -141,11 +141,11 @@ class Events extends Component
         }
         
         $this->calendarData = array_chunk($return, 7, true);
+        $this->thisYear = $today->year;
         $this->previousMonth = $monthsKas[$today->subMonth()->month - 1];
         $this->thisMonth = ucfirst($monthsKas[$today->addMonth()->month - 1]);
         $this->nextMonth = $monthsKas[$today->addMonth()->month - 1];
         $this->monthsSelect = $monthsKa;
-        $this->thisYear = $today->year;
 
     }
 
