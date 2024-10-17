@@ -1,6 +1,6 @@
 <x-two-columns style="align-items:start;margin-top:5.5rem;">
   <x-slot:title>Seansi</x-slot:title>
-  <p><strong style="color: #9E004F; font-size: 1.2rem">Līdz 13. oktobrim</strong> seansi notiek katru dienu no otrdienas līdz svētdienai ieskaitot. 14. un 15. oktobrī seansi nenotiek.</p>
+  <p>Seansi notiek no 12.00 līdz 19.30 katru dienu <strong style="color: #9E004F; font-size: 1.2rem">no otrdienas līdz svētdienai</strong>.</p>
   <ul>
     {{-- <li style="margin-bottom: 0.2rem">10.00 – 10.30 Mīts – Cilvēks – Daba</li>
     <li style="margin-bottom: 0.2rem">10.30 – 11.00 Manas iedvesmas dārzi</li>
@@ -20,9 +20,14 @@
 
     <li style="margin-bottom: 0.2rem">16.00 – 16.30 Mīts – Cilvēks – Daba</li>
     <li style="margin-bottom: 0.2rem">16.30 – 17.00 Manas iedvesmas dārzi</li>
-    <li style="margin-bottom: 1rem">17.00 – 17.30 Mīts – Cilvēks – Daba</li>
+    <li style="margin-bottom: 0.2rem">17.00 – 17.30 Mīts – Cilvēks – Daba</li>
+
+    <li style="margin-bottom: 0.2rem">17.30 – 18.00 Manas iedvesmas dārzi</li>
+    <li style="margin-bottom: 0.2rem">18.00 – 18.30 Mīts – Cilvēks – Daba</li>
+    <li style="margin-bottom: 0.2rem">18.30 – 19.00 Manas iedvesmas dārzi</li>
+
+    <li style="margin-bottom: 1rem">19.00 – 19.30 Mīts – Cilvēks – Daba</li>
   </ul>
-  <p><strong style="color: #9E004F; font-size: 1.2rem">No 16. oktobra</strong> seansi notiks piektdienās, sestdienās un svētdienās no 12.00 līdz 19.30.</p>
   <x-slot:second_slot>
     <h2>Cenas</h2>
     <x-table>

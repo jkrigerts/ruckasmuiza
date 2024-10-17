@@ -50,7 +50,7 @@
             </table>
 
             <p class="footer">Vairāk informācijas Ruckas muižas sociālajos tīklos vai rakstot uz e-pastu 
-                <strong><a href="mailto:kultura@ruckasmuiza.lv" class="svelte-1tmxm1l">kultura@ruckasmuiza.lv</a></strong>
+                <strong><a href="mailto:ieva@ruckasmuiza.lv" class="svelte-1tmxm1l">ieva@ruckasmuiza.lv</a></strong>,
                 vai zvanot uz tel. 
                 <strong><a href="tel:+37128237566" class="svelte-1tmxm1l">+371 28237566</a></strong>
             </p>

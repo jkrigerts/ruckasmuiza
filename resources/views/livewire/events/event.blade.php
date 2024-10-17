@@ -52,7 +52,7 @@
                 @endif
                 <div class="contacts">
                     <a href="tel:+37128237566"><x-icons.phone /> Zvanīt</a>
-                    <a href="mailto:kultura@ruckasmuiza.lv"><x-icons.mail /> Rakstīt</a>
+                    <a href="mailto:ieva@ruckasmuiza.lv"><x-icons.mail /> Rakstīt</a>
                 </div>
             </div>
         </div>
