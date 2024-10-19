@@ -4,6 +4,42 @@
 
     .general-table {
         max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    td {
+        padding-block: 14px;
+    }
+
+    th {
+        padding-block: 17px;
+
+        @include md-breakpoint {
+            padding: 12px;
+        }
+    }
+
+    .trattoria-emp {
+        font-size: 1.1em;
+        font-weight: 700;
+
+        @include md-breakpoint {
+            font-size: 1em;
+        }
+    }
+
+    .white {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .transparent {
+        background-color: transparent;
+    }
+
+    .places {
+        @include md-breakpoint {
+            font-size: 0.9em;
+        }
     }
 }
 
@@ -56,6 +92,6 @@
     gap: 2rem;
 
     @include md-breakpoint {
-        justify-content: start;
+        margin-top: 2.5rem;
     }
 }

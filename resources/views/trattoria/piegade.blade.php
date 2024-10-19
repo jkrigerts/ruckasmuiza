@@ -1,0 +1,85 @@
+<x-layouts.simple-page metaName="trattoria" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
+  <x-slot:title><span class="heading-prefix">Trattoria</span><span>picu piegāde Cēsu apkārtnē</span></x-slot:title>
+  <p><em>Trattoria</em> piedāvā ātru un ērtu picu piegādi Cēsīs un apkaimē! Lai pasūtījumu veiktu, zvaniet <a href="tel:+37129407566">+371&nbsp;29407566</a>.</p>
+
+  <div class="trattoria-table-center">
+    <x-table >
+      <thead>
+        <tr>
+          <th>Zona</th>
+          <th>Attālums</th>
+          <th>Iekļautās apdzīvotās vietas</th>
+          <th>Pasūtījuma summa</th>
+          <th>Piegādes cena</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color: white;">
+          <td rowspan="2">1.</td>
+          <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">3&nbsp;km</span></td>
+          <td rowspan="2" class="places">Agra, Cēsis, Meijermuiža, Ozolkalns, Žagarkalns</td>
+          <td>no&nbsp;<span class="trattoria-emp">5&nbsp;€</span></td>
+          <td><span class="trattoria-emp">1,50&nbsp;€</span></td>
+        </tr>
+        <tr>
+          <td>no&nbsp;<span class="trattoria-emp">10&nbsp;€</span></td>
+          <td><span class="trattoria-emp">Bezmaksas</span></td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">2.</td>
+          <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">5&nbsp;km</span></td>
+          <td rowspan="2" class="places">Dukuri, Jāņmuiža, Krīvi, Līvi, Priekuļi</td>
+          <td>no&nbsp;<span class="trattoria-emp">10&nbsp;€</span></td>
+          <td><span class="trattoria-emp">1,50&nbsp;€</span></td>
+        </tr>
+        <tr style="background-color: transparent;">
+          <td>no&nbsp;<span class="trattoria-emp">25&nbsp;€</span></td>
+          <td><span class="trattoria-emp">Bezmaksas</span></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td rowspan="2">3.</td>
+          <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">10&nbsp;km</span></td>
+          <td rowspan="2" class="places">Auciems, Āraiši, Drabeši, Jāņrāmis, Niniera ezers, Priekuļu biatlona trase, Raiskums, Vaive, Vēverkrogs, Viesmaņmuiža</td>
+          <td>no&nbsp;<span class="trattoria-emp">20&nbsp;€</span></td>
+          <td><span class="trattoria-emp">3,00&nbsp;€</span></td>
+        </tr>
+        <tr>
+          <td>no&nbsp;<span class="trattoria-emp">35&nbsp;€</span></td>
+          <td><span class="trattoria-emp">Bezmaksas</span></td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">4.</td>
+          <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">15&nbsp;km</span></td>
+          <td rowspan="2" class="places">Amata, Amatciems, Bille, Driškina ezers, Kārļi, Liepa, Mežmaļi, Melturi, Rāceņi, Rīdzene, “Ungurmalas”</td>
+          <td>no&nbsp;<span class="trattoria-emp">30&nbsp;€</span></td>
+          <td><span class="trattoria-emp">4,00&nbsp;€</span></td>
+        </tr>
+        <tr style="background-color: transparent;">
+          <td>no&nbsp;<span class="trattoria-emp">50&nbsp;€</span></td>
+          <td><span class="trattoria-emp">Bezmaksas</span></td>
+        </tr>
+        <tr style="background-color: white;">
+          <td>5.</td>
+          <td>līdz&nbsp;<span class="trattoria-emp">20&nbsp;km</span></td>
+          <td class="places">Bērzkrogs, Ģikši, Ieriķi, Jaunrauna, Rāmuļi, Stalbe</td>
+          <td>no&nbsp;<span class="trattoria-emp">40&nbsp;€</span></td>
+          <td><span class="trattoria-emp">5,00&nbsp;€</span></td>
+        </tr>
+
+        <tr style="background-color: transparent;">
+          <td>6.</td>
+          <td>līdz&nbsp;<span class="trattoria-emp">25&nbsp;km</span></td>
+          <td class="places">Mārsnēni, Plācis, Rauna, Straupe</td>
+          <td>no&nbsp;<span class="trattoria-emp">50&nbsp;€</span></td>
+          <td><span class="trattoria-emp">7,00&nbsp;€</span></td>
+        </tr>
+      </tbody>
+    </x-table>
+  </div>
+
+  <x-trattoria-gallery></x-trattoria-gallery>
+
+
+</x-layouts.simple-page>

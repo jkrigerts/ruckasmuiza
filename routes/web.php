@@ -127,5 +127,29 @@ Route::get('/galerija/{id}', [GalleryController::class, "show"]);
 Route::get('/kontakti', function () { return view('contacts');})
        ->name("contacts");
 
-Route::get('/trattoria', function () { return view('trattoria');})
-       ->name("trattoria");
+// Route::get('/trattoria', function () { return view('trattoria');})
+//        ->name("trattoria");
+
+Route::group(
+       [
+              "prefix" => "/trattoria",
+              "as" => "trattoria.",
+       ],
+       function () {
+              // Route::get('/', function () {
+              //        return view('services/services');
+              // })->name("");
+              Route::get('/edienkarte', function () {
+                     return view('trattoria/edienkarte');
+              })->name("edienkarte");
+              Route::get('/piegade', function () {
+                     return view('trattoria/piegade');
+              })->name("piegade");
+              Route::get('/darba-laiks', function () {
+                     return view('trattoria/darba_laiks');
+              })->name("darba_laiks");
+              Route::get('/par-mums', function () {
+                     return view('trattoria/par_mums');
+              })->name("par_mums");
+       }
+);
