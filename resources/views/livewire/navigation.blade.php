@@ -7,8 +7,14 @@
         </a>
         <nav  :class="open ? 'mobile-navigation' : ''">
             <ul>
-
-                <x-navigation.nav-link href="trattoria">Trattoria</x-navigation.nav-link>
+                <x-navigation.nav-link href="trattoria." unchoosable
+                                       :items="[
+                                        ['title' => 'Ēdienkarte', 'href' => 'trattoria.edienkarte'],
+                                        ['title' => 'Piegāde', 'href' => 'trattoria.piegade'],
+                                        ['title' => 'Darba laiks', 'href' => 'trattoria.darba_laiks'],
+                                        ['title' => 'Par mums', 'href' => 'trattoria.par_mums'],
+                                        ]"
+                >Trattoria</x-navigation.nav-link>
                 <x-navigation.nav-link href="living-paintings."
                                        :items="[
                                         ['title' => 'Mīts – Cilvēks – Daba', 'href' => 'living-paintings.myth'],
