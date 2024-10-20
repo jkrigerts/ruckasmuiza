@@ -79,6 +79,8 @@
     </x-table>
   </div>
 
+  <p style="margin-top:2rem">Veicot picu piegādi, papildus tiek piemērota maksa par iepakojumu: 1 € katrai picai.</p>
+
   <x-trattoria-gallery></x-trattoria-gallery>
 
 

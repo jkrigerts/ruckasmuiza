@@ -15,6 +15,7 @@
                                         ['title' => 'Par mums', 'href' => 'trattoria.par_mums'],
                                         ]"
                 >Trattoria</x-navigation.nav-link>
+                <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="living-paintings."
                                        :items="[
                                         ['title' => 'Mīts – Cilvēks – Daba', 'href' => 'living-paintings.myth'],
@@ -31,7 +32,6 @@
                                         ['title' => 'Fotosesija', 'href' => 'services.photo_session'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
-                <x-navigation.nav-link href="events">Pasākumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="offers."
                                        unchoosable
                                        :items="[
