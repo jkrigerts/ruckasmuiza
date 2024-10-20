@@ -6,16 +6,16 @@
     <x-table >
       <thead>
         <tr>
-          <th>Zona</th>
-          <th>Attālums</th>
+          <th class="zone">Zona</th>
+          <th>Attā&shy;lums</th>
           <th>Iekļautās apdzīvotās vietas</th>
-          <th>Pasūtījuma summa</th>
+          <th>Pasū&shy;tījuma summa</th>
           <th>Piegādes cena</th>
         </tr>
       </thead>
       <tbody>
         <tr style="background-color: white;">
-          <td rowspan="2">1.</td>
+          <td rowspan="2" class="zone">1.</td>
           <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">3&nbsp;km</span></td>
           <td rowspan="2" class="places">Agra, Cēsis, Meijermuiža, Ozolkalns, Žagarkalns</td>
           <td>no&nbsp;<span class="trattoria-emp">5&nbsp;€</span></td>
@@ -27,7 +27,7 @@
         </tr>
 
         <tr>
-          <td rowspan="2">2.</td>
+          <td rowspan="2" class="zone">2.</td>
           <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">5&nbsp;km</span></td>
           <td rowspan="2" class="places">Dukuri, Jāņmuiža, Krīvi, Līvi, Priekuļi</td>
           <td>no&nbsp;<span class="trattoria-emp">10&nbsp;€</span></td>
@@ -38,7 +38,7 @@
           <td><span class="trattoria-emp">Bezmaksas</span></td>
         </tr>
         <tr style="background-color: white;">
-          <td rowspan="2">3.</td>
+          <td rowspan="2" class="zone">3.</td>
           <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">10&nbsp;km</span></td>
           <td rowspan="2" class="places">Auciems, Āraiši, Drabeši, Jāņrāmis, Niniera ezers, Priekuļu biatlona trase, Raiskums, Vaive, Vēverkrogs, Viesmaņmuiža</td>
           <td>no&nbsp;<span class="trattoria-emp">20&nbsp;€</span></td>
@@ -50,7 +50,7 @@
         </tr>
 
         <tr>
-          <td rowspan="2">4.</td>
+          <td rowspan="2" class="zone">4.</td>
           <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">15&nbsp;km</span></td>
           <td rowspan="2" class="places">Amata, Amatciems, Bille, Driškina ezers, Kārļi, Liepa, Mežmaļi, Melturi, Rāceņi, Rīdzene, “Ungurmalas”</td>
           <td>no&nbsp;<span class="trattoria-emp">30&nbsp;€</span></td>
@@ -61,7 +61,7 @@
           <td><span class="trattoria-emp">Bezmaksas</span></td>
         </tr>
         <tr style="background-color: white;">
-          <td>5.</td>
+          <td class="zone">5.</td>
           <td>līdz&nbsp;<span class="trattoria-emp">20&nbsp;km</span></td>
           <td class="places">Bērzkrogs, Ģikši, Ieriķi, Jaunrauna, Rāmuļi, Stalbe</td>
           <td>no&nbsp;<span class="trattoria-emp">40&nbsp;€</span></td>
@@ -69,7 +69,7 @@
         </tr>
 
         <tr style="background-color: transparent;">
-          <td>6.</td>
+          <td class="zone">6.</td>
           <td>līdz&nbsp;<span class="trattoria-emp">25&nbsp;km</span></td>
           <td class="places">Mārsnēni, Plācis, Rauna, Straupe</td>
           <td>no&nbsp;<span class="trattoria-emp">50&nbsp;€</span></td>
@@ -80,6 +80,12 @@
   </div>
 
   <p style="margin-top:2rem">Veicot picu piegādi, papildus tiek piemērota maksa par iepakojumu: 1 € katrai picai.</p>
+
+  <x-inner-chapter-heading>Piegādes darba laiks</x-inner-chapter-heading>
+  <ul>
+    <li>Pirmdiena: brīvs</li>
+    <li>Otrdiena – svētdiena: 12.00 – 19.30</li>
+  </ul>
 
   <x-trattoria-gallery></x-trattoria-gallery>
 

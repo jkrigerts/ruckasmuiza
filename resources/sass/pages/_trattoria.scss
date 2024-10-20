@@ -5,6 +5,14 @@
     .general-table {
         max-width: 100%;
         margin-bottom: 0;
+
+        .zone {
+            text-align: center;
+
+            @include sm-breakpoint {
+                display: none;
+            }
+        }
     }
 
     td {
