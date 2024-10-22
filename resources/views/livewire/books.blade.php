@@ -40,7 +40,8 @@
         <section>
           @foreach ($books as $book)
             <article class="book" wire:key="{{ $book->id }}">
-              <a href="{{url("piedavajumi/gramatas/" . $book->id)}}" wire:navigate>
+              <a href="{{url("pakalpojumi/gramatas/" . $book->id)}}" wire:navigate>
+              {{-- <a href="{{route('book', $book->id)}}" wire:navigate> --}}
                 <img src="{{ url("storage/" . $book->image) }}" alt="{{ $book->title }}"/>
                 <div class="book-info">
                     <h2>{!! $book->title !!}</h2>

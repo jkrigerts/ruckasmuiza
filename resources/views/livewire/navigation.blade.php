@@ -23,24 +23,16 @@
                                         ['title' => 'Latvijas skolas soma', 'href' => 'living-paintings.school-bag'],
                                         ]"
                 >Dzīvās gleznas</x-navigation.nav-link>
-                <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>
                 <x-navigation.nav-link href="services."
                                        :items="[
                                         ['title' => 'Nakšņošana', 'href' => 'services.stay'],
-                                        ['title' => 'Kāzas', 'href' => 'services.weddings'],
                                         ['title' => 'Svinības', 'href' => 'services.celebrations'],
                                         ['title' => 'Fotosesija', 'href' => 'services.photo_session'],
+                                        ['title' => 'Gleznošana ar Baibu Feoktistovu', 'href' => 'services.painting_classes'],
+                                        ['title' => 'Grāmatu veikals', 'href' => 'services.books'],
+                                        ['title' => 'Dāvanu kartes', 'href' => 'services.gift_cards'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
-                <x-navigation.nav-link href="offers."
-                                       unchoosable
-                                       :items="[
-                                        ['title' => 'Dzīvās gleznas', 'href' => 'living-paintings.'],
-                                        ['title' => 'Gleznošana ar Baibu Feoktistovu', 'href' => 'offers.painting_classes'],
-                                        ['title' => 'Grāmatas', 'href' => 'offers.books'],
-                                        ['title' => 'Dāvanu kartes', 'href' => 'offers.gift_cards'],
-                                        ]"
-                >Piedāvājumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="blog."
                                        unchoosable
                                        :items="[
@@ -50,6 +42,7 @@
                 >Muiža runā</x-navigation.nav-link>
                 <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>
                 <x-navigation.nav-link href="contacts">Kontakti</x-navigation.nav-link>
+                <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>
             </ul>
         </nav>
         <button x-on:click="toggleOpen" class="hamburger">
