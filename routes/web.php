@@ -52,21 +52,31 @@ Route::group(
               "as" => "services.",
        ],
        function () {
+
+              Route::get('/gramatas/{id}', [BookController::class, "show"]);
               Route::get('/', function () {
                      return view('services/services');
               })->name("");
               Route::get('/naksnosana', function () {
                      return view('services/stay');
               })->name("stay");
-              Route::get('/kazas', function () {
-                     return view('services/weddings');
-              })->name("weddings");
               Route::get('/svinibas', function () {
                      return view('services/celebrations');
               })->name("celebrations");
               Route::get('/fotosesija', function () {
                      return view('services/photo_session');
               })->name("photo_session");
+
+              Route::get('/davanu-kartes', function () {
+                     return view('services/gift_cards');
+              })->name("gift_cards");
+
+              Route::get('/gleznosanas-meistarklases', function () {
+                     return view('services/painting_classes');
+              })->name("painting_classes");
+
+              Route::get('/gramatas', [BookController::class, "index"])
+                     ->name("books");
               // Route::get('/noma', function () {
               //        return view('services/rent');
               // })->name("rent");
@@ -83,26 +93,21 @@ Route::get('/pasakumi', function (Request $req) {
 })->name("events");
 
 
-Route::group(
-       [
-              "prefix" => "/piedavajumi",
-              "as" => "offers.",
-       ],
-       function () {
-              // Route::get('/ipasie-piedavajumi', function () {
-              //        return view('offers/special_offers');
-              // })->name("special_offers");
-              Route::get('/davanu-kartes', function () {
-                     return view('offers/gift_cards');
-              })->name("gift_cards");
-              Route::get('/gramatas', [BookController::class, "index"])
-                     ->name("books");
-              Route::get('/gramatas/{id}', [BookController::class, "show"]);
-              Route::get('/gleznosanas-meistarklases', function () {
-                     return view('offers/painting_classes');
-              })->name("painting_classes");
-       }
-);
+// Route::group(
+//        [
+//               "prefix" => "/piedavajumi",
+//               "as" => "offers.",
+//        ],
+//        function () {
+//               // Route::get('/ipasie-piedavajumi', function () {
+//               //        return view('offers/special_offers');
+//               // })->name("special_offers");
+              
+              
+//               // Route::get('/gramatas/{id}', [BookController::class, "show"]);
+              
+//        }
+// );
 
 Route::group(
        [

@@ -20,26 +20,25 @@
     <x-button-link href="{{ route('services.stay') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
-  <x-two-columns img_src='images/services/kazas.webp' img_alt="Kāzu kleita" swap={{true}}>
+  {{-- <x-two-columns img_src='images/services/kazas.webp' img_alt="Kāzu kleita" swap={{true}}>
     <x-slot:title>Kāzas</x-slot:title>
     <p>
       Vai meklē īsto vietu svarīgākajiem dzīves mirkļiem? Pasakaini skaista
       kāzu pieturvieta divvientulībai, laulību ceremonijai vai svinībām. To visu vari piedzīvot Ruckas muižā!
     </p>
     <x-button-link href="{{ route('services.weddings') }}" text="Uzzināt vairāk!"/>
-  </x-two-columns>
+  </x-two-columns> --}}
 
-  <x-two-columns img_src='images/services/svinibas.webp' img_alt="Svinības">
+  <x-two-columns img_src='images/services/svinibas.webp' img_alt="Svinības" swap={{true}}>
     <x-slot:title>Svinības</x-slot:title>
     <p>
-      Ruckas muiža ir īstā vieta, kur grezni svinēt sev īpašus dzīves notikumus
-      vai korporatīvus pasākumus – telpas ir plašas, mājīgas un gaišas!
-      Iespējams uzņemt līdz pat 120 viesiem.
+      Ruckas muiža ir īstā vieta, kur grezni svinēt sev īpašus dzīves notikumus vai
+      korporatīvus pasākumus – telpas ir plašas, mājīgas un gaišas! 
     </p>
     <x-button-link href="{{ route('services.celebrations') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
-  <x-two-columns img_src='images/services/photo-session/oranzerija-romantika-sm.webp' img_alt="Ruckas muižas oranžērijā" swap={{true}}>
+  <x-two-columns img_src='images/services/photo-session/oranzerija-romantika-sm.webp' img_alt="Ruckas muižas oranžērijā">
     <x-slot:title>Fotosesija</x-slot:title>
     <p>
       Ruckas muiža piedāvā iespēju notvert īpašos
