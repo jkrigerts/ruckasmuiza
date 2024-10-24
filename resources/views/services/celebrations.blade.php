@@ -6,6 +6,12 @@
     draugiem, kāzu viesiem vai sadarbības partneriem – telpas vienlīdz labi piemērotas kā privātu,
     tā korporatīvu svinību rīkošanai jebkurā gadalaikā. 
   </p>
+  <p style="margin-bottom:10px">Ruckas muiža piedāvā <strong style="color: #9E004F; font-size: 1.2rem">svinības bērniem ar picu meistarklasi</strong>.
+    Pavāra vadībā gatavosim picas pamatni no dabīgā ierauga mīklas.
+    Svinētājiem tiks pagatavoti īpaši kokteiļi no Ruckas muižas
+    Tratorijas bārmeņa. Svinību programmā ietilpst arī dzīvo gleznu
+    apmeklējums jubilāram ar viesiem.</p>
+    <p>Cena 25.00 EUR no personas. Pasākuma ilgums – līdz 2 stundām.</p>
   <x-inner-chapter-heading>Telpas svētkiem – cenas</x-inner-chapter-heading>
   <p>
     Cik cilvēku, tik vajadzību! Tieši tāpēc esam sagatavojuši piedāvājumus, kas atbildīs ikvienām vēlmēm.

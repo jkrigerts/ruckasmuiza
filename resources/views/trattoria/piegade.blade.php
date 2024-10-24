@@ -40,7 +40,7 @@
         <tr style="background-color: white;">
           <td rowspan="2" class="zone">3.</td>
           <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">10&nbsp;km</span></td>
-          <td rowspan="2" class="places">Auciems, Āraiši, Drabeši, Jāņrāmis, Niniera ezers, Priekuļu biatlona trase, Raiskums, Vaive, Vēverkrogs, Veismaņmuiža</td>
+          <td rowspan="2" class="places">Āraiši, Raiskums</td>
           <td>no&nbsp;<span class="trattoria-emp">20&nbsp;€</span></td>
           <td><span class="trattoria-emp">3,00&nbsp;€</span></td>
         </tr>
@@ -49,7 +49,7 @@
           <td><span class="trattoria-emp">Bezmaksas</span></td>
         </tr>
 
-        <tr>
+        {{-- <tr>
           <td rowspan="2" class="zone">4.</td>
           <td rowspan="2">līdz&nbsp;<span class="trattoria-emp">15&nbsp;km</span></td>
           <td rowspan="2" class="places">Amata, Amatciems, Bille, Driškina ezers, Kārļi, Liepa, Mežmaļi, Melturi, Rāceņi, Rīdzene, “Ungurmalas”</td>
@@ -74,7 +74,7 @@
           <td class="places">Mārsnēni, Plācis, Rauna, Straupe</td>
           <td>no&nbsp;<span class="trattoria-emp">50&nbsp;€</span></td>
           <td><span class="trattoria-emp">7,00&nbsp;€</span></td>
-        </tr>
+        </tr> --}}
       </tbody>
     </x-table>
   </div>
