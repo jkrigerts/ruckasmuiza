@@ -19,6 +19,7 @@ class Events extends Component
     public $nextMonth;
     public $monthsSelect;
     public $thisYear;
+    public $eventFromDB;
 
     #[Url(except: '')]
     public $monthOffset = 0; // this is the way arrow buttons are going to work now()->addMonths($monthOffset)
@@ -43,9 +44,9 @@ class Events extends Component
                     without the worry that it will skip two months
                 format() -> formats the date according to the $dateFormat value
         */
-        $eventFromDB = EventsModel::where("id", $this->event)->first();
-        if ($eventFromDB) {
-            $this->monthOffset = Carbon::parse(now())->diffInMonths(Carbon::parse($eventFromDB["happens_at"]), false);
+        $this->eventFromDB = EventsModel::where("id", $this->event)->first();
+        if ($this->eventFromDB) {
+            $this->monthOffset = Carbon::parse(now()->startOfMonth())->diffInMonths(Carbon::parse($this->eventFromDB["happens_at"])->startOfMonth(), false);
         }
         
       
