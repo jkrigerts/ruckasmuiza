@@ -17,27 +17,27 @@
           </tr>
           <tr>
             <td>Otrdiena</td>
-            <td>12.00 – 20.00</td>
+            <td><strong style="color: #D9992D; font-size: 1.1rem">12.00 – 19.30</strong></td>
           </tr>
           <tr>
             <td>Trešdiena</td>
-            <td>12.00 – 20.00</td>
+            <td><strong style="color: #D9992D; font-size: 1.1rem">12.00 – 19.30</strong></td>
           </tr>
           <tr>
             <td>Ceturtdiena</td>
-            <td>12.00 – 20.00</td>
+            <td><strong style="color: #D9992D; font-size: 1.1rem">12.00 – 19.30</strong></td>
           </tr>
           <tr>
             <td>Piektdiena</td>
-            <td>12.00 – 20.00</td>
+            <td><strong style="color: #9E004F; font-size: 1.1rem">12.00 – 24.00</strong></td>
           </tr>
           <tr>
             <td>Sestdiena</td>
-            <td>12.00 – 20.00</td>
+            <td><strong style="color: #9E004F; font-size: 1.1rem">12.00 – 24.00</strong></td>
           </tr>
           <tr>
             <td>Svētdiena</td>
-            <td>12.00 – 20.00</td>
+            <td><strong style="color: #D9992D; font-size: 1.1rem">12.00 – 19.30</strong></td>
           </tr>
         </x-table>
       </div>
