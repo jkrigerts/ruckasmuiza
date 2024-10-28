@@ -1,4 +1,24 @@
+@php
+    use Carbon\Carbon;
+@endphp
 
+<x-slot:meta>
+    <title>{{$eventFromDB ? $eventFromDB["title"] : "Pasākumi"}} - Ruckas muiža</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{$eventFromDB ? $eventFromDB["title"] : "Pasākumi"}} - Ruckas muiža" />
+    <meta property="og:image" content="{{asset("/images/meta_image.png")}}" />
+    <meta property="og:description" content="
+        @if ($eventFromDB)
+            {{ Carbon::parse($eventFromDB['happens_at'])->format('Y') }}. gada {{ Carbon::parse($eventFromDB['happens_at'])->day }}. {{ Carbon::parse($eventFromDB['happens_at'])->translatedFormat('F') }}
+             plkst. {{$eventFromDB['time']}}.
+             {{ $eventFromDB['infoLong'] != '' ? $eventFromDB['infoLong'] : $eventFromDB['info'] }}
+        @else
+            Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu – atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.
+        @endif
+    " />
+    
+  </x-slot:meta>
 
 
     <section class="main-events" >

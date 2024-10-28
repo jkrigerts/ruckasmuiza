@@ -87,17 +87,17 @@
 
         handleLoaded() {
             if (this.open) {
-                document.title = `${this.event.title} - Ruckas muiža`;
-                let ogTitle = document.querySelector('meta[property="og:title"]');
-                ogTitle.setAttribute("content", `${this.event.title} - Ruckas muiža`);
-                let ogDescription = document.querySelector('meta[property="og:description"]');
+                // document.title = `${this.event.title} - Ruckas muiža`;
+                // let ogTitle = document.querySelector('meta[property="og:title"]');
+                // ogTitle.setAttribute("content", `${this.event.title} - Ruckas muiža`);
+                // let ogDescription = document.querySelector('meta[property="og:description"]');
 
-                const date = new Date(this.event.happens_at); // Parse the date string
-                const year = date.getFullYear();
-                const day = date.getDate();
-                const month = new Intl.DateTimeFormat('lv', { month: 'long' }).format(date);
+                // const date = new Date(this.event.happens_at); // Parse the date string
+                // const year = date.getFullYear();
+                // const day = date.getDate();
+                // const month = new Intl.DateTimeFormat('lv', { month: 'long' }).format(date);
                 
-                ogDescription.setAttribute("content", `${year}. gada ${day}. ${month} ${this.event.time}. ${this.event.infoLong}`);
+                // ogDescription.setAttribute("content", `${year}. gada ${day}. ${month} ${this.event.time}. ${this.event.infoLong}`);
             }
 
         } 
