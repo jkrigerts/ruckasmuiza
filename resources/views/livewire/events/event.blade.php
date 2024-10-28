@@ -4,6 +4,7 @@
     class="event"
     style="--event-color: {{ $event['type']['color'] }};"
     x-data="modal({{$event}})"
+    x-init="handleLoaded; event = {{ $event }}"
 >
 
     <button @isset($event['type']['color'])
