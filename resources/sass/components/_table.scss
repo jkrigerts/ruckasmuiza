@@ -39,11 +39,11 @@
     tbody td {
         font-size: 1.05rem;
         @include md-breakpoint {
-            padding: 10px;
+            padding: 12px;
         }
 
         @include xs-breakpoint {
-            padding: 7px;
+            padding: 10px;
         }
     }
 
