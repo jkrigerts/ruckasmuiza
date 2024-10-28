@@ -11,8 +11,8 @@
     <meta property="og:description" content="
         @if ($eventFromDB)
             {{ Carbon::parse($eventFromDB['happens_at'])->format('Y') }}. gada {{ Carbon::parse($eventFromDB['happens_at'])->day }}. {{ Carbon::parse($eventFromDB['happens_at'])->translatedFormat('F') }}
-             plkst. {{$eventFromDB['time']}}.
-             {{ $eventFromDB['infoLong'] != '' ? $eventFromDB['infoLong'] : $eventFromDB['info'] }}
+             plkst. {{$eventFromDB['time']}}
+             {{-- {{ $eventFromDB['infoLong'] != '' ? $eventFromDB['infoLong'] : $eventFromDB['info'] }} --}}
         @else
             Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu – atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.
         @endif
