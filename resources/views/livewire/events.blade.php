@@ -41,7 +41,7 @@
                     <tr >
                         @foreach ($row as $date => $data)
                             <td>
-                                <x-events.day :data="$data"/>
+                                <x-events.day :data="$data" :eventurl="$event"/>
                             </td> 
                         @endforeach
                     </tr>
