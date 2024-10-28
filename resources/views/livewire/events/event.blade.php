@@ -3,19 +3,18 @@
 <div
     class="event"
     style="--event-color: {{ $event['type']['color'] }};"
-    x-data="{ open: 0 }"
-    
+    x-data="modal({{$event}})"
 >
 
     <button @isset($event['type']['color'])
                 style="gap: {{ 0.25 / $eventCount }}rem;"
             @endisset
             class="event-btn"
-            @click="open = 1"
+            @click="handleOpen; event = {{ $event }}"
     >
         <div>
             <p class="sm">{{ $event['type']['name'] }}</p>
-            <p class="sm">{{ $event['time'] }}</p>
+            <p class="sm">{{ $event['time'] }} {{$event['id']}}</p>
         </div>
         <p class="md">{{ $event['title'] }}</p>
         <p class="sm">{{ $event['info'] }}</p>
@@ -27,8 +26,8 @@
         x-transition:leave="modal-leave"
 
     >
-        <div class="modal-content" @click.away="open = 0">
-            <div @click.stop="open = 0" class="close-btn">
+        <div class="modal-content" @click.away="handleClose">
+            <div @click.stop="handleClose" class="close-btn">
                 <x-icons.x />
             </div>
 
@@ -58,7 +57,9 @@
         </div>
 
     </div>
-    
+
 </div>
+
+
 
 

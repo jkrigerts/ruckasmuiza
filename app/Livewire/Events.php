@@ -2,9 +2,10 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Events\Event;
 use Livewire\Component;
 
-use App\Models\Events as EventsModal;
+use App\Models\Events as EventsModel;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -21,6 +22,9 @@ class Events extends Component
 
     #[Url(except: '')]
     public $monthOffset = 0; // this is the way arrow buttons are going to work now()->addMonths($monthOffset)
+
+    #[Url(history: true)]
+    public $event = 0;
 
     
 
@@ -39,6 +43,12 @@ class Events extends Component
                     without the worry that it will skip two months
                 format() -> formats the date according to the $dateFormat value
         */
+        $eventFromDB = EventsModel::where("id", $this->event)->first();
+        if ($eventFromDB) {
+            $this->monthOffset = Carbon::parse(now())->diffInMonths(Carbon::parse($eventFromDB["happens_at"]), false);
+        }
+        
+      
         $today = Carbon::parse(now()->startOfMonth()->addMonths($this->monthOffset)->format($dateFormat));
 
         $monthsKa = [ // atbild uz jautājumu Kā?
@@ -97,7 +107,7 @@ class Events extends Component
         // add this month days
         $currentDate = $firstDayOfMonth;
         while ($currentDate <= $lastDayOfMonth) {
-            $events = EventsModal::where("published", true)->where('happens_at', $currentDate)->with('type')->get();
+            $events = EventsModel::where("published", true)->where('happens_at', $currentDate)->with('type')->get();
             
             $return[$currentDate] = [
                 'monthName' => $monthsKas[Carbon::parse($currentDate)->month - 1],
@@ -128,7 +138,7 @@ class Events extends Component
         if(Carbon::parse($currentDate)->dayOfWeek == 1){
             while(count($return) < 42){
                 $currentDate = Carbon::parse($currentDate)->addDay()->format($dateFormat);
-                $events = EventsModal::where("published", true)->where('happens_at', $currentDate)->with('type')->get();
+                $events = EventsModel::where("published", true)->where('happens_at', $currentDate)->with('type')->get();
                 
                 $return[$currentDate] = [
                     'monthName' => $monthsKas[Carbon::parse($currentDate)->month - 1],

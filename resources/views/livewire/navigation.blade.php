@@ -63,5 +63,27 @@
             },
         }
     })
+
+    Alpine.data('modal', (initialOpenState) => ({
+        open: initialOpenState.open,
+        event: null,
+
+        handleOpen() {
+            const url = new URL(window.location.href);
+            url.searchParams.set('event', this.event.id);
+            window.history.pushState({}, '', url);
+            this.open = ! this.open;
+            document.title = `${this.event.title} - Ruckas muiža`;
+
+        },
+
+        handleClose() {
+            const url = new URL(window.location.href);
+            url.searchParams.delete("event");
+            window.history.pushState({}, '', url);
+            this.open = ! this.open;
+            document.title = `Pasākumi - Ruckas muiža`
+        }
+    }))
 </script>
 @endscript
