@@ -43,7 +43,7 @@
             </div>
 
             <p>{{ $event['infoLong'] != "" ? $event['infoLong'] : $event['info'] }}</p>
-            <p>Dalības maksa: <strong>{{ $event['price'] }}</strong></p>
+            <p>Dalības maksa: {!!  str_replace("<a", "<a target='_blank'", preg_replace('/\s*<\/?p>\s*/i', ' ', $event['price'])) !!}</p>
 
             <div class="modal-contacts">
                 @if ($event->reservation_needed)   
