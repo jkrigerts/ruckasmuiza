@@ -23,6 +23,7 @@ use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\Indicator;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\RichEditor;
 
 class EventsResource extends Resource
 {
@@ -77,13 +78,6 @@ class EventsResource extends Resource
                             ->required()
                             ->maxLength(100)
                             ->placeholder('Kino vakars ar popkornu'),
-                        Textarea::make('infoLong')
-                            ->label('Apraksts uznirstošajā logā')
-                            ->autosize()
-                            ->columnSpanFull()
-                            ->placeholder('Harija Potera fanu kluba kino vakars ar popkornu skolas vecuma bērniem.')
-                            ->maxLength(255),
-        
                         Select::make('type_id')
                             ->label('Category')
                             ->native(false)
@@ -96,12 +90,24 @@ class EventsResource extends Resource
                                 TextInput::make('name')->required()->maxLength(50)->placeholder('Pieaugušiem'),
                                 ColorPicker::make('color')->required()->placeholder('#FFFFFF'),
                             ]),
-                        TextInput::make('price')
+                        Textarea::make('infoLong')
+                            ->label('Apraksts uznirstošajā logā')
+                            ->autosize()
+                            ->columnSpanFull()
+                            ->placeholder('Harija Potera fanu kluba kino vakars ar popkornu skolas vecuma bērniem.')
+                            ->maxLength(255),
+                        RichEditor::make('price')
                             ->required()
                             ->label('Dalības maksa')
-                            ->columnSpan(1) 
-                            ->maxLength(50)
-                            ->placeholder('5'),
+                            ->columnSpanFull()
+                            ->maxLength(500)
+                            ->placeholder('5')
+                            ->extraInputAttributes(['style' => 'min-height: 100px; max-height: 100px; overflow-y: auto;'])
+                            ->toolbarButtons([
+                                'bold',
+                                'italic',
+                                'link',
+                            ]),
                         Checkbox::make("reservation_needed")
                             ->label("Iepriekšēja pieteikšanās")
                             ->default(true),
@@ -129,9 +135,9 @@ class EventsResource extends Resource
                 Tables\Columns\TextColumn::make('time')
                     ->label('Laiks/Laiki')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('price')
-                    ->label('Cena')
-                    ->searchable(),
+                // Tables\Columns\TextColumn::make('price')
+                //     ->label('Cena')
+                //     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->label('Uztaisīts')
