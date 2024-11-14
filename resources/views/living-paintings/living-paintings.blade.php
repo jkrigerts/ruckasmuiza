@@ -29,7 +29,12 @@
 
   <x-living-paintings-info />
 
+  <x-inner-chapter-heading>Atlaides</x-inner-chapter-heading>
+  <x-living-paintings-discount-common></x-living-paintings-discount-common>
+
   <x-inner-chapter-heading>Latvijas skolas soma</x-inner-chapter-heading>
   <x-living-paintings-school-bag-common></x-living-paintings-school-bag-common>
+
+
 
 </x-layouts.simple-page>

@@ -1,0 +1,23 @@
+.pop-up-ad {
+    position: fixed;
+    top: calc(0px + $navHeight);
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - $navHeight);
+    z-index: 11;
+    background-color: #050505b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pop-up-ad-content {
+        width: 500px;
+        max-width: 90vw;
+
+        video {
+            max-height: 80vh;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    }
+}
