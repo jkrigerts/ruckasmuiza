@@ -4,3 +4,14 @@
     align-self: center;
     width: 100%;
 }
+
+.living-paintings-discount-video {
+    // height: 80vh;
+    // max-height: 500px;
+    align-self: center;
+    width: 100%;
+
+    @include md-breakpoint {
+        max-height: 500px;
+    }
+}

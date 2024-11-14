@@ -196,3 +196,5 @@
 		/>
 	</div>
 </x-layouts.app>
+
+<x-pop-up-ad></x-pop-up-ad>

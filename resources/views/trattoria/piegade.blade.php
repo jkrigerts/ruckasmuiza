@@ -83,8 +83,8 @@
 
   <x-inner-chapter-heading>Piegādes darba laiks</x-inner-chapter-heading>
   <ul>
-    <li>Pirmdienās - brīvs</li>
-    <li>Otrdienās, trešdienās, ceturtdienās un svētdienās - <strong style="color: #D9992D; font-size: 1.1rem">no 12.00 līdz 19.30</strong>.</li>
+    <li>Pirmdienās, otrdienās - slēgts</li>
+    <li>Trešdienās, ceturtdienās un svētdienās - <strong style="color: #D9992D; font-size: 1.1rem">no 12.00 līdz 19.30</strong>.</li>
     <li>Piektdienās un sestdienās - <strong style="color: #9E004F; font-size: 1.1rem">no 12.00 līdz 24.00</strong>!</li>
   </ul>
 

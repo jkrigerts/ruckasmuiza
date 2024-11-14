@@ -1,6 +1,6 @@
 <x-two-columns style="align-items:start;margin-top:5.5rem;">
   <x-slot:title>Seansi</x-slot:title>
-  <p>Seansi notiek no 12.00 līdz 19.30 katru dienu <strong style="color: #9E004F; font-size: 1.2rem">no otrdienas līdz svētdienai</strong>.</p>
+  <p>Seansi notiek no 12.00 līdz 19.30 <strong style="color: #9E004F; font-size: 1.2rem">no trešdienas līdz svētdienai</strong>.</p>
   <ul>
     {{-- <li style="margin-bottom: 0.2rem">10.00 – 10.30 Mīts – Cilvēks – Daba</li>
     <li style="margin-bottom: 0.2rem">10.30 – 11.00 Manas iedvesmas dārzi</li>

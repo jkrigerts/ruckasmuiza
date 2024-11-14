@@ -14,6 +14,9 @@
     Piesakiet savu apmeklējumu, zvanot <a href="tel:+37128237566">+371&nbsp;28237566</a>
     vai rakstot <a href="mailto:dzirnavas@ruckasmuiza.lv">dzirnavas@ruckasmuiza.lv</a>
   </p>
+  <div class="">
+    <a href="https://latvijasskolassoma.lv/norise/izzinosa-nodarbiba-simbolisms-latviesu-maksla-literatura-un-muzika-dzivo-gleznu-izstade-simbolisms/" class="button-link" target="_blank">Uz Latvijas skolas somu</a>
+  </div>
   <x-slot:second_slot>
     <video controls class="living-paintings-school-bag-video">
       <source src="{{asset('assets/aicinajums-pedagogiem-skolas-soma.mp4')}}#t=0.001" type="video/mp4">
@@ -21,6 +24,3 @@
     </video> 
   </x-slot:second_slot>
 </x-two-columns>
-<div class="gift_cards-centered-btn">
-  <a href="https://latvijasskolassoma.lv/norise/izzinosa-nodarbiba-simbolisms-latviesu-maksla-literatura-un-muzika-dzivo-gleznu-izstade-simbolisms/" class="button-link" target="_blank">Uz Latvijas skolas somu</a>
-</div>
