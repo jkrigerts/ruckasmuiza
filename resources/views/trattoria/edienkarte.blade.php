@@ -8,4 +8,21 @@
   </div>
 
   <x-trattoria-reservation></x-trattoria-reservation>
+
+
+  <x-two-columns swap="{true}">
+    <h2>Atlaides</h2>
+      <p>
+        Uzrādot <em>Dzīvo gleznu</em> biļeti, saņemiet <strong style="color: #9E004F; font-size: 1.1rem">20&nbsp;% atlaidi</strong> visām <em>Trattoria</em> picām!
+      </p>
+
+    
+    <x-slot:second_slot>
+      <video controls autoplay loop class="living-paintings-discount-video" style="border-radius:4px">
+        <source src="{{asset('assets/dzivas-gleznas-trattoria-atlaide.mp4')}}#t=0.001" type="video/mp4">
+        Pārlūkprogramma neatbalsta video!
+      </video> 
+    </x-slot:second_slot>
+</x-two-columns>
+
 </x-layouts.simple-page>

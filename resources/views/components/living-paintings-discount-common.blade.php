@@ -1,5 +1,5 @@
 <x-two-columns style_outer="margin-top:0">
-  <video controls class="living-paintings-discount-video">
+  <video controls autoplay loop class="living-paintings-discount-video">
     <source src="{{asset('assets/dzivas-gleznas-trattoria-atlaide.mp4')}}#t=0.001" type="video/mp4">
     Pārlūkprogramma neatbalsta video!
   </video> 

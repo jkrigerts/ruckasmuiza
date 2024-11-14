@@ -195,6 +195,7 @@
 			fade=false
 		/>
 	</div>
+	@persist('player')
+	<x-pop-up-ad></x-pop-up-ad>
+	@endpersist
 </x-layouts.app>
-
-<x-pop-up-ad></x-pop-up-ad>
