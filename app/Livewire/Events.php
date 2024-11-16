@@ -90,6 +90,7 @@ class Events extends Component
 
         $return = []; // return array with dates and arrays with events
         
+        $firstDayPlace = ($firstDayPlace == 0) ? 7 : $firstDayPlace;
         // add days before this month
         for($i = $firstDayPlace - 1; $i >= 1; $i--){
             $day = Carbon::parse($today)->startOfMonth()->subDays($i);
@@ -134,9 +135,8 @@ class Events extends Component
                 'eventCount' => count($events),
             ];
         }
-
-        // Fix anomaly that accures sometimes, and required sixth line in the calendar
-        if(Carbon::parse($currentDate)->dayOfWeek == 1){
+        // Fix anomaly that accures sometimes, and required sixth line in the calendar\
+        if(Carbon::parse($currentDate)->dayOfWeek >= 1){
             while(count($return) < 42){
                 $currentDate = Carbon::parse($currentDate)->addDay()->format($dateFormat);
                 $events = EventsModel::where("published", true)->where('happens_at', $currentDate)->with('type')->get();
@@ -150,7 +150,7 @@ class Events extends Component
                 ];
             }
         }
-        
+
         $this->calendarData = array_chunk($return, 7, true);
         $this->thisYear = $today->year;
         $this->previousMonth = $monthsKas[$today->subMonth()->month - 1];
