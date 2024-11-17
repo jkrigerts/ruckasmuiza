@@ -14,7 +14,7 @@
     >
         <div>
             <p class="sm">{{ $event['type']['name'] }}</p>
-            <p class="sm">{{ $event['time'] }} {{$event['id']}}</p>
+            <p class="sm">{{ $event['time'] }}</p>
         </div>
         <p class="md">{{ $event['title'] }}</p>
         <p class="sm">{{ $event['info'] }}</p>
