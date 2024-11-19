@@ -195,7 +195,7 @@
 			fade=false
 		/>
 	</div>
-	@persist('player')
+	{{-- @persist('player')
 	<x-pop-up-ad></x-pop-up-ad>
-	@endpersist
+	@endpersist --}}
 </x-layouts.app>
