@@ -1,1 +1,37 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(330, 100%, 31%);
+    opacity: 0.7;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    flex: 0 0 auto; /* Allows footer to shrink when content overflows */
+    width: 100%;
+    bottom: 0; /* Positions the footer at the bottom */
+}
+main{
+    min-height: calc(100vh - 60px);
+}
+.tooltip{
+    padding: 0.3rem;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    border-radius: 0.4rem;
+    transition: opacity 0.5s ease-in-out; /* Add transition effect */
+    opacity: 0;
+}
+
+footer:hover .tooltip {
+    display: flex;
+    opacity: 1; /* Make tooltip fully visible when hovering */
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 // pls no margin
