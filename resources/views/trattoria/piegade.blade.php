@@ -1,8 +1,8 @@
 <x-layouts.simple-page metaName="trattoria" bg_src='images/landing/landing.webp' bg_alt="Ruckas muiža">
   <x-slot:title><span class="heading-prefix">Trattoria</span><span>picu piegāde Cēsu apkārtnē</span></x-slot:title>
-  <p><em>Trattoria</em> piedāvā ātru un ērtu picu piegādi Cēsīs un apkaimē! Lai pasūtījumu veiktu, zvaniet <a href="tel:+37129407566">+371&nbsp;29407566</a>.</p>
+  <p><em>Trattoria</em> sadarbībā ar <a href="https://wolt.com/en/lva/cesis/restaurant/trattoria-cesis" target="_blank"><em>Wolt</em></a> piedāvā ātru un ērtu picu piegādi Cēsīs un apkaimē!</p>
 
-  <div class="trattoria-table-center">
+  {{-- <div class="trattoria-table-center">
     <x-table >
       <thead>
         <tr>
@@ -47,7 +47,7 @@
         <tr>
           <td>no&nbsp;<span class="trattoria-emp">35&nbsp;€</span></td>
           <td><span class="trattoria-emp">Bezmaksas</span></td>
-        </tr>
+        </tr> --}}
 
         {{-- <tr>
           <td rowspan="2" class="zone">4.</td>
@@ -75,7 +75,7 @@
           <td>no&nbsp;<span class="trattoria-emp">50&nbsp;€</span></td>
           <td><span class="trattoria-emp">7,00&nbsp;€</span></td>
         </tr> --}}
-      </tbody>
+      {{-- </tbody>
     </x-table>
   </div>
 
@@ -86,7 +86,7 @@
     <li>Pirmdienās, otrdienās - slēgts</li>
     <li>Trešdienās, ceturtdienās un svētdienās - <strong style="color: #D9992D; font-size: 1.1rem">no 12.00 līdz 19.30</strong>.</li>
     <li>Piektdienās un sestdienās - <strong style="color: #9E004F; font-size: 1.1rem">no 12.00 līdz 24.00</strong>!</li>
-  </ul>
+  </ul> --}}
 
   <x-trattoria-gallery></x-trattoria-gallery>
 
