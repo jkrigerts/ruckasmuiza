@@ -30,7 +30,7 @@
           <td>Nr. 10</td>
           <td>Viena divguļamā gulta</td>
           <td rowspan="7">
-            <p>2 personām <strong>40 €</strong> vai 1 personai <strong>30 €</strong></p>
+            <p>2 personām <strong>50 €</strong> vai 1 personai <strong>40 €</strong></p>
           </td>
         </tr>
         <tr>
