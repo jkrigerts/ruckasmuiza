@@ -12,7 +12,7 @@
   <x-trattoria-reservation></x-trattoria-reservation>
 
 
-  <x-two-columns swap="{true}">
+  {{-- <x-two-columns swap="{true}">
     <h2>Atlaides</h2>
       <p>
         Uzrādot <em>Dzīvo gleznu</em> biļeti, saņemiet <strong style="color: #9E004F; font-size: 1.1rem">20&nbsp;% atlaidi</strong> visām <em>Trattoria</em> picām!
@@ -25,6 +25,6 @@
         Pārlūkprogramma neatbalsta video!
       </video> 
     </x-slot:second_slot>
-</x-two-columns>
+  </x-two-columns> --}}
 
 </x-layouts.simple-page>
