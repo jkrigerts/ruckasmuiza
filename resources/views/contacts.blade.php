@@ -17,14 +17,24 @@
     <li>Konta Nr.: LV78UNLA0055000054373</li>
   </ul>
   <x-inner-chapter-heading>Kā nokļūt?</x-inner-chapter-heading>
+  <h3 style="margin-bottom: 0.75rem">Ar automašīnu</h3>
   <p>
-    Braucot no Rīgas pa A2 autoceļu, ~77. kilometrā jāveic pagrieziens uz Cēsīm
-    Melturos (P20). Pirmajā rotācijas aplī jāizvēlas 3. izeju, izbraucot Cēsīs.
-    Ceļš jāturpina taisni pa Piebalgas ielu līdz pirmajam ar luksoforu regulētajam
-    krustojumam, kur jānogriežas pa labi. Nākamajā krustojumā, kura kreisajā malā ir
-    nelielais Ruckas dīķis, jāgriežas pa kreisi, nokļūstot uz Vaives ielas.
-    Visbeidzot jānogriežas atkal pa kreisi Muižas ielā, un drīz vien skatam pavērsies
-    Ruckas muiža.
+    Braucot no Rīgas pa A2 autoceļu, ~77. kilometrā jāveic pagrieziens uz
+    Cēsīm Melturos (P20). Pirmajā rotācijas aplī jāizvēlas 3. izeju,
+    izbraucot Cēsīs. Ceļš jāturpina taisni pa Piebalgas ielu līdz
+    pirmajam ar luksoforu regulētajam krustojumam, kur jānogriežas pa labi. 
+    Nākamajā krustojumā, kura kreisajā malā ir nelielais Ruckas dīķis,
+    jāgriežas pa kreisi, nokļūstot uz Vaives ielas. Visbeidzot jānogriežas
+    atkal pa kreisi Muižas ielā, un drīz vien skatam pavērsies Ruckas muiža. 
+  </p>
+
+  <h3 style="margin-bottom: 0.75rem">Ar vilcienu vai autobusu</h3>
+  <p>
+    Ruckas muiža atrodas pašā Cēsu centrā, tāpēc, izvēloties braukt
+    ar sabiedrisko transportu, pietura, kurā jāizkāpj,
+    ir <strong style="font-size: 1.2rem; color: #9E004F">Cēsis</strong>.
+    Cēsu autoosta un dzelzceļa stacija no Ruckas muižas atrodas vien 
+    600 metru jeb 7 minūšu gājiena attālumā. 
   </p>
   <div class="contacts-map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2154.910245241806!2d25.27950801271705!3d57.30939357092749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ebe1905c90041b%3A0x9325a24ba40de836!2sRuckas%20mui%C5%BEa!5e0!3m2!1slv!2slv!4v1712590953868!5m2!1slv!2slv"

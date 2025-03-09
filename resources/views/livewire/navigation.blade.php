@@ -33,16 +33,24 @@
                                         ['title' => 'Dāvanu kartes', 'href' => 'services.gift_cards'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
-                <x-navigation.nav-link href="blog."
+                <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>
+                {{-- <x-navigation.nav-link href="blog."
                                        unchoosable
                                        :items="[
                                         ['title' => 'Renāra Sproģa dienasgrāmata', 'href' => 'blog.sprogis'],
                                         // ['title' => 'Jāņa Gabrāna piezīmes', 'href' => 'blog.gabrans'],
                                         ]"
-                >Muiža runā</x-navigation.nav-link>
-                <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>
+                >Muiža runā</x-navigation.nav-link> --}}
+
+                <x-navigation.nav-link href="about."
+                                       :items="[
+                                        ['title' => 'Muiža runā', 'href' => 'about.sprogis'],
+                                        ]"
+                >Par muižu</x-navigation.nav-link>
+
+
+                <x-navigation.nav-link href="experience-toscana">Piedzīvo Toskānu</x-navigation.nav-link>
                 <x-navigation.nav-link href="contacts">Kontakti</x-navigation.nav-link>
-                <x-navigation.nav-link href="about">Par muižu</x-navigation.nav-link>
             </ul>
         </nav>
         <button x-on:click="toggleOpen" class="hamburger">

@@ -20,7 +20,7 @@ header {
             gap: 16px;
         }
 
-        @include lg-breakpoint {
+        @media only screen and (max-width: 1060px) {
             justify-content: space-between;
         }
     }
@@ -108,13 +108,13 @@ header {
                     opacity: 1;
                 }
             }
-            @include lg-breakpoint {
+            @media only screen and (max-width: 1060px) {
                 flex-direction: column;
                 align-items: start;
                 gap: 10px;
             }
         }
-        @include lg-breakpoint {
+        @media only screen and (max-width: 1060px) {
             visibility: hidden;
             opacity: 0;
             pointer-events: none;
@@ -157,7 +157,7 @@ header {
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
         border: 1px solid rgb(25, 21, 22);
 
-        @include lg-breakpoint {
+        @media only screen and (max-width: 1060px) {
             position: static;
             opacity: 1;
             visibility: visible;
@@ -185,7 +185,7 @@ header {
         margin-right: 20px;
         cursor: pointer;
 
-        @include lg-breakpoint {
+        @media only screen and (max-width: 1060px) {
             display: flex;
         }
 

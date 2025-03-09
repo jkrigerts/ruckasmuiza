@@ -146,10 +146,15 @@
             'image' => $defaultImage,
             'desc'  => 'Trattoria - Renāra Sproģa un ģimenes picērija, kafetērija.',
         ],
+        'experience-toscana' => [
+            'title' => 'Piedzīvo Toskānu' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Darbojoties Ruckas muižā, mūsu mērķis ir pārnest labākās Toskānas dzīves tradīcijas uz Latviju.',
+        ],
         'error' => [
             'title' => 'Kļūda' . $afterTitle,
             'image' => $defaultImage,
-            'desc'  => 'Lapa nav atrasta vai notikusi servera kļūda',
+            'desc'  => 'Lapa nav atrasta vai notikusi servera kļūda.',
         ],
     ]
 @endphp
