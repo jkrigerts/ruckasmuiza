@@ -25,7 +25,7 @@
                 @isset ($post->blogCategory->color)
                     style="--blog-card-bg: {{$post->blogCategory->color}}"
                 @endisset
-                href="{{ ($post->section_id == 1 ? route("blog.sprogis") : route("blog.gabrans")) . "/" . $post->id }}"
+                href="{{ ($post->section_id == 1 ? route("about.sprogis") : route("about.")) . "/" . $post->id }}"
                 wire:navigate>
                 <img src="{{ Storage::url($post->image) }}" alt="">
                 <div class="content">
