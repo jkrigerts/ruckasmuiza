@@ -9,7 +9,7 @@ class BlogController extends Controller
 {
     public function index(Request $request)
     {   
-        return view('blog/' . ($request->is("*sprogis*") ? 'sprogis' : 'gabrans'));
+        return view('about/sprogis');
     }
     
     public function show(Request $request, string $id)
@@ -19,6 +19,6 @@ class BlogController extends Controller
                         ->where('section_id', $section_id)
                         ->where("published", true)
                         ->firstOrFail();
-        return view('blog/blog-post', ['blogPost' => $blogPost]);
+        return view('about/blog-post', ['blogPost' => $blogPost]);
     }
 }

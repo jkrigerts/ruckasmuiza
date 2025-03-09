@@ -43,9 +43,6 @@ Route::group(
        }
 );
 
-Route::get('/par-muizu', function () { return view('about');})
-       ->name("about");
-
 Route::group(
        [
               "prefix" => "/pakalpojumi",
@@ -109,18 +106,22 @@ Route::get('/pasakumi', function (Request $req) {
 //        }
 // );
 
+// Route::get('/par-muizu', function () { return view('about');})
+//        ->name("about");
+
 Route::group(
        [
-              "prefix" => "/muiza-runa",
-              "as" => "blog.",
+              "prefix" => "/par-muizu",
+              "as" => "about.",
        ],
        function () {
-              Route::get('/renars-sprogis', [BlogController::class, "index"])
+
+              Route::get('/muiza-runa/{id}', [BlogController::class, "show"]);
+              Route::get('/', function () {
+                     return view('about/about');
+              })->name("");
+              Route::get('/muiza-runa', [BlogController::class, "index"])
                      ->name("sprogis");
-              // Route::get('/janis-gabrans', [BlogController::class, "index"])
-              //        ->name("gabrans");
-              Route::get('/renars-sprogis/{id}', [BlogController::class, "show"]);
-              // Route::get('/janis-gabrans/{id}', [BlogController::class, "show"]);
        }
 );
 
@@ -131,6 +132,9 @@ Route::get('/galerija/{id}', [GalleryController::class, "show"]);
 
 Route::get('/kontakti', function () { return view('contacts');})
        ->name("contacts");
+
+Route::get('/piedzino-toskanu', function () { return view('experience-toscana');})
+       ->name("experience-toscana");
 
 // Route::get('/trattoria', function () { return view('trattoria');})
 //        ->name("trattoria");

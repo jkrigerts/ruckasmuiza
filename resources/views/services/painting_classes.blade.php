@@ -4,7 +4,7 @@
         bg_alt="Ruckas muiža"
         style="--heading-decrease-size: 0.2rem"
 >
-  <x-slot:title>Glezno&shy;šana ar Baibu Feoktistovu</x-slot:title>
+  <x-slot:title>Glezno&shy;šana ar Baibu Feoktis&shy;tovu</x-slot:title>
   <x-two-columns img_src='images/landing/gleznosanas-meistarklases.webp' img_alt="Baiba Feoktistova gleznojot">
     <p>
       Mācoties juveliera profesijā pie Oļega Auzera, Baiba Feoktistova guvusi vērtīgu pieredzi
