@@ -14,7 +14,7 @@ class BlogController extends Controller
     
     public function show(Request $request, string $id)
     {   
-        $section_id = $request->is("*sprogis*") ? 1 : 2;
+        $section_id = 1;
         $blogPost = Blog::where('id', $id)
                         ->where('section_id', $section_id)
                         ->where("published", true)
