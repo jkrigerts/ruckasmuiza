@@ -57,9 +57,22 @@ Route::group(
               Route::get('/naksnosana', function () {
                      return view('services/stay');
               })->name("stay");
-              Route::get('/svinibas', function () {
-                     return view('services/celebrations');
-              })->name("celebrations");
+              Route::group(
+                     [
+                            "prefix" => "/svinibas",
+                            "as" => "celebrations.",
+                     ],
+                     function () {
+                            Route::get('/', function () {
+                                   return view('services/celebrations/celebrations');
+                            })->name("");
+                            Route::get('/picu-meistarklase', function () {
+                                   return view('services/celebrations/pizza');
+                            })->name("pizza");
+                            Route::get('/dzimsanas-diena', function () {
+                                   return view('services/celebrations/birthday');
+                            })->name("birthday");
+              });
               Route::get('/fotosesija', function () {
                      return view('services/photo_session');
               })->name("photo_session");
