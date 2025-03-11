@@ -26,7 +26,7 @@
                 <x-navigation.nav-link href="services."
                                        :items="[
                                         ['title' => 'Nakšņošana', 'href' => 'services.stay'],
-                                        ['title' => 'Svinības', 'href' => 'services.celebrations'],
+                                        ['title' => 'Svinības', 'href' => 'services.celebrations.'],
                                         ['title' => 'Fotosesija', 'href' => 'services.photo_session'],
                                         ['title' => 'Gleznošana ar Baibu Feoktistovu', 'href' => 'services.painting_classes'],
                                         ['title' => 'Grāmatu veikals', 'href' => 'services.books'],

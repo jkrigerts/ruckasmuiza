@@ -63,6 +63,21 @@
             'image' => $defaultImage,
             'desc'  => 'Svini savus īpašos dzīves notikumus Cēsīs! Mūsu muižas greznās telpas ir iekārtotas tā, lai ērti un mājīgi svinētu kā lielus, tā mazus svētkus! Baudi kopābūšanu ar kolēģiem, radiem, draugiem, kāzu viesiem vai sadarbības partneriem – telpas vienlīdz labi piemērotas kā privātu, tā korporatīvu svinību rīkošanai jebkurā gadalaikā.',
         ],
+
+        // Celebrations 
+        'celebrationsPizza' => [
+            'title' => 'Svinības ar picu meistarklasi' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Svini īpašos dzīves notikumus, baudot picu meistarklasi, kas papildināta ar "Dzīvo gleznu" izrādi, ekskursiju muižā un citiem aizraujošiem piedzīvojumiem!',
+        ],
+
+        'celebrationsBirthday' => [
+            'title' => 'Dzimšanas dienas piedzīvojumu ballīte' . $afterTitle,
+            'image' => $defaultImage,
+            'desc'  => 'Divu stundu garumā 6 līdz 12 gadus vecais jubilārs un viņa draugi varēs piedalīties aizraujošā picu gatavošanas piedzīvojumā!',
+        ],
+
+
         'rent' => [
             'title' => 'Telpu noma Cēsīs' . $afterTitle,
             'image' => $defaultImage,

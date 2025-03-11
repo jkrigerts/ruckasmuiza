@@ -35,7 +35,7 @@
       Ruckas muiža ir īstā vieta, kur grezni svinēt sev īpašus dzīves notikumus vai
       korporatīvus pasākumus – telpas ir plašas, mājīgas un gaišas! 
     </p>
-    <x-button-link href="{{ route('services.celebrations') }}" text="Uzzināt vairāk!"/>
+    <x-button-link href="{{ route('services.celebrations.') }}" text="Uzzināt vairāk!"/>
   </x-two-columns>
 
   <x-two-columns img_src='images/services/photo-session/oranzerija-romantika-sm.webp' img_alt="Ruckas muižas oranžērijā">
