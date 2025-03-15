@@ -20,6 +20,7 @@ class Events extends Component
     public $monthsSelect;
     public $thisYear;
     public $eventFromDB;
+    public $pinned;
 
     #[Url(except: '')]
     public $monthOffset = 0; // this is the way arrow buttons are going to work now()->addMonths($monthOffset)
@@ -157,6 +158,11 @@ class Events extends Component
         $this->thisMonth = ucfirst($monthsKas[$today->addMonth()->month - 1]);
         $this->nextMonth = $monthsKas[$today->addMonth()->month - 1];
         $this->monthsSelect = $monthsKa;
+
+        $this->pinned = EventsModel::where('pinned', true)
+                                    ->whereDate('happens_at', '>=', Carbon::today())
+                                    ->orderBy('happens_at', 'asc')
+                                    ->get();
 
     }
 

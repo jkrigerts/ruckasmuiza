@@ -28,17 +28,32 @@
 
             <div class="calendar-header">
                 <x-section-heading>Pasākumu kalendārs</x-section-heading>
-                <p>Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu - atrodi sev aktuālo šajā mēnesī un pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.</p>
-                <div class="month-switcher">
-                    {{-- <div @click="() => {transition_left = true ; show_calendar = false; }" wire:click="down" >
-                        <x-icons.caret-left />
-                    </div>
+                <p>
+                    Ruckas muiža piedāvā izbaudīt plašu pasākumu klāstu - atrodi sev aktuālo šajā mēnesī un
+                    pavadi īpašus, neaizmirstamus mirkļus vietā, kur senatne sastopas ar mūsdienām.
+                </p>
+                
+                
+                @if(count($pinned) > 0)
+                    <section class="pinned-event-section">
+                        @foreach ($pinned as $pin)
+                            <article class="pinned-event" wire:key="{{ $pin["id"] }}">
+                            <a href="{{ route('event', ['id' => $pin["id"]]) }}" wire:navigate>
+                                @if ($pin["image"])
+                                    <img src="{{ url("storage/" . $pin["image"]) }}" alt="{{ $pin["title"] }}"/>
+                                @endif
+                                <div class="pinned-event-info">
+                                    <h2>{!! $pin["title"] !!}</h2>
+                                    <p>{{Carbon::parse($pin["happens_at"])->translatedFormat('Y.') . " gada " . Carbon::parse($pin["happens_at"])->translatedFormat('j. M ')}} plkst. {{ str_replace( ":", ".", $pin["time"]) }}</p>
+                                </div>
+                            </a>
+                            </article>
+                        @endforeach
+                    </section>
+                @endif
 
-                    <p>{{ $thisMonth }} {{ $thisYear }}</p>
-                    
-                    <div @click="() => {transition_left = false ; show_calendar = false; }" wire:click="up">
-                        <x-icons.caret-right />
-                    </div> --}}
+                <div class="month-switcher">
+
                     <a href="{{url("/pasakumi?monthOffset=") . ($monthOffset - 1)}}" wire:navigate>
                         <x-icons.caret-left />
                     </a>

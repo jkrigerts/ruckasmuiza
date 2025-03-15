@@ -220,6 +220,7 @@
                 cursor: pointer;
                 background-color: var(--event-color);
                 transition: background-color $transition-duration;
+                text-decoration: none;
 
                 &:hover {
                     background-color: var(--event-color-darker);
@@ -345,151 +346,6 @@
     }
 }
 
-// ------------------ Event modal -------------------
-
-.main-events .event .modal {
-    cursor: auto;
-
-    position: fixed;
-    width: 100dvw;
-    height: 100dvh;
-    top: 0;
-    left: 0;
-
-    background-color: rgba(5, 5, 5, 0.7);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
-    z-index: 51;
-
-    display: grid;
-    place-items: center;
-
-    animation: modal-appear $transition-duration forwards ease-out;
-
-    .modal-content {
-        user-select: auto;
-
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-
-        position: relative;
-
-        font-size: 1rem;
-        color: $color-black;
-        background-color: $color-white-gray;
-
-        width: 95%;
-        max-width: 400px;
-        min-height: min(80vh, 450px);
-        max-height: 80vh;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        padding: 1.4rem 1rem;
-        border-radius: $border-radius;
-
-        .close-btn {
-            color: $color-white;
-
-            position: absolute;
-            top: 0.5rem;
-            right: 0.5rem;
-
-            display: grid;
-            place-items: center;
-
-            padding: 0.1rem;
-            border-radius: 0.6rem;
-            background-color: var(--event-color);
-
-            cursor: pointer;
-
-            svg {
-                scale: 0.6;
-            }
-        }
-
-        .modal-title {
-            font-family: $font-display;
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: var(--event-color);
-        }
-
-        .modal-contacts {
-            margin-top: auto;
-
-            .contacts {
-                margin-top: 0.8rem;
-
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    color: $color-white;
-                    text-decoration: none;
-                    cursor: pointer;
-                    font-family: inherit;
-                    padding: 0.3rem 0.6rem;
-                    border-radius: 3px;
-                    font-size: $font-size-sm;
-                    font-weight: bold;
-                    background-color: var(--event-color);
-                    text-transform: uppercase;
-                    transition: all $transition-duration;
-                }
-            }
-        }
-    }
-}
-
-.main-events .event .modal-enter {
-    .modal-content {
-        animation: modal-content-appear $transition-duration ease-out forwards;
-    }
-}
-
-.main-events .event .modal-leave {
-    .modal-content {
-        animation: modal-content-leave $transition-duration ease-in forwards;
-    }
-
-    animation: modal-leave $transition-duration ease-in forwards;
-}
-
-@keyframes modal-appear {
-    0% {
-        background-color: rgba($color: $color-black, $alpha: 0);
-    }
-}
-
-@keyframes modal-leave {
-    100% {
-        background-color: rgba($color: $color-black, $alpha: 0);
-    }
-}
-
-@keyframes modal-content-appear {
-    0% {
-        opacity: 0;
-        scale: 0;
-    }
-}
-
-@keyframes modal-content-leave {
-    100% {
-        opacity: 0;
-        scale: 0;
-    }
-}
-
 // ------------------ Calendar animations -------------------
 .calendar-leave-up {
     animation: calendar-leave-up 250ms forwards;
@@ -532,5 +388,95 @@
     0% {
         transform: translateX(-100px);
         opacity: 0;
+    }
+}
+
+.pinned-event-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 5rem;
+    column-gap: min(50px, 2.6vw);
+    width: 100%;
+    margin: 2rem 0 100px 0;
+    z-index: 1;
+
+    // @media only screen and (max-width: 1350px) {
+    //     section {
+    //         grid-template-columns: repeat(3, 1fr);
+    //     }
+    // }
+
+    @include lg-breakpoint {
+        column-gap: min(50px, 5vw);
+    }
+
+    @include sm-breakpoint {
+        grid-template-columns: 1fr;
+    }
+
+    .pinned-event {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+
+        @include sm-breakpoint {
+            max-width: 340px;
+        }
+
+        &:before {
+            content: "";
+            width: 88%;
+            height: 107%;
+            position: absolute;
+            z-index: -1;
+            top: -3.5%;
+            left: 6%;
+            background-color: $color-raspberry-red;
+            border-radius: 3px;
+        }
+
+        a {
+            display: block;
+            background-color: $color-black;
+            border-radius: $border-radius;
+            box-shadow: 0 5px 70px $color-black-true;
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius;
+            overflow: hidden;
+            text-decoration: none;
+            transition: all $transition-duration;
+
+            &:hover {
+                transform: scale(1.02);
+                filter: brightness(1.1);
+            }
+
+            img {
+                width: 100%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                font-family: $font-display;
+                font-weight: 300;
+                word-break: break-word;
+                color: $color-white;
+                padding: 8px 5% 6px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: $color-white;
+                font-weight: 300;
+                text-align: center;
+                padding: 0px 5% 16px;
+            }
+        }
     }
 }

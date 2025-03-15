@@ -6,6 +6,7 @@ use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\EventsController;
 use Livewire\Livewire;
 
 /*
@@ -87,20 +88,12 @@ Route::group(
 
               Route::get('/gramatas', [BookController::class, "index"])
                      ->name("books");
-              // Route::get('/noma', function () {
-              //        return view('services/rent');
-              // })->name("rent");
-              // Route::get('/ekskursija', function () {
-              //        return view('services/excursion');
-              // })->name("excursion");
        }
 );
 
 
-Route::get('/pasakumi', function (Request $req) {
-       if ($req->monthOffset == null) return redirect(route('events', ['monthOffset' => 0])); // month offset pārbaude
-       return view('events');
-})->name("events");
+Route::get('/pasakumi', [EventsController::class, "index"])->name("events");
+Route::get('/pasakumi/{id}', [EventsController::class, "show"])->name("event");
 
 
 // Route::group(
