@@ -1,10 +1,10 @@
 <x-layouts.app>
   <x-slot:meta>
-    <title>{{ $event->title }} - Ruckas muiža</title>
+    <title>{!! $event->title !!} - Ruckas muiža</title>
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ $event->title }}" />
-    <meta property="og:image" content="{{asset("/images/meta_image.png")}}" />
+    <meta property="og:image" content="{{ url("storage/" . $event->image) }}" />
     <meta property="og:description" content='Pasākums Ruckas muižā! {{$event->info}}. {{trim($date)}} plkst. {{ str_replace( ":", ".", $event->time) }}' />
     
   </x-slot:meta>
@@ -25,6 +25,7 @@
             <img src='{{ url("storage/" . $event->image) }}' alt="{!! $event->title !!}">
           @endif
           <div class="text">
+            <p style="margin-bottom: 0"><strong style="font-size: 1.4rem">{{$event->info}}</strong></p>
             <p><strong>{{trim($date)}} plkst. {{ str_replace( ":", ".", $event->time) }}</strong></p>
             {!! $event->infoLong !!}
           </div>
