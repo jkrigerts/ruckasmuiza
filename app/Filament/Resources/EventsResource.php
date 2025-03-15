@@ -23,6 +23,7 @@ use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\Indicator;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 
 class EventsResource extends Resource
@@ -38,13 +39,36 @@ class EventsResource extends Resource
     {
         return $form
             ->schema([
-                Section::make('Datums un laiks')
+                Section::make('Vispārēji')
                     ->columns([
                         'sm' => 1,
                         'md' => 2,
                     ])
-                    ->description('Ievadiet datumu un laiku par pasākumu')
+                    ->description('Ievadiet kopējo informāciju par pasākumu')
                     ->schema([
+                        TextInput::make('title')
+                        ->label('Virsraksts')
+                        ->placeholder('Picas detektīvs')
+                        ->required()
+                        ->columnSpanFull()
+                        ->maxLength(100),
+                    TextInput::make('info')
+                        ->label('Kopsavilkums')
+                        ->required()
+                        ->maxLength(100)
+                        ->placeholder('Aizraujošs pasākums bērniem'),
+                    Select::make('type_id')
+                        ->label('Category')
+                        ->native(false)
+                        ->required()
+                        ->label('Kategorija')
+                        ->searchable(['name'])
+                        ->preload()
+                        ->relationship('type', 'name') // TODO: create custom options, where it also shows the category color
+                        ->createOptionForm([
+                            TextInput::make('name')->required()->maxLength(50)->placeholder('Pieaugušiem'),
+                            ColorPicker::make('color')->required()->placeholder('#FFFFFF'),
+                        ]),
                         DatePicker::make('happens_at')
                             ->label('Datums')
                             ->native(false)
@@ -56,66 +80,85 @@ class EventsResource extends Resource
                             ->required()
                             ->maxLength(50)
                             ->placeholder('12:30 - 14:00'),
-                        TextInput::make('timeLong')
-                            ->label('Laiks uznirstošajā logā')
-                            ->maxLength(100)
-                            ->placeholder('10:00 (3 - 5 gadi) / 11:30 (6 - 9 gadi)'),
-                    ]),
-
-                Section::make('Informācija')
-                    ->columns([
-                        'sm' => 1,
-                        'md' => 2,
-                    ])
-                    ->description('Ievadiet informāciju par jauno afišu')
-                    ->schema([
-                        TextInput::make('title')
-                            ->label('Virsraksts')
-                            ->required()
-                            ->maxLength(100),
-                        TextInput::make('info')
-                            ->label('Kopsavilkums')
-                            ->required()
-                            ->maxLength(100)
-                            ->placeholder('Kino vakars ar popkornu'),
-                        Select::make('type_id')
-                            ->label('Category')
-                            ->native(false)
-                            ->required()
-                            ->label('Kategorija')
-                            ->searchable(['name'])
-                            ->preload()
-                            ->relationship('type', 'name') // TODO: create custom options, where it also shows the category color
-                            ->createOptionForm([
-                                TextInput::make('name')->required()->maxLength(50)->placeholder('Pieaugušiem'),
-                                ColorPicker::make('color')->required()->placeholder('#FFFFFF'),
-                            ]),
-                        Textarea::make('infoLong')
-                            ->label('Apraksts uznirstošajā logā')
-                            ->autosize()
-                            ->columnSpanFull()
-                            ->placeholder('Harija Potera fanu kluba kino vakars ar popkornu skolas vecuma bērniem.')
-                            ->maxLength(255),
-                        RichEditor::make('price')
-                            ->required()
-                            ->label('Dalības maksa')
-                            ->columnSpanFull()
-                            ->maxLength(500)
-                            ->placeholder('5')
-                            ->extraInputAttributes(['style' => 'min-height: 100px; max-height: 100px; overflow-y: auto;'])
-                            ->toolbarButtons([
-                                'bold',
-                                'italic',
-                                'link',
-                            ]),
-                        Checkbox::make("reservation_needed")
-                            ->label("Iepriekšēja pieteikšanās")
-                            ->default(true),
+                        FileUpload::make('image')
+                            ->label('Reprezentējošs attēls')
+                            ->columnSpanFull(),
+                        Checkbox::make("pinned")
+                            ->label("Izcelt")
+                            ->default(false),
                         Checkbox::make("published")
                             ->label("Publicēt")
                             ->default(true)
                     ]),
+
+                Section::make('Viena ieraksta skats')
+                    ->columns([
+                        'sm' => 1,
+                        'md' => 2,
+                    ])
+                    ->description('Ievadiet informāciju viena ieraksta skatam')
+                    ->schema([
+
+                        RichEditor::make('infoLong')
+                            ->label('Īss ievads: kam, cik maksā, cik ilgi?')
+                            ->required()
+                            ->placeholder("Vecums: 5 - 10 gadi. Ilgums: 2 stundas")
+                            ->columnSpanFull()
+                            ->maxLength(50000)
+                            ->toolbarButtons([
+                                "blockquote",
+                                "bold",
+                                "bulletList",
+                                "h2",
+                                "h3",
+                                "italic",
+                                "link",
+                                "orderedList",
+                                "redo",
+                                "strike",
+                                "underline",
+                                "undo",
+                            ]),
+                        RichEditor::make('description')
+                            ->required()
+                            ->label('Pasākuma apraksts')
+                            ->columnSpanFull()
+                            ->maxLength(50000)
+                            ->toolbarButtons([
+                                "blockquote",
+                                "bold",
+                                "bulletList",
+                                "h2",
+                                "h3",
+                                "italic",
+                                "link",
+                                "orderedList",
+                                "redo",
+                                "strike",
+                                "underline",
+                                "undo",
+                            ]),
+                        RichEditor::make('notes')
+                            ->label('Piezīmes')
+                            ->placeholder("Pasākuma laikā tiks fotografēts")
+                            ->columnSpanFull()
+                            ->maxLength(2000)
+                            ->extraInputAttributes(['style' => 'min-height: 100px; max-height: 100px; overflow-y: auto;'])
+                            ->toolbarButtons([
+                                "bold",
+                                "bulletList",
+                                "italic",
+                                "link",
+                                "orderedList",
+                                "redo",
+                                "strike",
+                                "underline",
+                                "undo",
+                            ]),
+        
+                    ]),
             ]);
+            
     }
 
     public static function table(Table $table): Table
@@ -133,23 +176,13 @@ class EventsResource extends Resource
                     ->label('Datums')
                     ->date(),
                 Tables\Columns\TextColumn::make('time')
-                    ->label('Laiks/Laiki')
+                    ->label('Laiks')
                     ->searchable(),
-                // Tables\Columns\TextColumn::make('price')
-                //     ->label('Cena')
-                //     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->label('Uztaisīts')
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->label('Atjaunots')
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+  
                 Tables\Columns\CheckboxColumn::make("published")
-                    ->label("Publicēts")
+                    ->label("Publicēts"),
+                Tables\Columns\CheckboxColumn::make("pinned")
+                    ->label("Izcelts")
             ])
             ->filters([ // TODO: Add filter for dates and prices
                 Filter::make('happens_at')
