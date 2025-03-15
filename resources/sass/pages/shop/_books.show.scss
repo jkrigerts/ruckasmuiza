@@ -107,6 +107,11 @@
             object-fit: contain;
             border-radius: 3px;
             justify-self: end;
+
+            @include md-breakpoint {
+                height: auto;
+                max-height: auto;
+            }
         }
 
         .text {
