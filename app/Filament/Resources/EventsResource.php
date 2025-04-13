@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\EventsResource\Pages;
+use App\Filament\Resources\EventsResource\RelationManagers\EventSignupsRelationManager;
 use App\Models\Events;
 use Carbon\Carbon;
 use Closure;
@@ -80,6 +81,11 @@ class EventsResource extends Resource
                             ->required()
                             ->maxLength(50)
                             ->placeholder('12:30 - 14:00'),
+                        TextInput::make('registrations_count')
+                            ->label('Maksimālais dalībnieku skaits')
+                            ->numeric()
+                            ->helperText("0 - pasākums bez reģistrācijas")
+                            ->default(0),
                         FileUpload::make('image')
                             ->label('Reprezentējošs attēls')
                             ->columnSpanFull(),
@@ -239,7 +245,7 @@ class EventsResource extends Resource
     public static function getRelations(): array
     {
         return [
-            
+            EventSignupsRelationManager::class
         ];
     }
 
