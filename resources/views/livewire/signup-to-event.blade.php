@@ -5,7 +5,7 @@
     <p>Pieejamais vietu skaits: <strong style="color: hsl(330deg, 100%, 31%); font-size: 1.2rem">{{ $availableRegistrations }}</strong></p>
 
 
-    {{-- @if ($availableRegistrations > 0) --}}
+    @if ($availableRegistrations > 0)
         <form wire:submit="save">
 
             <div class="signup-form-input-layout">
@@ -48,7 +48,7 @@
         </div>
             <button type="submit" class="button-link" >Pieteikties</button>
         </form>
-    {{-- @endif --}}
+    @endif
 
     <p style="margin-top:2rem; margin-bottom:0">Ja rodušies kādi jautājumi, rakstiet <a href="mailto:madara@ruckasmuiza.lv" class="svelte-1tmxm1l">madara@ruckasmuiza.lv</a>
     vai zvaniet  
