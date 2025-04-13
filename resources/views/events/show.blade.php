@@ -35,8 +35,11 @@
       <div>
         {!! $event->notes !!}
       </div>
-      <x-inner-chapter-heading>Pieteikšanās pasākumam</x-inner-chapter-heading>
-      <livewire:signup-to-event :event="$event"></livewire:signup-to-event>
+
+      @if ($event->registrations_count > 0 && $event->happens_at > now()->subDay())
+        <x-inner-chapter-heading>Pieteikšanās pasākumam</x-inner-chapter-heading>
+        <livewire:signup-to-event :event="$event"></livewire:signup-to-event>
+      @endif
     </section>
   </main>
 </x-layouts.app>
