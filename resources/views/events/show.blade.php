@@ -35,6 +35,8 @@
       <div>
         {!! $event->notes !!}
       </div>
+      <x-inner-chapter-heading>Pieteikšanās pasākumam</x-inner-chapter-heading>
+      <livewire:signup-to-event :event="$event"></livewire:signup-to-event>
     </section>
   </main>
 </x-layouts.app>
