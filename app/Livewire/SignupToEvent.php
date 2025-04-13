@@ -33,12 +33,12 @@ class SignupToEvent extends Component
             'surname' => 'required|min:2',
             'email' => 'required|email',
             'phone_number' => 'nullable|string|min:6',
-            'count' => ['required', 'integer', 'min:1', 'max:2'],
+            'count' => ['required', 'integer', 'min:1', 'max:' . $this->availableRegistrations],
             'notes' => 'nullable|string|max:500',
         ]);
 
         EventSignup::create(array_merge(
-            ['events_id' => $this->event->id, "status" => "Jauns"],
+            ['events_id' => $this->event->id, "status" => "new"],
             $this->only(['name', 'surname', 'email', 'phone_number', 'count', 'notes'])
         )
         );

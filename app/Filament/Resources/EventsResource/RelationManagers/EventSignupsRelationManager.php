@@ -10,6 +10,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Database\Eloquent\Model;
+use Filament\Tables\Columns\TextColumn;
 
 class EventSignupsRelationManager extends RelationManager
 {
@@ -78,14 +79,6 @@ class EventSignupsRelationManager extends RelationManager
                     ]),
                 
             ]);
-
-            // $table->string("name");
-            // $table->string("surname");
-            // $table->string("email")->nullable();
-            // $table->string("phone_number")->nullable();
-            // $table->integer("count");
-            // $table->string("notes", 2000)->nullable();
-            // $table->string("statuss");
     }
 
     public function table(Table $table): Table
@@ -93,7 +86,29 @@ class EventSignupsRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('email')
             ->columns([
-                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Vārds'),
+                Tables\Columns\TextColumn::make('surname')
+                    ->label('Uzvārds'),
+                Tables\Columns\TextColumn::make('email')
+                    ->label('e-pasts'),
+                    TextColumn::make('status')
+                    ->label('Statuss')
+                    ->badge()
+                    ->color(fn (string $state) => match ($state) {
+                        'new' => 'danger',
+                        'pending' => 'warning',
+                        'paid' => 'success',
+                        'cancelled' => 'gray',
+                        default => 'secondary',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'new' => 'Jauns',
+                        'pending' => 'Nosūtīts',
+                        'paid' => 'Apmaksāts',
+                        'cancelled' => 'Atcelts',
+                        default => ucfirst($state),
+                    })
             ])
             ->filters([
                 //
