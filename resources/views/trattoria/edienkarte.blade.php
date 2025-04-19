@@ -6,7 +6,7 @@
   <div class="trattoria-centered-btn" style="margin-bottom:5rem">
     <a href="{{ url('assets/Ruckas_muiza-Trattoria-edienkarte.pdf') }}" class="button-link" target="_blank">Apskatīt ēdienkarti</a>
 
-    <a href="{{ url('assets/Rucka_manor-Trattoria-menu.pdf') }}" class="button-link" target="_blank">View Menu in English</a>
+    {{-- <a href="{{ url('assets/Rucka_manor-Trattoria-menu.pdf') }}" class="button-link" target="_blank">View Menu in English</a> --}}
   </div>
 
   <x-trattoria-reservation></x-trattoria-reservation>
