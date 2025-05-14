@@ -78,7 +78,7 @@
 
     <p style="margin-bottom: 0">Bezmaksas ieeja:</p>
     <ul style="padding-left: 20px">
-      <li style="margin-bottom: 0; list-style-type: disc">pirmsskolas vecuma bērniem,</li>
+      <li style="margin-bottom: 0; list-style-type: disc">bērniem līdz 2 gadu vecumam,</li>
       <li style="margin-bottom: 0; list-style-type: disc">personām ar I un II grupas invaliditāti un vienai personai, kas pavada personu ar I grupas invaliditāti. </li>
     </ul>
   </x-slot:second_slot>

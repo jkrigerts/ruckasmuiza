@@ -23,7 +23,7 @@ class SignupToEvent extends Component
     {
         $this->event = $event;
 
-        $this->availableRegistrations = $event->registrations_count - $event->eventSignups->count();
+        $this->availableRegistrations = $event->registrations_count - $event->eventSignups->sum("count");
     }
 
     public function save()
