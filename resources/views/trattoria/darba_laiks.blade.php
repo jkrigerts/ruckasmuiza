@@ -17,7 +17,7 @@
           </tr>
           <tr>
             <td>Otrdiena</td>
-            <td>slēgts</td>
+            <td>12.00 - 20.00</td>
           </tr>
           <tr>
             <td>Trešdiena</td>
