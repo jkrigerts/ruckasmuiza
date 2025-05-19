@@ -23,14 +23,8 @@
     Uzvarētājs saņems nelielu balvu - picu pavāra cepuri.
   </p>
   <p>
-    Būs arī <strong style="color: #9E004F; font-size: 1.2rem">foto stūrītis</strong>,
-    kur bērni varēs uzņemt jautras bildes ar savām izceptajām picām,
-    lai iemūžinātu šo īpašo brīdi.
-  </p>
-  <p>
-    Ballītes noslēgumā jubilāram tiks pasniegta muižas
-    <strong style="color: #9E004F; font-size: 1.2rem">saldumu meistares sagatavota kūka</strong>
-    ar svecītēm un laba vēlējumiem no muižas kolektīva.
+    Ballītes noslēgumā jubilāram kopā ar viesiem pie ceptajām picām tiks pasniegti
+    arī skaisti noformēti <strong style="color: #9E004F; font-size: 1.2rem">bezalkoholiskie kokteiļi</strong>. 
   </p>
   <p>
     Arī par vecākiem nav aizmirsts – Jūs varēsiet izvēlēties piedalīties meistarklasē
