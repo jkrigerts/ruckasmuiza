@@ -50,9 +50,9 @@
         </form>
     @endif
 
-    <p style="margin-top:2rem; margin-bottom:0">Ja rodušies kādi jautājumi, rakstiet <a href="mailto:madara@ruckasmuiza.lv" class="svelte-1tmxm1l">madara@ruckasmuiza.lv</a>
+    <p style="margin-top:2rem; margin-bottom:0">Ja rodušies kādi jautājumi, rakstiet <a href="mailto:kristiana@ruckasmuiza.lv" class="svelte-1tmxm1l">kristiana@ruckasmuiza.lv</a>
     vai zvaniet  
-    <a href="tel:+37122485145" class="svelte-1tmxm1l">+371 22485145</a></p>
+    <a href="tel:+37126127578" class="svelte-1tmxm1l">+371 26127578</a></p>
 
     @if (session()->has('status'))
         <div 

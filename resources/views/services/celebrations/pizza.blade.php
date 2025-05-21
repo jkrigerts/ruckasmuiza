@@ -13,12 +13,10 @@
   </p> 
   <p>
     Pēc mākslas baudījuma, viesi tiks lutināti ar glāzi izsmalcināta Toskānas vīna
-    vai atsvaidzinošu bezalkoholisko kokteili. Nesteidzīgi malkojot dzērienus, viesi
-    tiks aicināti doties <strong style="color: #9E004F; font-size: 1.2rem">aizraujošā ekskursijā pa muižu</strong>,
-    kur viņi varēs izbaudīt tās šarmu un raksturu.
+    vai atsvaidzinošu bezalkoholisko kokteili.
   </p>
   <p>
-    Pēc ekskursijas svinību viesi tiks aicināti piedalīties
+    Svinību viesi tiks aicināti piedalīties
     <strong style="color: #9E004F; font-size: 1.2rem">picu meistarklasē</strong>
     pieredzējuša picu pavāra vadībā, kur katrs dalībnieks varēs izveidot savu unikālo picu.
     Lai pasākumam pievienotu azartu un papildus jautrību, meistarklases laikā notiks
