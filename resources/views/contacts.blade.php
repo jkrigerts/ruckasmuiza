@@ -46,4 +46,6 @@
     >
     </iframe>
   </div>
+  <x-inner-chapter-heading>Noderīgi</x-inner-chapter-heading>
+  <p><a href="{{ route("privacy-policy")}}">Privātuma politika</a></p>
 </x-layouts.simple-page>

@@ -30,7 +30,7 @@
                                         ['title' => 'Fotosesija', 'href' => 'services.photo_session'],
                                         ['title' => 'Gleznošana ar Baibu Feoktistovu', 'href' => 'services.painting_classes'],
                                         ['title' => 'Grāmatu veikals', 'href' => 'services.books'],
-                                        ['title' => 'Dāvanu kartes', 'href' => 'services.gift_cards'],
+                                        // ['title' => 'Dāvanu kartes', 'href' => 'services.gift_cards'],
                                         ]"
                 >Pakalpojumi</x-navigation.nav-link>
                 <x-navigation.nav-link href="gallery">Galerija</x-navigation.nav-link>
