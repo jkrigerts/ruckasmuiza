@@ -70,6 +70,16 @@
 
             gtag('js', new Date());
             gtag('config', 'G-R2SXRMD1LG');
+
+            window.addEventListener('livewire:navigated', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'page_view', {
+                    page_location: window.location.href,
+                    page_path: window.location.pathname,
+                    page_title: document.title // optional
+                    });
+                }
+            });
         </script>
 
         <!-- Create one update function for each consent parameter -->
