@@ -139,6 +139,9 @@ Route::get('/galerija/{id}', [GalleryController::class, "show"]);
 Route::get('/kontakti', function () { return view('contacts');})
        ->name("contacts");
 
+Route::get('/privatuma-politika', function () { return view('privacy-policy');})
+       ->name("privacy-policy");
+
 Route::get('/piedzino-toskanu', function () { return view('experience-toscana');})
        ->name("experience-toscana");
 
