@@ -9,7 +9,48 @@
     <li>Tālr. nr. <em>Trattoria</em> galdiņu rezervācijai: <a href="tel:+37129407566">+371&nbsp;29407566</a></li>
   
   </ul>
-  <x-inner-chapter-heading>Rekvizīti</x-inner-chapter-heading>
+
+  <x-inner-chapter-heading>Darba laiks</x-inner-chapter-heading>
+  <a href="#open"></a>
+  <div class="trattoria-table-center">
+        <x-table >
+          <thead>
+            <tr>
+              <th>Diena</th>
+              <th>Darba laiks</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Pirmdiena</td>
+            <td>slēgts</td>
+          </tr>
+          <tr>
+            <td>Otrdiena</td>
+            <td>12.00 - 20.00</td>
+          </tr>
+          <tr>
+            <td>Trešdiena</td>
+            <td>12.00 - 20.00</td>
+          </tr>
+          <tr>
+            <td>Ceturtdiena</td>
+            <td>12.00 - 20.00</td>
+          </tr>
+          <tr>
+            <td>Piektdiena</td>
+            <td>12.00 - 22.00</td>
+          </tr>
+          <tr>
+            <td>Sestdiena</td>
+            <td>12.00 - 22.00</td>
+          </tr>
+          <tr>
+            <td>Svētdiena</td>
+            <td>12.00 - 20.00</td>
+          </tr>
+        </x-table>
+  </div>
+    <x-inner-chapter-heading>Rekvizīti</x-inner-chapter-heading>
   <ul>
     <li>"Live Latvija" biedrība</li>
     <li>Adrese: Cēsu nov., Raiskuma pag., "Billes", LV-4146</li>
