@@ -156,4 +156,6 @@ return [
     */
 
     'pagination_theme' => 'tailwind',
+
+    'asset_url' => 'https://cdn.livewire.io',
 ];
