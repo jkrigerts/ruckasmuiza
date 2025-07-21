@@ -21,6 +21,8 @@
         <!-- Styles -->
         {{-- @vite("resources/sass/app.scss") --}}
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        @livewireStyles
+        @livewireScripts
 
         <script>
             // Define dataLayer and the gtag function.
