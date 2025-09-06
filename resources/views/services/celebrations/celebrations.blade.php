@@ -36,7 +36,7 @@
     <strong style="color: #9E004F; font-size: 1.2rem">80 EUR stundā</strong>.</p>
     <p>
       Vairāk informācijas, sazinoties e-pastā:
-    <a href="mailto:madara@ruckasmuiza.lv">madara@ruckasmuiza.lv</a> 
+    <a href="mailto:megija@ruckasmuiza.lv">megija@ruckasmuiza.lv</a> 
   </p>
 
   <p>

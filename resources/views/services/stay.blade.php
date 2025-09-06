@@ -54,7 +54,7 @@
           <td>Nr. 10</td>
           <td>Viena divguļamā gulta</td>
           <td rowspan="7">
-            <p>2 personām <strong>60 €</strong> vai 1 personai <strong>50 €</strong></p>
+            <p>2 personām <strong>70 €</strong> vai 1 personai <strong>60 €</strong></p>
           </td>
         </tr>
         <tr>
@@ -67,11 +67,11 @@
           <td>Nr. 8</td>
           <td>Divas vienguļamās gultas</td>
         </tr>
-        <tr>
+        {{-- <tr>
           <td>Jēkaba istaba</td>
           <td>Nr. 6</td>
           <td>Viena divguļamā gulta</td>
-        </tr>
+        </tr> --}}
         <tr>
           <td>Margarētas istaba</td>
           <td>Nr. 3</td>
