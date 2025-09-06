@@ -85,7 +85,7 @@
             </table>
 
             <p class="footer">Vairāk informācijas Ruckas muižas sociālajos tīklos vai rakstot uz e-pastu 
-                <strong><a href="mailto:madara@ruckasmuiza.lv" class="svelte-1tmxm1l">madara@ruckasmuiza.lv</a></strong>,
+                <strong><a href="mailto:megija@ruckasmuiza.lv" class="svelte-1tmxm1l">megija@ruckasmuiza.lv</a></strong>,
                 vai zvanot uz tel. 
                 <strong><a href="tel:+37128237566" class="svelte-1tmxm1l">+371 28237566</a></strong>
             </p>

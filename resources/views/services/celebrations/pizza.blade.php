@@ -45,6 +45,6 @@
   <p>
     Pievienojieties mums un izbaudiet neaizmirstamu picas ballīti mūsu skaistajā muižā!
     Lai rezervētu datumu vai uzzinātu vairāk,
-    rakstiet uz e-pastu <a href="mailto:madara@ruckasmuiza.lv">madara@ruckasmuiza.lv</a> 
+    rakstiet uz e-pastu <a href="mailto:megija@ruckasmuiza.lv">megija@ruckasmuiza.lv</a> 
   </p>
 </x-layouts.simple-page>
