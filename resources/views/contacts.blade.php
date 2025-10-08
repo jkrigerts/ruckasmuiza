@@ -26,7 +26,7 @@
           </tr>
           <tr>
             <td>Otrdiena</td>
-            <td>12.00 - 20.00</td>
+            <td>slēgts</td>
           </tr>
           <tr>
             <td>Trešdiena</td>
@@ -38,11 +38,11 @@
           </tr>
           <tr>
             <td>Piektdiena</td>
-            <td>12.00 - 22.00</td>
+            <td>12.00 - 20.00</td>
           </tr>
           <tr>
             <td>Sestdiena</td>
-            <td>12.00 - 22.00</td>
+            <td>12.00 - 20.00</td>
           </tr>
           <tr>
             <td>Svētdiena</td>
