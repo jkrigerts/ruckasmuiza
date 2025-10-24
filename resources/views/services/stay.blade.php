@@ -28,7 +28,7 @@
   </ul>
   
   <p>
-    Pie mums pieejamas nakšņošanas iespējas kādā no pieciem numuriņiem. 
+    Pie mums pieejamas nakšņošanas iespējas kādā no 6 numuriņiem. 
     Viesiem pieejamas tikai koplietošanas WC un plašas dušas telpas. 
     Bez nakšņošanas iespējām piedāvājam arī citus pakalpojumus, 
     lai uzturēšanās muižā būtu īpaši neaizmirstama. Ar piedāvājumu 
