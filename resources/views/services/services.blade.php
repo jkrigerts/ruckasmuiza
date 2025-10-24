@@ -14,7 +14,7 @@
     <x-slot:title>Nakšņošana</x-slot:title>
     <p>
       Izbaudi neaizmirstamu nakšņošanas pieredzi kādā no grezni
-      iekārtotajām Ruckas muižas istabiņām. Muižā pieejami 7 unikāli
+      iekārtotajām Ruckas muižas istabiņām. Muižā pieejami 6 unikāli
       iekārtoti numuriņi mierpilnai un greznai atpūtai.
     </p>
     <x-button-link href="{{ route('services.stay') }}" text="Uzzināt vairāk!"/>
