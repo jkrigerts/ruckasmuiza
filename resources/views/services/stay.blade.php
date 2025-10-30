@@ -54,7 +54,7 @@
           <td>Nr. 10</td>
           <td>Viena divguļamā gulta</td>
           <td rowspan="7">
-            <p>2 personām <strong>70 €</strong> vai 1 personai <strong>60 €</strong></p>
+            <p><strong>50 €</strong> (1 - 2 personas)</p>
           </td>
         </tr>
         <tr>
