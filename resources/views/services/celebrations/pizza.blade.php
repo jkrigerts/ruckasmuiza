@@ -22,8 +22,7 @@
     Lai pasākumam pievienotu azartu un papildus jautrību, meistarklases laikā notiks
     <strong style="color: #9E004F; font-size: 1.2rem">picas dekorēšanas konkurss</strong>.
     Mūsu kolorītie un zinošie picas pavāri novērtēs katru picu un noteiks uzvarētāju.
-    Konkursa uzvarētājs balvā saņems picas pavāra cepuri, kas būs lieliska piemiņa
-    no pasākuma. Pēc konkursa dalībnieki varēs vērot, kā viņu picas tiek ceptas krāsnī
+    Pēc konkursa dalībnieki varēs vērot, kā viņu picas tiek ceptas krāsnī
     un iepazīties ar cepšanas procesu. Noslēgumā katrs dalībnieks varēs baudīt savu
     paša gatavoto picu, daloties ar pārējiem dalībniekiem šajā gardajā piedzīvojumā.
   </p>
